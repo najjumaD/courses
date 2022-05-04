@@ -1,7 +1,7 @@
 ---
 title: "Description of the project to be submitted"
 author: "Stephan.Huber@hs-fresenius.de"
-date: 'HS-Fresenius: Data Science Course'
+date: 'HS-Fresenius: Data Science for Business'
 output:
   html_document:
     toc: yes
@@ -80,7 +80,7 @@ In data science and the open source community, many people use [Creative Commons
 - Guide and motivate the reader and outline the target audience of your work. Usually, the introduction is a good place to introduce the scope and content. In particular, make clear what is found in each section. 
 - Be concise. Remove all unnecessary repetition. Read each sentence several times and ask yourself if it is concise and clear and if it fits with what was said before and after.
 - You don't have to explain everything from scratch, but if you shorten things that are essential to understanding, you should give the reader a source where they can find the missing pieces and teach themselves. 
-- The paper should be written with __R Markdown__. The .Rmd file with which this document is written, can be used as a template. Information about writing and publishing with R Markdown can be found here:
+- The paper should be written with __R Markdown__. The .Rmd file with which this document is written, can be used as a template. This file is hosted at [my GitHub page:](https://github.com/hubchev/courses/tree/main/rmd) Information about writing and publishing with R Markdown can be found here:
     - [R Markdown from R Studio](https://rmarkdown.rstudio.com/lesson-1.html)
     - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) written by @Xie2018R
 - Insert R code in your R markdown file by typing the chunk delimiters (see the keyboard shortcut *Ctrl+Alt+I* for Windows and Linux based OS and *Cmd+Option+I* for Macintosh OS) or [this lesson](https://rmarkdown.rstudio.com/lesson-3.html)).
@@ -141,7 +141,7 @@ In data science and the open source community, many people use [Creative Commons
 
 # Projects to be assigned
 
-1. Data Visualization with ggplot2  [@Wickham2018R: ch. 3, p. 3-36]. 
+1. Data Visualization with ggplot2  [@Wickham2018R: ch. 1, p. 3-36]. 
     - max. 2 learning modules that can be worked on in a group of two people.
     - ggplot2 package
 2. Data Transformation with dplyr  [@Wickham2018R: ch. 3, p. 43-76]. 
