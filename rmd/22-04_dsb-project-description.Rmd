@@ -34,6 +34,7 @@ knit_hooks$set(purl = hook_purl)
 Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
 
 
+
 # Abstract {-}
 In the following I describe the project that needs to be submitted in the course _Data Science for Businesses_. I give some hints for your efficient progress and success, I introduce the elements and files to be submitted, and I describe how I evaluate the submissions. 
 
@@ -94,7 +95,7 @@ In data science and the open source community, many people use [Creative Commons
   - Further descriptions to the project, which may include, for example:
     - How the datasets were prepared for the swirl module.
     - How to access and install the module (with the .swc file, online via GitHub, ...).
-    - Challanges you had to overcome when creating the module (keep it short!).
+    - Challenges you had to overcome when creating the module (keep it short!).
     - Explanations and comments on the didactic concept of the module.
     - ... 
     
