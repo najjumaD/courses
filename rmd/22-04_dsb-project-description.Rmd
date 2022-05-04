@@ -37,7 +37,7 @@ Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", kni
 # Abstract {-}
 In the following I describe the project that needs to be submitted in the course _Data Science for Businesses_. I give some hints for your efficient progress and success, I introduce the elements and files to be submitted, and I describe how I evaluate the submissions. 
 
-# Main Goal
+# Main goal
 
 __Course description__
 *''Students complete this module with a project work. The project work includes a project report (15-20 pages) and a project presentation (20-30 minutes).''*
@@ -170,6 +170,14 @@ In data science and the open source community, many people use [Creative Commons
 10. Dates and Times with lubridate
     - max. 1 learning module
     - lubridate package
+
+---
+
+```{r eval=FALSE}
+rmarkdown::render("22-04_dsb-project-description.Rmd", "all")
+```
+
+
 
 
 # Literature
