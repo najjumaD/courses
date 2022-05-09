@@ -1,10 +1,19 @@
 ---
 title: "Regression Analysis"
 author: "Stephan.Huber@hs-fresenius.de"
-date: 'HS-Fresenius: Data Science Course'
+date: 'Hochschule Fresenius: Data Science'
 output:
-  slidy_presentation: default
-  ioslides_presentation: default
+  html_document:
+    toc: yes
+    toc_depth: 2
+    number_sections: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +21,11 @@ library("knitr")
 knit_hooks$set(purl = hook_purl)
 ```
 
-## Literature
+Compiled at `r format(Sys.time(), '%d %B, %Y')`
+Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
+---
+
+# Literature
 
 Regression analysis is covered by almost all econometric and statistical textbooks. Some are more formal some are more illustrative and intuitive. Here is my selection with a focus on R:
 
@@ -24,7 +37,7 @@ Regression analysis is covered by almost all econometric and statistical textboo
 - This presentation is available on ILIAS as an html file.
 
 
-## Why to care about regression analysis
+# Why to care about regression analysis
 
 ![](/home/sthu/Dropbox/hsf/pic/destat/afact2.png)
 
@@ -33,7 +46,7 @@ Regression analysis is covered by almost all econometric and statistical textboo
 - to reduce the likeliness of **causal fallacy**.
 
 
-## Simpsons paradox
+# Simpsons paradox
 
 ![](/home/sthu/Dropbox/hsf/pic/destat/foo-13.png)
 
@@ -42,11 +55,11 @@ Regression analysis is covered by almost all econometric and statistical textboo
 ![](/home/sthu/Dropbox/hsf/pic/destat/foo-32.png)
 
 
-## Correlation does not imply causation
+# Correlation does not imply causation
 
 ![](/home/sthu/Dropbox/hsf/pic/destat/storks.png){ width=75% }
 
-## Correlation 
+# Correlation 
 
 - Correlation reflects the \textit{strength} and \textit{direction} of a linear relationship (top row), it tells us nothing about the slope of that relationship (middle). Thus, we cannot interpret them economically.
 - Moreover, many aspects of nonlinear relationships (bottom) remain unexplained. The figure in the center has a slope of 0 but in that case the correlation coefficient is undefined because the variance of $Y$ is zero.
@@ -77,7 +90,7 @@ where
 -  $\beta_1$ is the slope of regression line
 -  $\epsilon_i$ is the \textbf{error term} or the residual.
 
-## OLS estimation method
+# OLS estimation method
 
 - minimize the squared residuals by choosing the estimated coefficients $\hat{\beta_{0}}$ and $\hat{\beta_{1}}$ 
 
@@ -100,13 +113,13 @@ Here you find the derivation of the OLS estimator for the multiple regression mo
 
 
 
-## Caveats of OLS
+# Caveats of OLS
 
 On this [website](https://www.econometrics-with-r.org/4-2-estimating-the-coefficients-of-the-linear-regression-model.html) you find an interactive application. Play around with it and discuss possible caveats of the OLS method.
 
 ![](/home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png){ width=85% }
 
-## Example 
+# Example 
 
 In the statistic course of WS 2020, I asked 23 students about their weight, height, sex, and number of siblings:
 
@@ -354,29 +367,14 @@ However, OLS estimates can suffer from **omitted variable bias** when the regres
 
 
 
-## Take away messages
+# Take away messages
 
-- Regressions rule the world and may kill alternative facts
-- correlation does not imply causation
-- it is hard to find the true *data generating process*
-
-
-![](/home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png){ width=80% }
-
-
-
-
-## Take away messages
-
-- Regressions rule the world and may kill alternative facts
-- correlation does not imply causation
-- it is hard to find the true *data generating process*
+- Regressions rule the world and may kill alternative facts.
+- Correlation does not imply causation.
+- It is hard to find the true *data generating process*.
 
 
 ![](/home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png){ width=80% }
-
-
-
 
 
 
