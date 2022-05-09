@@ -101,3 +101,6 @@ tab_model(m3, m5,
 plot(residuals(m3), fitted(m3))
 plot(residuals(m3), classdata$siblings)
 
+## ----eval=FALSE---------------------------------------------------------------
+#  rmarkdown::render("regress_lecture.Rmd", "all")
+

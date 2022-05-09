@@ -1,0 +1,358 @@
+
+\chapter{Introduction: What is data analysis?}
+
+\hfill	\includegraphics[width=.6\textwidth]{$HOME/Dropbox/hsf/pic/jdm/automated}
+
+
+%\section{Data Analysis}
+%\addtocounter{framenumber}{-4}
+
+
+\section{What is data?}
+
+\boxx{Data are values of qualitative or quantitative variables, belonging to a set of items.\\
+
+\desx{
+	\item[set of items:] Sometimes called the population; the set of objects you are interested in
+	\item[variables:] A measurement or characteristic of an item.
+	\item[qualitative:] Country of origin, sex, treatment
+	\item[quantitative:] Height, weight, blood pressure
+}
+}
+
+
+
+
+Although the terms `\textbf{data}' and `\textbf{information}' are often used interchangeably, these terms have distinct meanings. Data is sometimes said to be transformed into information when it is viewed in context or in post-analysis. In academic treatments of the subject, however, data are simply units of information. [\dots]
+
+Data is measured, collected and reported, and analyzed, whereupon it can be visualized using graphs, images or other analysis tools. Data as a general concept refers to the fact that some existing information or knowledge is represented or coded in some form suitable for better usage or processing. 
+
+
+
+
+
+\section{Types of data}
+
+\textbf{Raw data} (`unprocessed data') is a collection of numbers or characters before it has been `cleaned' and corrected by researchers. Raw data needs to be corrected to remove outliers or obvious instrument or data entry errors [\dots]`. Data processing commonly occurs by stages, and the `processed data' from one stage may be considered the `raw data' of the next stage.\\
+\textbf{Field data} is raw data that is collected in an uncontrolled environment.\\
+\textbf{Experimental data} is data that is generated within the context of a scientific investigation by observation and recording.\\
+\textbf{Structured data:} Data is stored, processed, and manipulated in a traditional relational
+database management system (e.g., temperature)\\
+\textbf{Un-structured data} is commonly generated from human activities and does not
+fit into a structured database format (e.g., text)\\
+\textbf{Semi-structured data} does not fit into a structured database system, but is
+nonetheless structured by tags that are useful for creating a form of order and
+hierarchy in the data\\
+\textbf{Big data} \textit{see below}\\
+\textbf{Dark data} \textit{see below}
+
+
+\pbn
+\subsection{Structured vs. semi-structured data}
+Business Intelligency requires analysts to deal with both structured and semi-structured data. The term semi-structured data is used for all data that does not fit neatly into relational or flat files, which is called structured data.
+We use the term semi-structured (rather than the more common unstructured) to recognize that most data has some structure to it. A survey indicated that 60\% of CIOs and CTOs consider semi-structured data as critical for improving operations and creating new business opportunities \citep{Blumberg2003Problem}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.75\linewidth]{../../../pic/stvsus}
+	\end{center}
+	\caption{Structured vs. semi-structured data}
+\end{figure}
+
+\boxx{\subsubsection*{Executive at Fortune 500 telecommunciations provider}\textit{``We have between 50,000 and 100,000 conversations with our customers daily,
+		and I don't know what was discussed. I can see only the end point -- for example,
+		they changed their calling plan. I'm blind to the content of the conversations.''} \citep[see][]{Blumberg2003Problem}}
+
+
+
+
+
+%\section{Online Survey}
+%Go to\\ \url{https://pingo.coactum.de/455163}
+%
+%Give 3 examples for semi-structured data.
+%}
+
+
+\subsection{Semi-structured data: Examples}
+For example, e-mail is divided into messages and messages are accumulated into file folders. 
+
+Business processes, Chats, E-mails, Graphics, Image files, Letters, Marketing material, Memos, Movies, News items, Phone, conversations, Presentations, Reports, Research, Spreadsheet files, 
+User group files, Video files, Web pages, White papers, Word processing text
+
+\pbn
+\exex{Data Mining}{
+	\itex{
+		\item Watch: \url{https://youtu.be/EH3bp5335IU}
+		\item Read the Wikipedia page of `Data Mining'
+		%\item Make slides that should introduce Data Minining to a student of IBM at the first semester in three minutes.
+}}
+
+
+
+
+\pbn
+\subsection{Big data}
+Big data is a field that treats ways to analyze, systematically extract information from, or otherwise deal with data sets that are too large or complex to be dealt with by traditional data-processing application software. [\dots]
+%Data with many cases (rows) offer greater statistical power, while data with higher complexity (more attributes or columns) may lead to a higher false discovery rate. 
+Big data challenges include capturing data, data storage, data analysis, search, sharing, transfer, visualization, querying, updating, information privacy and data source. Big data was originally associated with three key concepts: volume, variety, and velocity. When we handle big data, we may not sample but simply observe and track what happens. Therefore, big data often includes data with sizes that exceed the capacity of traditional software to process within an acceptable time and value. 
+
+Current usage of the term big data tends to refer to the use of predictive analytics, user behavior analytics, or certain other advanced data analytics methods that extract value from data, and seldom to a particular size of data set. [\dots]
+%``There is little doubt that the quantities of data now available are indeed large, but that's not the most relevant characteristic of this new data ecosystem.'' 
+Analysis of data sets can find new correlations to ``spot business trends, prevent diseases, combat crime and so on.'' Scientists, business executives, practitioners of medicine, advertising and governments alike regularly meet difficulties with large data-sets in areas including Internet searches, fintech, urban informatics, and business informatics. Scientists encounter limitations in e-Science work, including meteorology, genomics, connectomics, complex physics simulations, biology and environmental research. \textbf{(Wikipedia)}
+
+
+\pbn
+%\subsubsection{Big data characteristics}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{../../../pic/Big_Data}
+	\end{center}
+	\caption{Big data characteristics}
+\end{figure}
+
+%Other mentioned data characteristics are:\\ Veracity, Exhaustive, Fine-grained and uniquely lexical, Relational, Extensional, Scalability, Value, Variability 
+
+
+
+\pbn
+\paragraph{Volume:} The amount of data matters. With big data, you’ll have to process high volumes of low-density, unstructured data. This can be data of unknown value, such as Twitter data feeds, clickstreams on a webpage or a mobile app, or sensor-enabled equipment.
+\paragraph{Velocity:} The speed at which the data is generated and processed to meet the demands and challenges.  Normally, the highest velocity of data streams directly into memory versus being written to disk. Some internet-enabled smart products operate in real time or near real time and will require real-time evaluation and action
+\paragraph{Variety:} Variety refers to the many types of data that are available. Traditional data types were structured and fit neatly in a relational
+database. With the rise of big data, data comes in new unstructured data types. Unstructured and semistructured data types, such as
+text, audio, and video, require additional preprocessing to derive meaning and support metadata
+
+
+\includegraphics[width=.9\paperwidth]{$HOME/Dropbox/hsf/pic/big4}
+
+\includegraphics[width=.6\paperwidth]{$HOME/Dropbox/hsf/pic/bd1a}
+
+%\includegraphics[width=.6\paperwidth]{$HOME/Dropbox/hsf/pic/bd1b}
+
+\pbn
+\subsection{Dark data}
+Dark data is data that is collected through various computer network operations but is not used in any way to gain insight or make decisions. An organization's ability to collect data may exceed its capacity with which to analyze the data. In some cases, the company is not even aware that the data is being collected. Approximately 90 percent of the data generated by sensors and analog-to-digital converters is never used.
+
+
+
+
+\pbn
+\section{What is Data Analysis}
+
+\boxx{The data is the second most important thing
+\itex{
+	\item The most important thing in data science is the question
+	\item The second most important is the data
+	\item Often the data will limit or enable the questions
+	\item But having data can't save you if you don't have a question
+}}
+
+\pbn
+\boxx{\textbf{Data science} is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is related to data mining and big data.
+	
+	Data science is a ``concept to unify statistics, data analysis, machine learning and their related methods'' in order to ``understand and analyze actual phenomena'' with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, computer science, and information science. 
+}
+
+\subsubsection*{Data analytics is what data scientists do}
+
+\itex{
+	\item Define the question
+	\item Define the ideal data set
+	\item Determine what data you can access
+	\item Obtain the data
+	\item Clean the data
+	\item Exploratory data analysis
+	\item Statistical prediction/modeling
+	\item Interpret results
+	\item Challenge results
+	\item Synthesize/write up results
+	\item Create reproducible code
+	\item Distribute results to other people
+}
+
+\begin{figure}\centering
+		\includegraphics[width=.6\textwidth]{$HOME/Dropbox/hsf/pic/data_scientist_sexy} 
+		\caption{The sexiest job of the 21st century}
+		\note{Source: \cite{Davenport2012Data}}
+\end{figure}
+
+
+
+
+\exex{What is data analysis}{
+Open the Wikipedia page of `Data`Analysis'.
+\itex{\item Therein, the process of data analysis is described in eight steps. Read and try to memorize these steps.
+\item Stephen Few described eight types of quantitative messages that users may attempt to understand or communicate from a set of data and the associated graphs used to help communicate the message. Read and try to memorize these steps.
+\item The work of a data analyst contains many different tasks. Some of these tasks are described in the article. Which of these are new to you?}
+}
+
+
+
+
+
+\subsubsection*{Data analysis...}
+\begin{minipage}{0.25\textwidth}	
+	\includegraphics[width=.95\textwidth]{../../../pic/moneyball}
+\end{minipage}
+\begin{minipage}{0.75\textwidth}
+	... is a process of inspecting, cleansing, transforming and modeling data with the goal of discovering useful information, informing conclusion and supporting decision-making. Data analysis has multiple facets and approaches, encompassing diverse techniques under a variety of names, and is used in different business, science, and social science domains. In today's business world, data analysis plays a role in making decisions more \textit{scientific} and helping businesses operate more effectively.
+	
+	\itex{\item	Please watch: \url{https://youtu.be/J36ZfXBsGjs}
+		\item Sport Economics\footnote{It covers both the ways in which economists can study the distinctive institutions of sports, and the ways in which sports can allow economists to research many topics, including discrimination and antitrust law. } is a well-accepted discipline, see: \url{https://journals.sagepub.com/home/jse}	}
+\end{minipage}
+
+
+
+
+\section{Machine learning, AI, automated decision-making}
+
+
+While \textbf{machine learning} (ML) is based on the idea that machines should be able to learn and adapt through experience, artificial intelligence (AI) refers to a broader idea where machines can execute tasks \textit{smartly}. AI applies ML techniques to solve actual problems and to automate decision making.
+
+
+\subsection{Machine learning\dots}
+\dots  is the study of computer algorithms that improve automatically through experience. In particular,  machine learning is a form of artificial intelligence (AI) as it provides machines and systems to automatically learn and improve from experience. Machine learning algorithms build a mathematical model based on sample data, known as `training data', in order to make predictions or decisions without being explicitly programmed to do so.
+\begin{description}
+	\item[\dots  for making predictions:] if you want a model to determine future
+	trends; machine learning algorithms are the best bet. This falls under the paradigm of
+	supervised learning. It is called supervised because you already have the data based on
+	which you can train your machines (for example, a fraud detection model can be
+	trained using a historical record of fraudulent purchases).\\
+	
+	\item[\dots for pattern discovery:] If you don’t have the parameters based on which you can make
+	predictions, then you need to find out the hidden patterns within the dataset to be
+	able to make meaningful predictions. This is nothing but the unsupervised model as
+	you don’t have any predefined labels for grouping. The most common algorithm used
+	for pattern discovery is Clustering.
+\end{description}
+
+
+%\section{Automated Decision-Making}
+
+\subsection{What is automated decision-making?}
+Automated decision-making is the process of making a decision by automated means without any human involvement. These decisions can be based on factual data, as well as on digitally created profiles or inferred data. Examples of this include:	
+\itex{\item 	an online decision to award a loan; and
+	\item an aptitude test used for recruitment which uses pre-programmed algorithms and criteria.
+}
+Automated decision-making often involves \textbf{profiling}, but it does not have to.
+
+\boxb{
+	\citet{Demetis2018When}:
+	``Another well-known example comes from
+	Amazon. The vast majority of prices are defined by
+	algorithms in so far as Amazon vendors ``use algorithmic pricing to ensure that they can
+	automatically change their product prices based on a
+	competitor''' [39], with the result that vendors are
+	being forced to engage in this practice for fear of
+	losing out to the competition. Meanwhile, the
+	algorithmic interactions between vendors carry the
+	possibility
+	of
+	developing
+	unpredictable
+	consequences. Such algorithmic pricing on Amazon
+	can be found in the example of the book entitled The
+	Making of a Fly by evolutionary biologist Peter
+	Lawrence. This book came to be priced at
+	\textdollar23,698,655.93 (plus \textdollar3.99 shipping) as two sellers
+	were using algorithms to adjust the price of the book
+	in response to one another. It took 10 days for
+	humans to notice and intervene to bring back the
+	prices to normal levels [43]; ironically, ``normal
+	levels'' merely indicated a temporary human decision
+	that would allow the continuation of algorithmic
+	pricing.''
+}
+
+%Please read section 2 of 
+%\url{https://core.ac.uk/download/pdf/77240158.pdf}
+
+\pbn
+\subsection{What is profiling?}
+Profiling analyzes aspects of an individual’s personality, behavior, interests and habits to make predictions or decisions about them.
+In particular, profiling' means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyze or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behavior, location or movements.
+
+
+\boxx{Watch: \tvbig\url{https://youtu.be/7-MNbzv8lAA}
+	%\begin{center}
+	\includegraphics[width=0.3\linewidth]{../../../pic/jdm/profile}
+	%\end{center}
+}
+
+\boxb{\textbf{You are carrying out profiling if you:}
+	\itex{\item collect and analyse personal data on a large scale, using algorithms, AI or machine-learning;
+		\item identify associations to build links between different behaviours and attributes;
+		\item create profiles that you apply to individuals; or
+		\item predict individuals’ behaviour based on their assigned profiles.}}
+
+%\pbn\paragraph{How does profiling work?}
+Organizations obtain personal information about individuals from a variety of different sources. Internet searches, buying habits, lifestyle and behavior data gathered from mobile phones, social networks, video surveillance systems and the Internet of Things are examples of the types of data organizations might collect.
+
+They analyze this information to classify people into different groups or sectors. This analysis identifies correlations between different behaviors and characteristics to create profiles for individuals. This profile will be new personal data about that individual.
+
+\boxb{\textbf{Organizations use profiling to}
+	\itex{\item 
+		find something out about individuals’ preferences;
+		\item predict their behavior; and/or
+		\item make decisions about them.}}
+
+Profiling can use \textbf{algorithms}. An algorithm is a sequence of instructions or set of rules designed to complete a task or solve a problem. Profiling uses algorithms to find correlations between separate datasets. These algorithms can then be used to make a wide range of decisions, for example to predict behavior or to control access to a service. Artificial intelligence (AI) systems and machine learning are increasingly used to create and apply algorithms. 
+%For more information about algorithms, AI and machine-learning, big data, artificial intelligence, machine learning and data protection see the expert talks.
+
+Although many people think of marketing as being the most common reason for profiling, this is not the only application.
+
+
+\paragraph{What are the benefits of profiling and automated decision-making?}
+Profiling and automated decision making can be very useful for organisations and also benefit individuals in many sectors, including healthcare, education, financial services and marketing. They can lead to quicker and more consistent decisions, particularly in cases where a very large volume of data needs to be analysed and decisions made very quickly.      
+
+
+\paragraph{Examples}
+Profiling is used in some medical treatments, by applying machine learning to predict patients’ health or the likelihood of a treatment being successful for a particular patient based on certain group characteristics.
+
+Less obvious forms of profiling involve drawing inferences from apparently unrelated aspects of individuals’ behavior.
+
+Using social media posts to analyze the personalities of car drivers by using an algorithm to analyze words and phrases which suggest ‘safe’ and ‘unsafe’ driving in order to assign a risk level to an individual and set their insurance premium accordingly.
+
+
+\pbn
+\paragraph{What are the risks?}
+
+Although these techniques can be useful, there are potential risks:
+\itex{\item 
+	Profiling is often invisible to individuals.
+	\item People might not expect their personal information to be used in this way.
+	\item People might not understand how the process works or how it can affect them.
+	\item The decisions taken may lead to significant adverse effects for some people.}
+
+Just because analysis of the data finds a correlation doesn’t mean that this is significant. As the process can only make an assumption about someone’s behaviour or characteristics, there will always be a margin of error and a balancing exercise is needed to weigh up the risks of using the results. 
+
+\pbn
+\subsection{Industry 4.0}
+Smart industry or \textit{INDUSTRIE 4.0} refers to the technological evolution from embedded systems to cyber-physical system. `INDUSTRIE 4.0 represents the coming fourth industrial revolution on the way to an Internet of Things, Data and Services. Decentralized intelligence helps create intelligent object networking and independent process management, with the interaction of the real and virtual worlds representing a crucial new aspect of the manufacturing and production process.
+
+
+
+\begin{center}
+	
+	\includegraphics[width=0.6\linewidth]{../../../pic/jdm/i4dev}
+\end{center}
+
+\begin{center}
+	
+	\includegraphics[width=0.7\linewidth]{../../../pic/jdm/i4}
+\end{center}
+
+
+%
+%\begin{center}
+%	
+%	\includegraphics[width=0.75\linewidth]{../../../pic/jdm/ii4}
+%\end{center}
+
+
+
+
+
+
+
+

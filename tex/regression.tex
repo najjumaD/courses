@@ -1,0 +1,199 @@
+\chapter{Regression Analysis}\label{ch:regression}
+
+\boxx{Additional literature: Please consider my presentation about regression analysis available at my github account:  \url{https://htmlpreview.github.io/?https://github.com/hubchev/courses/blob/main/rmd/regress_lecture.html} and 
+attached in the Appendix of these notes, see pages \pageref{sec:regress_lecture}f.}
+\section{Simple linear regression}
+
+
+
+%\subsubsection*{Regression Model}
+\itex{
+\item Linear regression analysis is one of the most commonly used predictive modeling techniques. The aim of linear regression is to find a mathematical equation for a continuous response variable $y$ as a function of one (simple linear model) or more variables (multiple linear regression), $x$. So that you can use this regression model to predict $y$ when only the $x$ is known. 
+\item Of course, for a meaningful prediction you need more than two observations, $i$, that must be available for the variables of interest.
+\item The linear regression model is
+\[
+y_i = \beta_{0} + \beta_{1} x_i + \epsilon_i
+\]
+where
+\itex{
+\item the index $i$ runs over the observations, $i=1,\dots,n$
+\item $y_i$ is the \textbf{dependent variable}, the regressand, or simply the left-hand variable
+\item $x_i$ is the \textbf{independent variable}, the regressor, or simply the right-hand variable
+\item $\beta_0$ is the \textbf{intercept} of the population regression line or the constant
+\item $\beta_1$ is the slope of the population regression line
+\item $\epsilon_i$ is the \textbf{error term} or the residual.
+}
+}
+
+\subsubsection*{Estimating the coefficients of the linear regression model}
+
+\itex{
+	\item In practice, the intercept and slope of the regression are unknown. Therefore, we must employ data to estimate both unknown parameters.
+	\item The method we use to \textit{fit a line} is called the ordinary least squared (OLS) method. The idea is to minimize the sum of the squared differences of all $y_i$ and $y_i^*$ as sketched in the plot below. 
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{../../../pic/destat/regression_ols}
+	\end{center}
+	\item In more formal words, we try minimize the squared residuals by choosing the estimated coefficients $\hat{\beta_{0}}$ and $\hat{\beta_{1}}$ 
+\begin{align*}
+\min_{\hat{\beta_{0}}, \hat{\beta_{1}}}\sum_{i=1} \epsilon_i^2 &= \sum_{i=1}	\left[y_i - \underbrace{(\hat{\beta_{0}} + \hat{\beta_{1}} x_i)}_{\textnormal{predicted values}\equiv y_i^*}\right]^2\\
+\Leftrightarrow  &=  \sum_{i=1}	(y_i - \hat{\beta_{0}} - \hat{\beta_{1}} x_i)^2
+\end{align*}
+\item Minimizing the function requires to calculate the first order conditions with respect to alpha and beta and set them zero:
+\begin{align*}
+\frac{\partial \sum_{i=1} \epsilon_i^2}{\partial \beta_{0}}=2 \sum_{i=1}	(y_i - \hat{\beta_{0}} - \hat{\beta_{1}} x_i)=0\\
+\frac{\partial \sum_{i=1} \epsilon_i^2}{\partial \beta_{1}}=2 \sum_{i=1}	(y_i - \hat{\beta_{0}} - \hat{\beta_{1}} x_i)x_i=0
+\end{align*}
+\item This is just a linear system of two equations with two unknowns $\beta_{0}$ and $\beta_{1}$, which we can mathematically solve for $\beta_0$:
+\begin{align*}
+	&\sum_{i=1}	(y_i - \hat{\beta_{0}} - \hat{\beta_{1}} x_i)=0\\
+	\Leftrightarrow \hat{\beta_{0}}&=\frac{1}{n}\sum_{i=1}	(y_i  - \hat{\beta_{1}} x_i)\\
+	\Leftrightarrow \hat{\beta_{0}}&=\bar{y}-\hat{\beta_{1}}\bar{x}
+\end{align*}
+\item and for $\beta_{1}$:
+\begin{align*}
+	&\sum_{i=1}	(y_i - \hat{\beta_{0}} - \hat{\beta_{1}} x_i)x_i=0\\
+	\Leftrightarrow & \sum_{i=1}	y_i x_i- \underbrace{\hat{\beta_{0}}}_{\bar{y}-\hat{\beta_{1}}\bar{x}}x_i - \hat{\beta_{1}} x_i^2=0\\
+	\Leftrightarrow & \sum_{i=1}	y_i x_i- (\bar{y}-\hat{\beta_{1}}\bar{x})x_i - \hat{\beta_{1}} x_i^2=0\\	
+	\Leftrightarrow & \sum_{i=1}	y_i x_i- \bar{y}x_i-\hat{\beta_{1}}\bar{x}x_i - \hat{\beta_{1}} x_i^2=0\\	
+	\Leftrightarrow & \sum_{i=1}	(y_i - \bar{y}-\hat{\beta_{1}}\bar{x} - \hat{\beta_{1}} x_i)x_i=0\\	
+%	\Leftrightarrow & \sum_{i=1}	(y_i - \bar{y})-\beta_{1}\bar{x} - \hat{\beta_{1}} x_i=0\\
+	\Leftrightarrow & \sum_{i=1} (y_i - \bar{y}) x_i -\hat{\beta_{1}}(\bar{x} -  x_i)x_i =0\\
+	\Leftrightarrow & \sum_{i=1}	(y_i - \bar{y}) x_i  =  \hat{\beta_{1}} \sum_{i=1} (\bar{x} -  x_i) x_i \\
+%	\Leftrightarrow & \beta_{1} =\frac{\sum_{i=1}(y_i - \bar{y})x_i }{ \sum_{i=1} (\bar{x} -  x_i)x_i }\\
+	\Leftrightarrow & \hat{\beta_{1}} =\frac{\sum_{i=1}(y_i - \bar{y})x_i }{ \sum_{i=1} (\bar{x} -  x_i)x_i }\\
+		\Leftrightarrow & \hat{\beta_{1}} =\frac{\sum_{i=1}(y_i -\bar{y})(x_i-\bar{x})}{\sum_{i=1} (\bar{x} -  x_i)^2 }\\
+	\Leftrightarrow & \hat{\beta_{1}} ={\frac {\sigma_{x,y}}{\sigma^2_{x}}}
+\end{align*}
+\item The estimated regression coefficient $\hat{\beta_{1}}$ equals the covariance between $y$ and $x$ divided by the variance of $x$.
+\item The formulas presented above may not be very intuitive at first glance. On \url{https://www.econometrics-with-r.org/4-2-estimating-the-coefficients-of-the-linear-regression-model.html} however, an interactive application can be found. This application aims to help you understand the mechanics of OLS. You can add observations by clicking into the coordinate system where the data are represented by points. Once two or more observations are available, the application computes a regression line using OLS and some statistics which are displayed in the right panel. The results are updated as you add further observations to the left panel. A double-click resets the application, i.e., all data are removed.
+}
+
+
+
+\subsubsection*{The least squares assumptions}
+
+OLS performs well under a quite broad variety of different circumstances. However, there are some assumptions which need to be satisfied in order to ensure that the estimates are normally distributed in large samples.
+
+The Least Squares Assumptions should fullfil the following assumptions:
+\[Y_i = \beta_0 + \beta_1 X_i + \epsilon_i \text{, } i = 1,\dots,n\]
+\enux{
+	\item The error term $\epsilon_i$ has conditional mean zero given $X_i: E(u_i|X_i)=0$.
+	\item $(Xi,Yi),i=1,\dots,n$ are independent and identically distributed (i.i.d.) draws from their joint distribution.
+	\item Large outliers are unlikely: $X_i$ and $Y_i$ have nonzero finite fourth moments. That means, assumption 3 requires that $X$ and $Y$ have a finite kurtosis.
+}
+
+\subsubsection*{Measures of fit}
+
+After fitting a linear regression model, a natural question is how well the model describes the data. Visually, this amounts to assessing whether the observations are tightly clustered around the regression line. Both the coefficient of determination and the standard error of the regression measure how well the OLS Regression line fits the data.
+
+$R^2$ the coefficient of determination, is the fraction of the sample variance of $Y_i$ that is explained by $X_i$. Mathematically, the $R^2$ can be written as the ratio of the explained sum of squares to the total sum of squares. The explained sum of squares (ESS) is the sum of squared deviations of the predicted values $\hat{Y_i}$, from the average of the $Y_i$. The total sum of squares (TSS) is the sum of squared deviations of the $Y_i$ from their average. Thus we have
+\begin{align}
+ESS & =  \sum_{i = 1}^n \left( \hat{Y_i} - \overline{Y} \right)^2,   \\
+TSS & =  \sum_{i = 1}^n \left( Y_i - \overline{Y} \right)^2,   \\
+R^2 & = \frac{ESS}{TSS}.
+\end{align}
+Since $TSS = ESS + SSR$ we can also write
+\[R^2 = 1- \frac{\textcolor{blue}{SSR}}{\textcolor{red}{TSS}}\]
+with $SSR= \sum_{i = 1}^n \epsilon^2$
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{../../../pic/destat/fitR}
+\end{center}
+
+
+$R^2$ lies between 0 and 1. It is easy to see that a perfect fit, i.e., no errors made when fitting the regression line, implies $R2=1$ since then we have $SSR=0$. On the contrary, if our estimated regression line does not explain any variation in the $Y_i$, we have $ESS=0$ and consequently $R^2=0$.
+%
+
+\section{Multiple linear regression}
+
+In what follows I introduce linear regression models that use more than just one explanatory variable and discuss important key concepts in multiple regression. As we broaden our scope beyond the relationship of only two variables (the dependent variable and a single regressor) some potential new issues arise such as \textit{multicollinearity} and \textit{omitted variable bias} (OVB). In particular, this section deals its implication for causal interpretation of OLS-estimated coefficients.
+
+\subsubsection*{Simpsons paradox}
+Simpson's paradox is an effect that occurs when the marginal association between two categorical variables is qualitatively different from the partial association between the same two variables \textbf{after controlling for one or more other variables}. Simpson's paradox is important for three critical reasons. First, people often expect statistical relationships to be immutable. They often are not. The relationship between two variables might increase, decrease, or even change direction depending on the set of variables being controlled. Second, Simpson’s paradox is not simply an obscure phenomenon of interest only to a small group of statisticians. Simpson’s paradox is actually one of a large class of association paradoxes. Third, Simpson’s paradox reminds researchers that causal inferences, particularly in nonexperimental studies, can be hazardous. Uncontrolled and even unobserved variables that would eliminate or reverse the association observed between two variables might exist.
+
+
+\includegraphics[width=.48\linewidth]{../../../pic/destat/foo-13}
+\includegraphics[width=.48\linewidth]{../../../pic/destat/foo-32}
+
+\textbf{Example:} Understanding Simpson’s paradox is easiest in the context of a simple example. Suppose that a university is concerned about sex bias during the admission process to graduate school. To study this, applicants to the university’s graduate programs are classified based on sex and admissions outcome. These data would seem to be consistent with the existence of a sex bias because men (40 percent were admitted) were more likely to be admitted to graduate school than women (25 percent were admitted).
+
+To identify the source of the difference in admission rates for men and women, the university subdivides applicants based on whether they applied to a department in the natural sciences or to one in the social sciences and then conducts the analysis again. Surprisingly, the university finds that the direction of the relationship between sex and outcome has reversed. In natural science departments, women (80 percent were admitted) were more likely to be admitted to graduate school than men (46 percent were admitted); similarly, in social science departments, women (20 percent were admitted) were more likely to be admitted to graduate school than men (4 percent were admitted).
+
+Although the reversal in association that is observed in Simpson's paradox might seem bewildering, it is actually straightforward. In this example, it occurred because both sex and admissions were related to a third variable, namely, the department. First, women were more likely to apply to social science departments, whereas men were more likely to apply to natural science departments. Second, the acceptance rate in social science departments was much less than that in natural science departments. Because women were more likely than men to apply to programs with low acceptance rates, when department was ignored (i.e., when the data were aggregated over the entire university), it seemed that women were less likely than men to be admitted to graduate school, whereas the reverse was actually true. Although hypothetical examples such as this one are simple to construct, numerous real-life examples can be found easily in the social science and statistics literature.
+
+\subsubsection*{Regression model and estimation}
+
+The multiple regression model is
+\[
+Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \beta_3 X_{3i} + \dots + \beta_k X_{ki} + u_i, \ i=1,\dots,n.
+\]
+
+How can we estimate the coefficients of the multiple regression model? As in the simple model, we seek to minimize the sum of squared mistakes by choosing estimated
+coefficients $\beta_0,\beta_1,\dots,\beta_k$ such that
+\[\sum_{i=1}^n (Y_i - b_0 - b_1 X_{1i} - b_2 X_{2i} - \dots -  b_k X_{ki})^2 \]
+
+This demands matrix notation. This goes beyond the scope of this introduction. I refer to the open book \textit{Applied Statistics with R}, see: \url{https://daviddalpiaz.github.io/appliedstats/multiple-linear-regression.html}. Here the derivation of the OLS estimator is explained in further detail.
+
+
+\subsection*{Confounding variables}\label{sec:confounding}
+
+A confounding variable is a characteristic which was not
+included or controlled for in the study, but can influence the
+results. That is, the real effects due to the treatment are confounded, or clouded, due to this variable.
+
+For example, if you select a group of people who take vitamin C daily, and a group who don't, and follow them all for a year's
+time counting how many colds they get, you might notice the
+group taking vitamin C had fewer colds than the group who
+didn't take vitamin C. However, you cannot conclude that vitamin C reduces colds. Because this was not a true experiment
+but rather an observational study, there are many confounding variables at work. One possible confounding variable is
+the person’s level of health consciousness; people who take
+vitamins daily may also wash their hands more often, thereby
+heading off germs.
+
+How do researchers handle confounding variables? \textbf{Control}
+is what it's all about. Here you could pair up people who
+have the same level of health-consciousness and randomly
+assign one person in each pair to taking vitamin C each day
+(the other person gets a fake pill). Any difference in number
+of colds found between the groups is more likely due to the vitamin C, compared to the original observational study. Good
+experiments control for potential confounding variables. 
+
+Suppose a researcher claims that eating seaweed helps you
+live longer; you read interviews with the subjects and dis-
+cover that they were all over 100, ate very healthy foods, slept
+an average of 8 hours a day, drank a lot of water, and exer-
+cised. Can we say the long life was caused by the seaweed?
+You can’t tell, because so many other variables exist that
+could also promote long life (the diet, the sleeping, the water,
+the exercise); these are all confounding variables.
+A common error in research studies is to fail to control for
+confounding variables, leaving the results open to scrutiny.
+The best way to head off confounding variables is to do a well-
+designed experiment in a controlled setting.
+Observational studies are great for surveys and polls, but not
+for showing cause-and-effect relationships, because they don’t
+control for confounding variables. A well-designed experiment
+provides much stronger evidence.
+
+
+\exex{Look at the Output}{
+	\begin{center}
+		\includegraphics[width=.8\linewidth]{../../../pic/mas/reg_stata2}
+	\end{center}
+	
+	Above you see an excerpt of a regression output taken from a statistical program. Some t-values and p-values are missing.
+	\abcx{
+		\item Calculate the t-value of the coefficient \texttt{mpg}. Is the coefficient  at a level of $\alpha=0.05$ statistically significant?	
+		\item Is the coefficient \texttt{foreign} at a level of $\alpha=0.05$ statistically significant? 	
+		\item Is the constant (i.e., \texttt{\_cons}) at a level of $\alpha=0.05$ statistically significant? 
+	}
+}
+
+
+\exex{Look at Stata Output}{
+	Below you find two regression outputs from Stata. Try to interpret the p-values and the confidence intervals. How are the t-values calculated. Can you use the \textit{magic number} 1.96 to say if a corresponding estimated coefficient is statistically significant, or not? Which estimated model is \textit{better}?
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{../../../pic/mas/reg_stata_class2}
+		\includegraphics[width=0.8\linewidth]{../../../pic/mas/reg_stata_class}
+	\end{center}
+}	

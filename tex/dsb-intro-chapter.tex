@@ -1,0 +1,306 @@
+
+
+
+\chapter{Introduction: What is data science?}
+
+
+
+\subsection*{Data science is what data scientists do}
+
+
+\textbf{Data analysts\dots}
+\itex{\item \dots collect, manipulate, visualize, and analyze data. 
+	\item \dots aim to discover useful information to support decision-making.
+	\item \dots should help to understand and optimize processes and to open up new product areas and/or lines of business.
+	\item \dots need to interact with customers, i.e., the user of the information as the addressee, and with domain experts.}
+
+\textbf{Data analysts should have\dots}
+\itex{
+	\item \dots econometric skills (Regressions, Time Series Analysis, Machine Learning)
+	\item \dots knowledge on statistical software packages (R, Phyton, SAS, etc.)
+	\item \dots a basic understanding of business operations (Business Intelligence)
+	\item \dots technical knowledge in database design, data models, data mining and segmentation techniques
+}
+
+
+
+
+\pbn
+\section{My first PC}
+\zitat{
+	``Data science is best understood as partnership between a data scientist and a computer.''
+	\hfill --- \citet[p. 97]{Kelleher2018Data}
+}
+
+\begin{minipage}{0.29\linewidth}
+Commodore C64, price  about \textbf{750 Euro}, CPU < 1 MHz, RAM 64 KByte, i.e., 0,064 MB or 0,000064 GB, Graphics 320 x 200 with 16 colors, no HD but 5,25" floppy disks of 166KByte and a max of 144 files.\\ My main PC today has 4100Mhz at 8 cores and 16 threats with 32GB of RAM and my video card can do 3840 x 2160 at four screens, 1 NVmE of 1 TB, 2 SSD of 500GB each, 2 HD of 4TB each and 3TB in a cloud.
+
+My first external HD in 2002 had 160GB and cost 170 Euro.
+	\end{minipage}	
+\begin{minipage}{0.7\linewidth}
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{../../../pic/C64c_system}
+\end{center}
+	\end{minipage}	
+
+\exex{What is the house of Santa Claus?}{
+	\begin{minipage}{0.7\linewidth}		
+		The house of Santa Claus is an old German drawing game. It goes like this: You have to draw a house in one line where you (a) must start at bottom left (point 1), (b) you are not allowed to lift your pencil while drawing and (c) it is forbidden to repeat a line. During drawing you say: ``Das ist das Haus des Nikolaus''.\\
+		
+		How many ways to fail and succeed, respectively do exist? Can you think of a logical procedure that gives you a complete solution?
+	\end{minipage}	
+	\begin{minipage}{0.29\linewidth}	
+		\includegraphics[width=0.8\linewidth]{../../../pic/jdm/nikolaus}
+	\end{minipage}	
+
+}
+
+\pbn
+\solx{What is the house of Santa Claus?}{
+	\begin{minipage}{0.4\linewidth}		
+		\includegraphics[width=0.4\linewidth]{../../../pic/jdm/nikolaus2}
+		\includegraphics[width=0.5\linewidth]{../../../pic/jdm/nikolaus3}
+	\end{minipage}	
+	\begin{minipage}{0.6\linewidth}	
+		\websmall \url{https://de.wikipedia.org/wiki/Haus_vom_Nikolaus}\\
+		There are 44 solutions and only 10 different ways to fail. Thus, the probability to fail is about 18.5\% and hence the probability to succeed is about 81.5\%.
+		In the course 10 persons participated in the poll. Here are the answers:\\
+		\includegraphics[width=0.8\linewidth]{../../../pic/jdm/nikolaus-poll}\\
+		Nobody came close to the correct probability.		
+	\end{minipage}	
+}
+
+\exex{Hexapawn}{	
+\begin{minipage}{0.2\linewidth}	
+	\includegraphics[width=.9\linewidth]{$HOME/Dropbox/hsf/pic/dsb/Hexapawn}
+		
+\end{minipage}	
+\begin{minipage}{0.8\linewidth}	
+\textbf{Hexapawn} is a simple game with the following rules:
+As in chess, each pawn may be moved in two different ways: it may be moved one square forward, or it may capture a pawn one square diagonally ahead of it. A pawn may not be moved forward if there is a pawn in the next square. Unlike chess, the first move of a pawn may not advance it by two spaces. A player loses if they have no legal moves or the other player reaches the end of the board with a pawn. 
+\abcx{
+\item Play that game with a fellow student.
+\item Think hard: Is there a way how you could improve your winning rate?
+}
+	\end{minipage}	
+}
+
+\pbn
+\solx{Hexapawn}{
+\begin{minipage}{0.5\linewidth}	
+In his article \textbf{How to build a game-learning machine and then teach it to play and to win} \cite{Gardner1962How} discussed how a computer could be taught to play the game Hexapawn using a relatively small number of training matches.  The basic idea was to keep track of the different possible states of the board and the potential for success (i.e., a win) from each state. When a particular move led directly to a loss, the computer \textit{forgot} the move, thereby causing it  to  avoid  that  particular  loss  in  the  future.   By  \textit{pruning} possible  moves  in  this  way,  various intermediate game moves could indirectly lead to losses (i.e., to states that previously resulted in losses), and thus those intermediate moves would be pruned out as well.  This idea is a very simple version of \textit{reinforcement learning} which serves as the basis for today's machine learning gaming systems such as Google's Alpha-Go.
+Gardner's original computer was constructed from matchboxes containing colored beads (this was the 1960's,  remember).  Each bead corresponded to a potential move,  and pruning involved disposing of the last bead played.  
+\end{minipage}	
+\begin{minipage}{0.49\linewidth}	
+%	\includegraphics[width=.4\linewidth]{$HOME/Dropbox/hsf/pic/dsb/gardner_boxes}
+		\includegraphics[width=.99\linewidth]{$HOME/Dropbox/hsf/pic/dsb/matchboxes}
+
+To understand how the game-learning machine works, watch \tv \textit{The Game That Learns} \url{https://youtu.be/sw7UAZNgGg8} or watch \tv \textit{‘Building a MENACE machine’, Matthew Scroggs, University College London} \url{https://youtu.be/hK25eXRaBdc}
+\end{minipage}	
+}
+%\solx{What is the house of Santa Claus?}{
+%
+%%
+%}
+
+\subsection*{Programming skills}
+\begin{center}
+	\includegraphics[width=.45\linewidth]{$HOME/Dropbox/hsf/pic/indeedjobs_png}
+	\includegraphics[page=1, scale=0.2]{$HOME/Dropbox/hsf/lit/R_learn/Grolemund2018R.pdf}
+\end{center}\note{Source: \cite{Muenchen2019Data}}
+
+
+\subsection*{Data science skills are required in many jobs}
+\begin{center}
+	\includegraphics[width=.5\linewidth]{$HOME/Dropbox/hsf/pic/postings_pdf}
+	\includegraphics[page=1, scale=0.2]{$HOME/Dropbox/hsf/lit/R_learn/Provost2013Data.pdf}
+\end{center}	\nocite{Provost2013Data} \nocite{Grolemund2018R}
+
+
+%https://newrelic-wpengine.netdna-ssl.com/wp-content/uploads/shutterstock_155746922_DataNerd.jpg
+
+\subsection*{`Data scientist' is a weakly defined label}
+\textbf{Business analysts\dots}
+\itex{
+	\item \dots also focus on data. 
+	\item \dots rarely use sophisticated methods like machine learning or tools to analyse unstructured data
+	\item \dots analyze data and assesses requirements from a business perspective related to an organization's overall system. 
+	\item \dots are more concerned with the business implications of the data and the actions that should result (investment A vs. B). 
+	\item \dots should leverage the work of data science teams to communicate an answer.}
+
+
+\pbn
+\subsection*{Stereotypes}
+
+\begin{minipage}[t]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{$HOME/Dropbox/hsf/pic/nerdds_pdf}
+	
+	data scientists are nerds
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{$HOME/Dropbox/hsf/pic/nerdbus_pdf}
+	
+	business analysts are networking moneymaker
+\end{minipage}
+
+
+See \websmall \url{http://www.worldofanalytics.be/blog/are-all-data-scientists-nerds} for a funny investigation of this topic.
+
+
+
+\pbn
+\subsection*{Data Science Approach: from prototype to production}
+The goal is to use data in a way which creates value for a business.
+\begin{center}
+	\includegraphics[width=.6\linewidth]{$HOME/Dropbox/hsf/pic/one1_1}
+\end{center}
+
+\note{Source: \url{https://www.onelogic.de/en/data-science-services}}\includegraphics[width=.1\linewidth]{$HOME/Dropbox/hsf/pic/onelogic1}
+
+\pbn
+\subsection*{This lecture}
+The goal is to use data in a way which creates value for a business.
+\begin{center}
+	\includegraphics[width=.6\linewidth]{$HOME/Dropbox/hsf/pic/one1_2}
+\end{center}
+
+\note{Source: \url{https://www.onelogic.de/en/data-science-services}}
+\includegraphics[width=.1\linewidth]{$HOME/Dropbox/hsf/pic/onelogic1}
+
+
+\section{Example: I am too lazy to read the book}
+\begin{center}
+	\citet{Provost2013Data}
+	
+	\includegraphics[page=1, scale=0.45,clip]{/home/sthu/Dropbox/hsf/lit/R_learn/Provost2013Data.pdf}
+\end{center}
+
+\subsubsection{My view as a data scientist on Ch. 1\&2 of \citet{Provost2013Data}}
+
+\begin{center}
+	\includegraphics[width=.5\linewidth]{$HOME/Dropbox/hsf/pic/acloud_ch1+2}\note{Source: own calculations}
+\end{center}
+
+The size of the word represents its frequency in the text, e.g., data was counted about 600 times, mining about 140 times and science about 100 times.
+
+This is a \textbf{wordcloud}. A nice tool to analyze unstructured data such as the text of two chapters. Unstructured data does not have a pre-defined data model or is not organized in a pre-defined manner.
+
+\section{Example: Taxi driver in NY}
+\subsection{Best and worst job}
+	\begin{center}
+\includegraphics[width=.56\linewidth]{$HOME/Dropbox/hsf/pic/ds2}\\
+\includegraphics[width=.56\linewidth]{$HOME/Dropbox/hsf/pic/td}
+	\end{center}
+University Professor is ranked third with the best work environment and less stress, but only a median salary of \$76,000.
+\note{Source: https://www.careercast.com/jobs-rated/2019-jobs-rated-report}
+
+
+\pbn
+\subsection*{Can data science make taxi drivers happier?}
+
+\paragraph{NYC Taxis: A Day in the Life}
+\itex{\item Visit: \websmall \url{http://chriswhong.github.io/nyctaxi/}
+\item This visualization displays the data for one random NYC yellow taxi on a single day in 2013. See where it operated, how much money it made, and how busy it was over 24 hours.
+}
+\boxb{\textbf{Get the data ready} Create a spreadsheet/dataset that contains all the shown information excluding the particular route taken by the taxi driver.
+}
+
+\pbn
+\subsubsection{NYC Taxis: A Day in the Life}
+
+\makebox[\linewidth]{\includegraphics[page=1,width=.7\paperwidth]{$HOME/Dropbox/hsf/pic/nyctaxi1}}
+%		\includegraphics[width=1.1\linewidth]{../pic/nyctaxi1}
+
+\pbn
+\subsubsection{How to create and organize data}
+\boxb{\textbf{Identifying Variables} dr\_id, date, op\_id, trip
+}
+\boxb{\textbf{What is the `Operation ID' and `trip'?} A Taxi can either be full or empty. With each change of this condition the ID must change. For example: A taxi starts empty (ID=1), then, the first passenger is picked up (ID=2), after that, a new trip begins when the taxi is empty again, \dots 
+}
+\boxb{\textbf{Attributes (Informing Variables)} Start-Coordinates (latitude/longitude), End-Coordinates (latitude/longitude), Start-Time, End-Time, Travel-Distance (miles), Fares, Surcharege, MTA Tax, Tips, Tolls, Number of Passengers
+}
+
+
+\subsubsection{Excerpt of the (structured) data:}
+%\begin{table}[]
+\begin{tabularx}{\linewidth}{llCCllCCCC}\toprule
+dr\_id & date       & op\_id & trip &GPS\_1             & GPS\_2               & time\_1 & time\_2 & dist & fares  \\\midrule
+A          & 03-15 & 1  &      1     & 40.7127837 -74.0059414 & {40.7137837 -74.0168515} & 09:00       & 09:10     & 1500     & 9                \\\hline
+A          & 03-15 & 2 &        1    & 40.7137837 -74.0168515 & 40.7149827 -74.0157314 & 09:10       & 09:12     & 200      & 19                   \\\hline
+A          & 03-15 & 1 &    2        & 40.7149827 -74.0157314 & 40.9137837 -74.0168517 & 09:12       & 09:55     & 35000    & 19 \\\hline
+\dots         & \dots& \dots&\dots         & \dots&\dots         & \dots&\dots  &\dots  &\dots     \\\bottomrule
+\end{tabularx}
+
+\textbf{Please note:} This exemplary table is incomplete. In particular, the route of the trip is excluded. Real time travel information has a high granularity, i.e., tracking the taxi over time is more data intensive and the analysis is a real challenge.
+
+\pbn
+\subsubsection*{Are these sort of data `big data'?} 
+For example, the T-Drive trajectory dataset of \cite{Zheng2011T} contains a one-week trajectories of 10,357 taxis. The total number of points in this dataset is about 15 million and the total distance of the trajectories reaches 9 million kilometers.
+
+\pbn
+\exex{What can data scientists do for taxi drivers?}{
+Maybe a driver wants
+\itex{
+\item more profit (fare-costs+tips)
+\item more tips 
+\item less time being `empty' and driving around searching 
+\item to know fuel saving-routes 
+\item to work in areas with less stressful traffic (How to avoid Manhattan?)
+\item to start at the optimal place and time 
+\item to know when and where to rest without loosing much
+\item ...
+
+Discuss how data scientist may help.
+}
+}
+
+\pbn
+\exex{Helping Luigi}{
+Suppose you are consulting the delivery service of Luigi's Pizza restaurant. So far, Luigi’s advertised his service in local television. Now, he commissioned you to use his database for targeted advertising. In particular, he wants find one district to start a poster advertising campaign.
+
+Luigi gives you a large dataset with information on all 13,810 deliveries of the year 2018. Here is an excerpt of the first seven orders:
+
+\includegraphics[width=.8\linewidth]{$HOME/Dropbox/hsf/pic/dsb/luigi_data}
+
+
+Legend:\\
+Order: Number of order (from 1 to 13,810).\\
+Time: Time of order (24-hour clock).\\
+Meal: Component of the orders. Overall, Luigi offers 100 meals (from 1 to 100).\\
+Price: Total Price of order measured in Euro. Luigi does not charge delivery costs.\\
+Address: Street name and number. All addresses are in the same city.\\
+District: The city consists of four districts (A, B, C, D). All have about the same size.\\
+Time to deliver: The time measured in minutes that it takes to drive the food to the customer.\bigskip
+
+
+\abcx{
+	\item Explain the structure of the dataset. In particular, name the variables that identify the dataset.
+\item Suppose you are a data scientist. Name the services you can provide to Luigi.
+\item You know little about the effectiveness of poster advertising and Luigi’s goals. Thus, in order to make the poster advertising campaign a success. You probably need more information. Luigi is well informed and open for your questions. Name four reasonable and concrete questions that you like to ask Luigi.
+\item Luigi heart about the wordclouds and he thinks it is a modern tool that can help him. Explain Luigi what a wordcloud actually is and comment if it could really help him, or not.
+}
+}
+
+\pbn
+\solx{Helping Luigi}{
+	\abcx{
+\item This is a structured dataset. The identifying variable is \textbf{Order}.	
+\item I can manipulate, visualize, and analyze the dataset for him. If necessary, I can collect and merge additional datasets to complement his information. Doing so, I can discover useful information to support his decision making. At best, I can help to understand and optimize his processes and to open up new product areas and/or lines of business. 
+\item 
+Possible answer:
+\itex{
+	\item What do you like to improve and maximize, respectively.
+\item  Do you like to maximize volume of sales?
+\item  Do you like to maximize the profit?
+\item  If you like to maximize the profit, can you give information about the profit/contribution margin for each meal?
+\item  What are the average costs for a driver per minute?
+\item  Can you give me your address? I need it to calculate the travel distances between your restaurant and the address of the customer.
+\item Do you think that a poster campaign help to attract new customers or increase the order frequency?
+}
+\item A wordcloud is a tool to visualize unstructured dataset. Mostly, it is used to identify the importance of specific words in a text. Luigi’s dataset only contains numeric variables with the addresses being the exception. Although a wordcloud could be used to visualize the popularity of meals or the frequency of orderings from particular districts, for example, it is probably better to do that in tables that show the frequency of occurrence for each meal and the number of orders by district.
+}
+}
+
+\exex{AlphaGo}{
+Watch \tv \textit{AlphaGo - The Movie | Full award-winning documentary} \url{https://youtu.be/WXuK6gekU1Y}
+}
