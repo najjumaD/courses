@@ -32,6 +32,9 @@ slope  <- model$coefficients[2]
 interw <- model$coefficients[1]+model$coefficients[3] 
 
 ## ---- echo=TRUE---------------------------------------------------------------
+summary(model)
+
+## ---- echo=TRUE---------------------------------------------------------------
 ggplot(classdata, aes(x=height, y=weight, shape = sex)) +
   geom_point() +
   geom_abline(slope = slope, intercept = interw, linetype = 2, size=1.5)+
@@ -52,18 +55,15 @@ ggplot(classdata, aes(x=height, y=weight, shape = sex)) +
   geom_point( aes(size = siblings)) 
 
 
-## ---- echo=FALSE--------------------------------------------------------------
+## ---- echo=TRUE---------------------------------------------------------------
 ## baseline model
 model  <- lm(weight ~ height + sex , data = classdata )
-interw <- model$coefficients[1]+model$coefficients[3] 
-interm <- model$coefficients[1] 
-slope  <- model$coefficients[2]
 
 ggplot(classdata, aes(x=height, y=weight, shape = sex)) +
   geom_point( aes(size = 2)) +
   stat_smooth(formula = y ~ x,  
               method = "lm", 
-              se = FALSE, 
+              se = T, 
               colour = "red", 
               linetype = 1)
 
