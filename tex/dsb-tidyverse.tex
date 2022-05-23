@@ -1,12 +1,22 @@
-\chapter{The tidyverse universe}\label{ch:tidyverse}\label{sec:tidyverse}
+\chapter{The tidyverse universe}\label{ch:tidyverse}
 
-
+\section{Introduction}
+\boxx{
+	Required reading:
+	\itex{
+		\item \citet[ch. 2]{Grolemund2018R}. See:  \url{https://r4ds.had.co.nz/workflow-basics.html}`
+	}
+Required exercise: 
+	\itex{
+		\item My swirl learning module `tidyverse'. See \pageref{exe:swirl-tidyverse}.
+}
+}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{../../../pic/Rstudio/tidyverse}
 	\caption{The tidyverse universe}
-	\label{fig:tidyverse}
+	\label{fig:tidyverseuniverse}
 \end{figure}
 
 If you want to work with \R, I guess you should get known to the \rtext{tidyverse} package. 
@@ -22,11 +32,21 @@ Install the complete tidyverse with:
 See how the tidyverse makes data science faster, easier and more fun with the book \textit{R for Data Science} from \cite{Grolemund2018R}. Read it online, buy the book or try another resource from the community, see e.g.: \websmall\url{www.tidyverse.org}.
 On YouTube you find tons of material that exemplifies how to use \R. 
 
+\section{The pipe operator}
+\boxx{
+	Required exercise: 
+	\itex{
+		\item Exercise `The pipe operator and others' on \autoref{app:pipe}. Also see  \url{https://github.com/hubchev/courses/blob/main/rmd/pipe-operator.Rmd}.
+	}
+}
 
 \section{Data manipulation with \rtext{dplyr}}
 
 \boxx{
-Required reading \citet[ch. 3]{Grolemund2018R}. See:  \url{https://r4ds.had.co.nz/transform.html}
+	Required reading:
+	\itex{
+		\item \citet[ch. 3]{Grolemund2018R}. See:  \url{https://r4ds.had.co.nz/transform.html}
+	}
 }
 
 \citet[ch. 3]{Grolemund2018R} is about the five key dplyr functions who allow you to solve the vast majority of your data-manipulationchallenges:
@@ -45,160 +65,30 @@ All functions work similarly:
 \enux{
 	\item The first argument is a data frame.
 	\item The subsequent arguments describe what to do with the data
-frame, using the variable names (without quotes).
+frame.
 	\item The result is a new data frame.
 }
 
 
-\subsection*{Exercise: Swirl module about tidyverse}
-I wrote a short swirl module which you can find on my github page. To install it type 
-\begin{rblock1}
-	library("swirl)
-	install_course_github("hubchev", "swirl-it")
-	swirl()
-\end{rblock1}
-Then you should choose the course "swirl-it" and the learning module "huber-tidyverse".\footnote{If the course has failed to install, you can try to download the file \texttt{swirl-it.swc} from \url{https://github.com/hubchev/swirl-it} and install the course with \rtext{install\_course()}.}
+\section{Using graphs and visualizing data}\label{ch:graphs}
 
-Here is a transcript of the swirl learning module:
+\boxx{
+	Required readings: 
+	\itex{
+		\item \textit{Using Graphs and Visualising Data} by Oliver \cite{Kirchkamp2018Using}: \url{https://www.kirchkamp.de/oekonometrie/pdf/gra-p.pdf}
+		\item \citet[ch. 1]{Grolemund2018R}: \textit{Data Visualization with ggplot2}, See: \url{https://r4ds.had.co.nz/data-visualisation.html}
+	}
+	Required exercises:
+	\itex{
+		\item The \textit{Convergence} exercise found in \autoref{sec:convergence} and here: \url{https://github.com/hubchev/courses/blob/main/scr/convergence.R}
+		\item The \textit{Regression analysis presentation} that can be found in the Appendix of these notes on pages \pageref{sec:regress_lecture}f and here: \url{https://htmlpreview.github.io/?https://github.com/hubchev/courses/blob/main/rmd/regress_lecture.html}
+	}
+}
 
-This lesson should help you to understand why the ‘tidyverse’ world is interesting. Working with R is easier with tidyverse!
-
-The tidyverse is an collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
-
-Developed by RStudio's chief scientist Hadley Wickham, tidyverse provides an efficient, fast, and well-documented workflow for general data modeling, wrangling, and visualization tasks.
-
-Open the tidyverse website and see what all is involved. \url{www.tidyverse.org/packages/}
-
-The tidyverse introduces a set of useful data analysis packages to help streamline your work in R. In particular, the Tidyverse was designed to address the top three common issues that arise when dealing with data analysis in R functions.
-
-Results obtained from a base R function often depend on the type of data being used.
-
-When R expressions are used in a non-standard way, they can confuse beginners.
-
-Hidden arguments often have various default operations that beginners are unaware of.
-
-I would like to briefly introduce you to the most important packages
-
-dplyr is actually not only a pliers, but a whole toolbox of functions to manipulate the dataset the way we need it. No, this is not about p-hacking or faking results! It’s about data manipulation and accesses, calculating new variables, looking only at certain subsets of data… so the basics before we can start with a meaningful data analysis.
-
-tidyr helps us to get a ‘clean’ dataset. That means a well structured dataset where we can find everything well. Also it helps us to create two different types of data formats (wide and long). Some functions in R like to be fed with a wide data set, others with the long format.
-
-Hadley Wickham is the main developer of the whole tidyverse and the chief researcher of RStudio. His book ‘R for Data Science’ is great. Please give chapter 3 ‘Data visualisation’ a reading after you have finished this swirl lesson (\url{https://r4ds.had.co.nz/data-visualisation.html})
-
-Another package is tibble. It is the name of the package, but also of the data structure that can be created with it. Basically, a tibble is a data frame. However, a tibble doesn’t do weird conversions and gives more error messages when something goes wrong. That means less weird things happen automatically and there is more information about where problems come from.
-
-Read chapter 4 ‘Workflow basics’ of the book ‘R for Data Science’ now. Here you can review what you already know, but also learn a few new aspects. (It’s not very long). (\url{https://r4ds.had.co.nz/workflow-basics.html})
-
-I am serious. Read it now!
-
-And don’t forget the exercises of chapter 4. Try them now!
-
-If you struggle with some exercises in the book ‘R for Data Science’ you can look at the book ‘R for Data Science. Exercise Solutions’ by Jeffrey B. Arnold. This nice guy solved everything. (\url{https://jrnold.github.io/r4ds-exercise-solutions/})
-
-An important tool is the so called ‘pipe’. It comes from the package ‘magrittr’ and is automatically loaded by packages from the tidyvers. So it is always automatically available to you as well.
-
-At the beginning of this lesson, tidyverse was already loaded. (If it was not already installed, Swirl asked you if it should be installed). You can also load tidyverse manually with ‘library(tidyverse)’.
-
-Now what is this ‘pipe’? The pipe looks like this \rtext{\%>\%}.
-	 The key combination CTRL + SHIFT + M (CMD + SHIFT + M for OSX) creates the pipe for you. There are also special pipes, but we are not interested in them for now.
-
-How does this help us? Pipe allows us to write our R code in a form that is much easier to read and understand.
-
-Let’s look at an example. Let us load the data set ‘dataset’. This data should already be loaded in your environment. I am now, for some reason, interested in the median income. However, only from people who have job 1 and have more than two friends. Feel free to look at the dataset again so you know what it’s about. Do you remember how to do this?
-
-Let’s print first 10 rows of the data set ‘dataset’ by typing \rtext{head(dataset, n=10)}
-
-\begin{rblock1}
-head(dataset, n=10)
-
-##      name birth_date job friends alcohol income neurotic
-## 1     Ben   7/3/1977   1       5      10  20000       10
-## 2  Martin  5/24/1969   1       2      15  40000       17
-## 3    Andy  6/21/1973   1       0      20  35000       14
-## 4    Paul  7/16/1970   1       4       5  22000       13
-## 5  Graham 10/10/1949   1       1      30  50000       21
-## 6  Carina  11/5/1983   2      10      25   5000        7
-## 7  Karina  10/8/1987   2      12      20    100       13
-## 8    Doug  1/23/1989   2      15      16   3000        9
-## 9    Mark  5/20/1973   2      12      17  10000       14
-## 10    Zoe 11/12/1984   2      17      18     10       13
-\end{rblock1}
-	
-One possibility would be this code \rtext{mean(dataset[dataset\$job==1 \& dataset\$friends >2, c('income')])}. Don’t be scared! We’ll go through everything step by step. Copy this code into the console and run it.
-
-\begin{rblock1}
-mean(dataset[dataset$job==1 & dataset$friends >2, c('income')])
-
-## [1] 21000
-\end{rblock1}
-
-We have a nesting of functions here. We have to work our way from the inside to the outside. So let us look at this part \rtext{dataset[datasetjob==1 \& dataset}
-
-\begin{rblock1}
-friends >2, c(’income’)]
-\end{rblock1}
-
-We access the dataset and make a data access (i.e. we use square brackets [ ]).
-
-Do you know how the access works? It works like this \rtext{data [rows, columns]}. Each row contains the data for one person. We want only the rows, or only the people who have job 1. So the column job in the dataset should have the value 1 \rtext{dataset\$job==1}.Furthermore the column friends should be greater than two and \rtext{dataset\$friends > 2}.
-
-If we would now type \rtext{dataset[dataset\$job == 1 \& dataset\$friends > 2,]} R will give us all rows where this is true. In addition, R outputs all columns to us. We have not told it anything else.
-
-However, we are only interested in the values of the income column. Therefore we type \rtext{dataset[dataset\$job == 1 \& dataset\$friends > 2, c(’income’)]}
-
-Note, we would not necessarily need to write c() around ‘income’. R only accepts one specification for the columns to be displayed. Here we want only one column and have no problem. However, if we want income and neuroticism to be displayed, we can’t(!) just write \rtext{dataset[... , ‘income’, ‘neuroticism’]}.
-%
-So we would have to use \rtext{dataset[... , c(‘income’, ‘neuroticism’)]}. c() creates a vector with the two elements. Thus, it is only one element for R and R knows what to do.
-
-Let us illustrate this again with another example. We will now use the function mean(). Type ?mean to get information about the function. (We use the function from the ‘base’ package, which is always available to us).
-
-\begin{rblock1}
-	?mean
-\end{rblock1}
-
-You should now see the help for the mean function at the bottom right. We need to pass an object x to the function. We can use comma to give the function more arguments ‘trim’ and ‘na.rm’
-
-Now type ‘mean(10,20,30)’
-
-\begin{rblock1}
-mean(10,20,30)
-
-## [1] 10
-\end{rblock1}
-	
-R interprets 10 as the object x. R interprets 20 and 30 as further arguments of the function that do something. But we wanted to have the mean value of 10,20,30.
-
-Now type ‘mean(c(10,20,30))’. We now give the function mean a vector with the numbers 10, 20 and 30. The whole vector is now understood as the object x of the function, with the contents 10, 20 and 30. Now we also get the correct result - yay! Try it out.
-
-\begin{rblock1}
-mean(c(10,20,30))
-
-## [1] 20
-\end{rblock1}
-
-The important point here is that R can only know what to do if we ‘feed’ it correctly. If a command does not work, we can troubleshoot here.
-
-But now back to the pipe... We used \rtext{dataset[dataset\$job == 1 \& dataset\$friends > 2, c(‘income’)]} to select the income of all people who have job 1 and have more than two friends. The results are output to us in a vector.
-
-Around this result we now build the function mean(). Now we have completely understood the code from before. But hand on heart, it was quite a way to get there…
-
-Now we will do exactly the same only with the pipe and functions from dplyr.
-
-Run this code \rtext{dataset \%>\% filter(job==1, friends >2) \%>\% summarise(mean(income))}
-
-\begin{rblock1}
-dataset \%>\% filter(job==1, friends >2) \%>\% summarise(mean(income))
-
-##   mean(income)
-## 1        21000
-\end{rblock1}
-	
-As you can see, the result is the same as before. Look at the code \rtext{dataset \%>\% filter(job==1, friends >2) \%>\% summarise(mean(income))}. Can you imagine what the code does? Do you find it easier to read?
-
-First, we tell R what data we are talking about ‘dataset’. Now we ‘move the pipe’. We pass the dataset to the next step. With the function filter() we now pick out only the cases where the job is 1 and there are more than two friends. We pass the result to the next function. With summarise() we can request a summary. i.e., we would like to have the mean value of the income.
-
-So with the pipe we can reach our goal step by step. The intermediate steps are automatically passed on to the next step.
-
-So the pipe can help us. But it is also not a universal remedy. When we create very long concatenations, it becomes harder and harder to find errors. Sometimes it is also useful to save or at least view the intermediate results.
-
-I hope that you did not get confused, but realized that the Pipe can be very useful. If you got a small overview here and an idea of what all this is useful for you, then you have already learned more than enough in this lesson. But you can also read chapter 18 of the book ‘R for data science’. Time for a break!
+\exex{What makes a graph ugly?}{
+	Discuss what are the features of a good and bad graphical visualization of data. What do you think about the following graph?
+	% TODO: \usepackage{graphicx} required
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{../../../pic/worst95}
+	\end{center}
+}
