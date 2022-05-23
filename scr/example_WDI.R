@@ -1,6 +1,6 @@
 
 install.packages('WDI')
-
+?WDI
 library(WDI)
 WDIsearch('gdp')[1:10,]
 dat = WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
