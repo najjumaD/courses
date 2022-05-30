@@ -2,8 +2,7 @@
 setwd("/home/sthu/Dropbox/hsf/22-ss/dsb_bac/work/")
 rm(list=ls())
 library(tidyverse)
-classdata <- read_csv("https://raw.githubusercontent.com/hubchev/courses/main/dta/classdata.csv")
-classdata %>%
+  read_csv("https://raw.githubusercontent.com/hubchev/courses/main/dta/classdata.csv") %>%
   select(sex,weight,height,siblings) %>% 
   ggpairs(.,
           title = "Graphical Visualization of Our Survey in a Matrix: An Example", 

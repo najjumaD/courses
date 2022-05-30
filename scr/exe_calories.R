@@ -31,7 +31,11 @@ summary(df)
 # 8
 df  %>%
   group_by(sex) %>%
-  summarise(mcal = mean(calories), sdcal = sd(calories), mweight = mean(weight), sdweight = sd(weight))
+  summarise(mcal = mean(calories), 
+            sdcal = sd(calories), 
+            mweight = mean(weight), 
+            sdweight = sd(weight)
+            )
  
 # 9
 # discussed in class
@@ -64,7 +68,7 @@ reg_base <- lm(weight ~ calories, data = df)
 summary(reg_base)
 
 # 15
-# 1) A 100 increase in calories (taken on average on a daily basis) is associated 
+# 1) An increase of 100 calories (taken on average on a daily basis) is associated 
 # - on average and ceteris paribus - with 2.69 more of kg the participants are 
 # pretended to weight.   
 # 2) The estimated coefficient $beta_1$ is statistically significantly different to zero

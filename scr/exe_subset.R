@@ -22,31 +22,31 @@ dim(cars)
 
 # Alternative
 ncol(cars)
-ncol(cars)
+nrow(cars)
 
 # 6
-cars = rename(cars, MPG = mpg)
+cars <- rename(cars, MPG = mpg)
 
 # 7
-cars = rename_all(cars, toupper)
+cars <- rename_all(cars, toupper)
 
 # 8
-cars = rownames_to_column(mtcars, var = "car")
+cars <- rownames_to_column(mtcars, var = "car")
 
 # 9
-pvars = select(cars, car, ends_with("p"))
+pvars <- select(cars, car, ends_with("p"))
 
 # 10
-carsSub = select(cars, car, wt, qsec, hp)
+carsSub <- select(cars, car, wt, qsec, hp)
 
 # 11
 dim(carsSub)
 
 # 12
-carsSub = rename_all(carsSub, toupper)
+carsSub <- rename_all(carsSub, toupper)
 
 # 13
-cars_mpg = filter(cars, mpg > 20)
+cars_mpg <- filter(cars, mpg > 20)
 dim(cars_mpg)
 
 #14
@@ -54,18 +54,19 @@ filter(cars, mpg < 16 & hp > 100) %>%
   nrow()
 
 # 15
-carsSub = filter(cars, cyl == 8) 
-carsSub = select(carsSub, wt, qsec, hp, car)
+carsSub <- filter(cars, cyl == 8) 
+carsSub <- select(carsSub, wt, qsec, hp, car)
 dim(carsSub)
 
 # 16
 # Alternative with pipe operator:
-carsSub = cars %>%
+carsSub <- cars %>%
   filter(cyl == 8) %>%
   select(wt, qsec, hp, car)
 
 # 17
-carsSub = arrange(carsSub, wt)
+carsSub <- arrange(carsSub, wt)
 
 # 18
-carsSub %>% mutate(wt2 = wt^2)
+carsSub %>% 
+  mutate(wt2 = wt^2)
