@@ -49,17 +49,19 @@ On YouTube you find tons of material that exemplifies how to use \R.
 	}
 }
 
-\citet[ch. 3]{Grolemund2018R} is about the five key dplyr functions who allow you to solve the vast majority of your data-manipulationchallenges:
+\citet[ch. 3]{Grolemund2018R} is about the five key dplyr functions who allow you to solve the vast majority of your data-manipulation
+challenges:
 \itex{
 	\item Pick observations by their values (\rtext{filter()}).
 	\item Reorder the rows (\rtext{arrange()}).
 	\item Pick variables by their names (\rtext{select()}).
 	\item Create new variables with functions of existing variables
 (\rtext{mutate()}).
-	\item Collapse many values down to a single summary (\rtext{summarize()}).
+	\item Collapse many values down to a single summary (\rtext{summarise()}).
 }
 These functions can all be used in conjunction with \rtext{group\_by()} , which
-changes the scope of each function from operating on the entiredataset to operating on it group-by-group. 
+changes the scope of each function from operating on the entire
+dataset to operating on it group-by-group. 
 
 All functions work similarly:
 \enux{
@@ -69,26 +71,17 @@ frame.
 	\item The result is a new data frame.
 }
 
+\exex{dplyr cheatsheets}{
+	Here \url{https://www.rstudio.com/resources/cheatsheets/} you find some cheatsheets on the \texttt{dplyr} package. Assign the following graphical sketches to one of the four functions mentioned above that are part of the \texttt{dplyr} package.
+	
+\includegraphics[width=.18\linewidth]{$HOME/Dropbox/hsf/pic/dsb/arrange.png}
 
-\section{Using graphs and visualizing data}\label{ch:graphs}
+\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/mutate.png}
 
-\boxx{
-	Required readings: 
-	\itex{
-		\item \textit{Using Graphs and Visualising Data} by Oliver \cite{Kirchkamp2018Using}: \url{https://www.kirchkamp.de/oekonometrie/pdf/gra-p.pdf}
-		\item \citet[ch. 1]{Grolemund2018R}: \textit{Data Visualization with ggplot2}, See: \url{https://r4ds.had.co.nz/data-visualisation.html}
-	}
-	Required exercises:
-	\itex{
-		\item The \textit{Convergence} exercise found in \autoref{sec:convergence} and here: \url{https://github.com/hubchev/courses/blob/main/scr/convergence.R}
-		\item The \textit{Regression analysis presentation} that can be found in the Appendix of these notes on pages \pageref{sec:regress_lecture}f and here: \url{https://htmlpreview.github.io/?https://github.com/hubchev/courses/blob/main/rmd/regress_lecture.html}
-	}
-}
+\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/select.png}
 
-\exex{What makes a graph ugly?}{
-	Discuss what are the features of a good and bad graphical visualization of data. What do you think about the following graph?
-	% TODO: \usepackage{graphicx} required
-	\begin{center}
-		\includegraphics[width=0.7\linewidth]{../../../pic/worst95}
-	\end{center}
+\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/filter.png}
+
+\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/summarise.png}
+
 }
