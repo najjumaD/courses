@@ -36,7 +36,7 @@ On YouTube you find tons of material that exemplifies how to use \R.
 \boxx{
 	Required exercise: 
 	\itex{
-		\item Exercise `The pipe operator and others' on \autoref{app:pipe}. Also see  \url{https://github.com/hubchev/courses/blob/main/rmd/pipe-operator.Rmd}.
+		\item Exercise `The pipe operator and others' on \autoref{app:pipe}. Also see  \url{https://htmlpreview.github.io/?https://github.com/hubchev/courses/blob/main/rmd/pipe-operator.html}.
 	}
 }
 
@@ -74,16 +74,43 @@ frame.
 \exex{dplyr cheatsheets}{
 	Here \url{https://www.rstudio.com/resources/cheatsheets/} you find some cheatsheets on the \texttt{dplyr} package. Assign the following graphical sketches to one of the four functions mentioned above that are part of the \texttt{dplyr} package.
 	
-\includegraphics[width=.18\linewidth]{$HOME/Dropbox/hsf/pic/dsb/arrange.png}
+\includegraphics[width=.18\linewidth]{/home/sthu/Dropbox/hsf/pic/dsb/arrange.png}
 
-\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/mutate.png}
+\includegraphics[width=.2\linewidth]{/home/sthu/Dropbox/hsf/pic/dsb/mutate.png}
 
-\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/select.png}
+\includegraphics[width=.2\linewidth]{/home/sthu/Dropbox/hsf/pic/dsb/select.png}
 
-\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/filter.png}
+\includegraphics[width=.2\linewidth]{/home/sthu/Dropbox/hsf/pic/dsb/filter.png}
 
-\includegraphics[width=.2\linewidth]{$HOME/Dropbox/hsf/pic/dsb/summarise.png}
+\includegraphics[width=.2\linewidth]{/home/sthu/Dropbox/hsf/pic/dsb/summarise.png}
 
 }
 
 
+\exex{Subsetting}{
+	\enux{
+		\item Load the following packages: \rtext{tidyverse}, \rtext{dplyr}, and \rtext{tibble}.
+		\item Check to see if you have the \rtext{mtcars} dataset by entering the command \rtext{mtcars}.
+		\item Save the \rtext{mtcars} dataset in an object named \rtext{cars}.
+		\item What class is \rtext{cars}?
+		\item How many observations (rows) and variables (columns) are in the mtcars dataset?
+		\item Rename mpg in cars to \rtext{MPG}. Use \rtext{rename()}.
+		\item Convert the column names of cars to all upper case. Use \rtext{rename\_all}, and the \rtext{toupper} command.
+		\item Convert the rownames of \rtext{cars} to a column called \rtext{car} using \rtext{rownames\_to\_column}. 
+		\item Subset the columns from \rtext{cars} that end in "\rtext{p}" and call it \rtext{pvars} using \rtext{ends\_with()}.
+		\item Create a subset cars that only contains the columns: \rtext{wt}, \rtext{qsec}, and \rtext{hp} and assign this object to \rtext{carsSub}.  (Use \rtext{select()}.)
+		\item What are the dimensions of \rtext{carsSub}? (Use \rtext{dim()}.)
+		\item Convert the column names of \rtext{carsSub} to all upper case. Use \rtext{rename\_all()}, and \rtext{toupper()} (or \rtext{colnames()}).
+		\item Subset the rows of cars that get more than 20 miles per gallon (\rtext{mpg}) of fuel efficiency. How many are there? (Use \rtext{filter()}.)
+		\item Subset the rows that get less than 16 miles per gallon (\rtext{mpg}) of fuel efficiency and have more than 100 horsepower (\rtext{hp}). How many are there? (Use \rtext{filter()} and the pipe operator.)
+		\item Create a subset of the cars data that only contains the columns: \rtext{wt}, \rtext{qsec}, and \rtext{hp} for cars with 8 cylinders (\rtext{cyl}) and reassign this object to \rtext{carsSub}. What are the dimensions of this dataset? Don't use the pipe operator.
+		\item Create a subset of the cars data that only contains the columns: \rtext{wt}, \rtext{qsec}, and \rtext{hp} for cars with 8 cylinders (\rtext{cyl}) and reassign this object to \rtext{carsSub2}. Use the pipe operator.
+		\item Re-order the rows of \rtext{carsSub} by weight (\rtext{wt}) in increasing order. (Use \rtext{arrange()}.)
+		\item Create a new variable in carsSub called wt2, which is equal to $wt^2$, using \rtext{mutate()} and piping \rtext{\%>\%}.
+	}
+	
+	\boxx{
+		Please find solutions here: 
+		\url{https://raw.githubusercontent.com/hubchev/courses/main/scr/exe_subset.R}
+	}
+}
