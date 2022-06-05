@@ -3,6 +3,8 @@
 # Nevertheless, you should use the time to prepare for the exam. In the 
 # following I will give you some tasks and hints what you should study and 
 # repeat, respectively.
+# I will review these exercises next week. However, try to work on them as good
+# as possible given the time you have.
 ################################################################################
 
 # ==============================================================================
@@ -156,64 +158,48 @@ ggplot(data = mpg) +
 # ______________________________________________________________________________
 
 
+
 # ==============================================================================
-# 5.
-# Solve the exercise "Convergence" that you also find in the lecture notes.
+# 5. 
+# Read Wickham and Grolemund (2018, ch. "Data transformation") 
+# See: https://r4ds.had.co.nz/transform.html
+# Answer the question (1) of exercise 5.2.4 of Wickham and Grolemund (2018)
+# See: 
+# https://r4ds.had.co.nz/transform.html#exercises-8
 # 
-# The dataset convergence.dta, see  
-# https://github.com/hubchev/courses/blob/main/dta/convergence.dta, contains the
-# per capita GDP of 1960 (gdppc60) and the average growth rate of GDP per capita 
-# between 1960 and 1995 (growth) for different countries (country), as well as 3 
-# dummy variables indicating the belonging of a country to the region Asia 
-# (asia), Western Europe (weurope) or Africa (africa). 
+# Solutions can be found here:
+# https://jrnold.github.io/r4ds-exercise-solutions/transform.html
+# !!! For your own benefit: try to come up with the solution yourself. 
 
 # ===
-# Some countries are not assigned to a certain country group. Name the countries
-# which are assign to be part of Western Europe, Africa or Asia. If you find 
-# countries that are members of the EU, assign them a '1' in the variable 
-# weurope.
+# Find all flights that
 
 
 # ===
-# Create a table that shows the average GDP per capita for all available points 
-# in time. Group by Western European, Asian, African, and the remaining 
-# countries.
+# Had an arrival delay of two or more hours
 
 
 # ===
-# Create the growth rate of GDP per capita from 1960 to 1995 and call it 
-# gdpgrowth. (Note: The log value X minus the log value X of the previous period 
-# is approximately equal to the growth rate).
+# Flew to Houston (IAH or HOU)
 
 
 # ===
-# Calculate the unconditional convergence of all countries by constructing a 
-# graph in which a scatterplot shows the GDP per capita growth rate between 1960
-# and 1995 (gdpgrowth) on the y-axis and the 1960 GDP per capita (gdppc60) on 
-# the x-axis. Add to the same graph the estimated linear relationship. You do 
-# not need to label the graph further, just two things: title the graph `world' 
-# and label the individual observations with the country names.
+# Were operated by United, American, or Delta
 
 
 # ===
-# Create three graphs describing the same relationship for the sample of Western
-# European, African and Asian countries. Title the graph accordingly with 
-# `weurope', `africa' and `asia'. 
+# Departed in summer (July, August, and September)
 
 
 # ===
-# Combine the 4 graphs into one image. Discuss how an upward or downward sloping
-# regression line can be interpreted.
+# Arrived more than two hours late, but didn’t leave late
 
 
 # ===
-# Estimate the relationships illustrated in the 4 graphs using the least squares
-# method. Present the 4 estimation results in a table, indicating the 
-# significance level with stars. In addition, the Akaike information criterion, 
-# and the number of observations should be displayed in the table. Interpret the
-# four estimation results regarding their significance. 
-	
+# Were delayed by at least an hour, but made up over 30 minutes in flight
+
 
 # ===
-# Put the data set into the so-called \textit{long format} and calculate the GDP
-# per capita growth rates for the available time points in the countries.
+# Departed between midnight and 6 am (inclusive)
+
+# ______________________________________________________________________________
