@@ -1,0 +1,223 @@
+
+%\twocolumn
+
+\section*{Exam appendix --- Rules of Algebra}
+%Let $a$, $b$, $c$, and $d$ be any real numbers. \pbn
+
+\subsubsection*{Basic Arithmetic}
+\begin{minipage}{0.5\textwidth}
+	\abcx{\setlength{\itemsep}{6pt}
+		\item $a + b = b + a$
+		\item 	$( a+b ) +c = a+ ( b+c )$
+		\item $	a + 0 = a$
+		\item $	a + ( -a ) = 0$
+		\item $	ab = ba$
+		\item $	( ab ) c = a ( bc )$
+		\item $1\cdot a = a$
+		\item $aa^{-1} = 1$, for $a\neq 0$
+		\item $	(- a ) b = a ( -b ) = -ab$
+		\item $	( -a )( -b ) = ab$
+		\item $	a ( b + c ) = ab + ac$
+		\item $	( a + b ) c = ac + bc$
+		%\itex{
+		\item $( a + b )^2 = a^2 + 2ab + b^2$
+		\item $( a -b )^2 = a^2- 2ab + b^2$
+		\item $( a + b ) ( a -b ) = a^2- b^2 $
+	}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	
+	\subsubsection*{Rules for Fractions}
+	\abcx{\setlength{\itemsep}{6pt}
+		\item $\frac{a}{b}+\frac{a}{d}=\frac{ad+bc}{bd}$
+		\item $\frac{a}{b}\cdot \frac{c}{d} = \frac{ac}{bd}$
+		\item $\frac{a}{b}:\frac{c}{d}=\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a}{b}\cdot \frac{d}{c}=\frac{ad}{bc}$
+		\item $\frac{a}{b}\cdot \frac{c}{c}=\frac{ac}{bc}$
+	}
+					\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	\subsubsection*{Rules for Powers}
+	\abcx{\setlength{\itemsep}{6pt}
+		\item $x^0=1$
+		\item $x^a\cdot x^b=x^{a+b}$
+		\item $\frac{x^a}{x^b}=x^{a-b}$
+		\item $x^a\cdot y^a=(x\cdot y)^a$
+		\item $\left(\frac{x}{y}\right)^a=\frac{x^a}{y^a}$
+		\item $(x^a)^b=x^{a\cdot b}$
+		\item $x^a\cdot y^b=z^c \Leftrightarrow x^{\frac{a}{c}}\cdot y^{\frac{b}{c}}=z$
+	}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+
+\subsubsection*{Rules for Roots}
+
+\abcx{\setlength{\itemsep}{6pt}
+	\item $a^{\frac{1}{2}}=\sqrt{a}$ 
+	\item $\sqrt[n]{a}=a^{\frac{1}{n}}$ (valid if $a\geq 0$) 
+	\item $a^{\frac{m}{n}}=\sqrt[n]{a^m}$
+	\item $\frac{1}{\sqrt[n]{a^m}}=a^{-\frac{m}{n}}$
+	\item $\sqrt{ab}=\sqrt{a}\sqrt{b}$
+	\item $\sqrt{a+b}\neq \sqrt{a}+\sqrt{b}$	
+	\item $\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}$
+}
+\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+
+\subsubsection*{Rules for Quadratic Function}
+
+\itex{
+	\item The \textbf{roots} of a quadratic function, i.e. $ax^2+bx+c=0$, are defined by the formula $$x_{1,2}= \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ if  $b^2 - 4ac \geq 0$.
+	\item Factorization of a  quadratic function also gives us the roots:$$ax^2+bx+c=a(x-x_1)(x-x_2)$$
+%	\textbf{Example:} $$G(x)=-3x^2+90x-375= -3(x-5)(x-25)$$
+}
+%\end{minipage}
+
+%\onecolumn
+
+\pbn
+\subsubsection*{Rules of Differentiation}
+
+\begin{align*}
+	\text{Rule 1:}\quad	f(x)&=A \\
+	\Rightarrow  f^{\prime}(x)&=0\\
+	\text{Rule 2:}\quad	f(x)&=A+g(x)  \\
+	\Rightarrow  f^{\prime}(x)&=g^{\prime}(x)\\
+	\text{Rule 3:}\quad	f(x)&=Ag(x)  \\
+	\Rightarrow  f^{\prime}(x)&=A g^{\prime}(x)\\
+	\text{Rule 4 (power):}\quad	f(x)&=x^{a} \\
+	\Rightarrow  f^{\prime}(x)&=a x^{a-1}
+\end{align*}
+with a being an arbitrary constant.
+
+If both $f$ and $g$ are differentiable at $x,$ then the sum $f+g$ and the difference $f-g$ are both differentiable at $x,$ and
+\begin{align*}
+	\text{Rule 5 (sums):}\quad	h(x)&=f(x) \pm g(x)\\
+	\Rightarrow \quad h^{\prime}(x)&=f^{\prime}(x) \pm g^{\prime}(x)
+\end{align*}
+
+\pbn
+If both $f$ and $g$ are differentiable at $x$, then so is $h=f \cdot g$,  and 
+\begin{align*}
+	\text{Rule 6 (products):}\quad h(x)&=f(x) \cdot g(x) \\
+	\Rightarrow \quad h^{\prime}(x)&=f^{\prime}(x) \cdot g(x)+f(x) \cdot g^{\prime}(x)
+\end{align*}
+
+
+
+\pbn
+If both $f$ and $g$ are differentiable at $x$ and $g(x) \neq 0,$ then $h=f / g$ is differentiable at $x,$ and 
+\begin{align*}
+	\text{Rule 7 (quotient):}\quad	h(x)&=\frac{f(x)}{g(x)} \\
+	\Rightarrow \quad h^{\prime}(x)&=\frac{f^{\prime}(x) \cdot g(x)-f(x) \cdot g^{\prime}(x)}{(g(x))^{2}}
+\end{align*}
+
+
+
+\pbn
+If $g$ is differentiable at $x$ and $f$ is differentiable at $u=g(x),$ then the composite function $h(x)=f(g(x))$ is differentiable at $x,$ and
+
+\begin{align*}
+	\text{Rule 8 (sums):}\quad	h^{\prime}(x)&=f^{\prime}(u) \cdot g^{\prime}(x)=f^{\prime}(g(x)) \cdot g^{\prime}(x)
+\end{align*}
+
+\textbf{In words:} First differentiate the exterior function with respect to the interior function (kernel), then multiply by the derivative of the interior function.
+
+
+
+
+
+
+\pbn
+\subsubsection*{Rules for Summation}
+The \textbf{summation sign}, $\sum$, allows for a compact formulation of
+lengthy expressions.
+
+
+Rule  (Additivity Property)
+$$
+\sum_{i=1}^{n}\left(a_{i}+b_{i}\right)=\sum_{i=1}^{n} a_{i}+\sum_{i=1}^{n} b_{i}
+$$
+Rule  (Homogeneity Property)
+$$
+\sum_{i=1}^{n} c a_{i}=c \sum_{i=1}^{n} a_{i} \\
+$$
+and if $a_{i}=1$ for all $i$ then
+$$
+\sum_{i=1}^{n} c a_{i}=c \sum_{i=1}^{n} a_{i}=c(n \cdot 1)=c n
+$$
+Rule (Rule for Sums)
+\begin{align*}
+	\sum_{i=1}^{n} i&=1+2+\ldots+n=\frac{1}{2} n(n+1) \\
+	\sum_{i=1}^{n} i^{2}&=1^{2}+2^{2}+\ldots+n^{2}=\frac{1}{6} n(n+1)(2 n+1) \\
+	\sum_{i=1}^{n} i^{3}&=1^{3}+2^{3}+\ldots+n^{3}=\left(\frac{1}{2} n(n+1)\right)^{2}=\left(\sum_{i=1}^{n} i\right)^{2}
+\end{align*}
+$$
+\sum_{i=0}^{n} a^{i}=\frac{1-a^{n+1}}{1-a}
+$$
+
+The double sum notation allows us to write lengthy expressions in a compact way.
+$$
+\sum_{i=1}^{Z} b_{i} \sum_{j=1}^{S} a_{i j} b_{j}=\sum_{i=1}^{Z} \sum_{j=1}^{S} a_{i j} b_{i} b_{j}=\sum_{j=1}^{S} \sum_{i=1}^{Z} a_{i j} b_{i} b_{j}=\sum_{j=1}^{S} b_{j} \sum_{i=1}^{Z} a_{i j} b_{i}
+$$
+Consider some summation sign $\sum_{i=1}^{Z} .$ All variables with index $i$ must be to the right of that summation sign.
+
+
+\subsubsection*{Rules for Logarithms and Exponentials}
+
+\subsubsection*{Exponential Function}
+\begin{align*}
+	y&=f(x)=e^x=exp(x) \quad \text{is strictly increasing } \forall x \in \mathbb R \\
+	D_f&=\mathbb R= ]-\infty,\infty[\\
+	e^x&> 0 \forall x \in \mathbb R\\
+	e^x&= 1+x+\frac{x^2}{2}+\frac{x^3}{4}+\frac{x^4}{24}+\dots\\
+	e^0&= 1\\
+	e^1&= e= 2.718\dots \text{Euler number}\\
+	\lim\limits_{x\rightarrow\infty}e^x&\rightarrow\infty \quad \text{and}\\
+	\quad \lim\limits_{x\rightarrow - \infty}e^x& \rightarrow 0
+\end{align*}
+
+\begin{minipage}{0.5\textwidth}
+\subsubsection*{Logarithmic Function}
+\begin{align*}
+	y&=f(x)=\ln(x) \quad \text{is strictly increasing } \\
+	D_f&=\mathbb R^+=]0,\infty[\\
+	\ln(x)&=e^{\ln x}\\
+	\ln 1&= 0\\
+	\ln e&= 1
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	
+\subsubsection*{Rules to Transform exp}
+\begin{align*}
+	e^{x+y}&=e^x\cdot e^y\\
+	e^{x-y}&=\frac{e^x}{e^y}\\
+	e^{ax}&=(e^x)^a\\
+	e^{\ln x}&=x\\
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	
+\subsubsection*{Rules to Transform log}
+\begin{align*}
+	\ln(x\cdot y)&=\ln x + \ln y\\
+	\ln(\frac{x}{y})&=\ln x - \ln y\\
+	\ln x^a&=a\cdot \ln x\\
+	\ln e^x&= x
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	
+\subsubsection*{Rules for Derivatives of Both Functions}
+\begin{align*}
+	f(x)&=e^x \Rightarrow f'(x)=e^x\\
+	f(x)&=\ln x \Rightarrow f'(x)=\frac{1}{x}\\
+	\left(e^{f(x)}\right)^{\prime}&=f^{\prime}(x) \cdot e^{f(x)}\\
+	(\ln f(x))^{\prime}&=f^{\prime}(x) \cdot \frac{1}{f(x)}
+\end{align*}
+\end{minipage}
+
+
+
+
+
