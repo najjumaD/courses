@@ -1,4 +1,6 @@
 # Subsetting with \R
+# exe_subset.R
+# Stephan Huber; 2022-06-07
 
 setwd("/home/sthu/Dropbox/hsf/22-ss/dsb_bac/work/")
 rm(list=ls())
@@ -29,6 +31,8 @@ cars <- rename(cars, MPG = mpg)
 
 # 7
 cars <- rename_all(cars, toupper)
+# if you like lower cases:
+# cars <- rename_all(cars, tolower)
 
 # 8
 cars <- rownames_to_column(mtcars, var = "car")
@@ -68,5 +72,12 @@ carsSub <- cars %>%
 carsSub <- arrange(carsSub, wt)
 
 # 18
-carsSub %>% 
+carsSub <-carsSub %>% 
+  mutate(wt2 = wt^2)
+
+# Alternatively you can put everything into one pipe:
+carsSub2 <- cars %>%
+  filter(cyl == 8) %>%
+  select(wt, qsec, hp, car) %>% 
+  arrange(carsSub, wt) %>% 
   mutate(wt2 = wt^2)

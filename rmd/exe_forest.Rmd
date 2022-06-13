@@ -1,0 +1,321 @@
+---
+title: "Exam: Data Science and Data Analytics"
+author: "Stephan.Huber@hs-fresenius.de"
+date: 'Date: 23.06.2022; Study Programme: THEM_bac; Semester: 4'
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    number_sections: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  pdf_document:
+    toc: no
+    toc_depth: '3'
+    number_sections: yes
+  word_document:
+    toc: no
+    toc_depth: '3'
+citation_package: natbib
+biblio-style: apalike
+header-includes: \usepackage{setspace}\doublespacing
+fontsize: 12pt
+urlcolor: blue
+linkcolor: red
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+ __Please answer all (!) questions in an R script. Normal text should be written 
+ as comments, using the '#' to comment out text. Make sure the script runs 
+ without errors before submitting it. Each task (starting with 1) is worth five
+ points. You have a total of 120 minutes of editing time. Please do not forget 
+ to number your answers.__
+ 
+ __When you are done with your work, save the R script, export the script to pdf 
+ format and upload the pdf file.__
+
+---
+
+ _Suppose you aim to empirically examine Okun's Law. In economics, Okun's law is
+ an empirically observed relationship between growth in unemployment and losses
+ in a country's production. The data set that we use in the following is 
+ 'forest.Rdata' and should already been known to you from the lecture._ 
+
+
+
+(0)    
+ Write down your name, matriculation number, and date.
+
+(1)    
+ Set your working directory. 
+
+```{r echo=FALSE}
+setwd("/home/sthu/Dropbox/hsf/exams/22-07/scr/")
+```
+
+(2)    
+ Clear your global environment.
+ 
+```{r echo=FALSE}
+rm(list=ls())
+```
+
+(3)    
+ Install and load the following packages: 'tidyverse', 'sjPlot', and 'ggpubr'
+ 
+```{r echo=FALSE}
+# install.packages("tidyverse")
+# install.packages("ggpubr")
+# install.packages("sjPlot")
+library("tidyverse")
+library("ggpubr")
+library("sjPlot")
+```
+
+(4)    
+ Download and load the data, respectively, with the following code: 
+ 
+```{r}
+load(url("https://github.com/hubchev/courses/raw/main/dta/forest.Rdata"))
+```
+ If that is not working, you can also download the data from ILIAS, save it in 
+ your working directory and load it from there with:
+```
+load("forest.Rdata")
+```
+
+(5)    
+ Show the first six observations of the dataset 'df'.
+ 
+```{r include=FALSE}
+head(df)
+```
+
+(6)    
+ Show the last six observations of the dataset 'df'.
+ 
+```{r include=FALSE}
+tail(df)
+```
+
+(7)    
+ Which type of data do we have here (Panel, cross-section,time series, ...)?
+ Name the variable(s) that identify the observations in the dataset.
+ 
+```{r include=FALSE}
+ # panel data set
+ # date and country.x
+```
+
+(8)    
+ How many observations (rows) and variables (columns) are in the dataset?
+ 
+```{r include=FALSE}
+dim(df)
+```
+
+(9)    
+ Show for all numerical variables the summary statistics including the mean, 
+ median, minimum, and the maximum.
+ 
+```{r include=FALSE}
+summary(df)
+```
+
+(10)    
+ Rename the variable 'country.x' to 'country' in the dataset 'df'. 
+```{r include=FALSE}
+df <- rename(df, country=country.x)
+```
+
+(11)    
+  Rename the variable 'date' to 'year' in the dataset 'df'. 
+```{r include=FALSE}
+df <- rename(df, year=date)
+```
+
+(12)    
+ Create a variable that indicates the GDP per capita ('gdp' divided by 'pop'). 
+ Name the variable 'gdp_pc'. (If you fail here, use the variable 'gdppc' which is 
+ already in the dataset as a replacement for 'gdp_pc' in the following tasks.)
+```{r include=FALSE}
+df <- df %>% 
+  mutate(gdp_pc = gdp/pop)
+```
+
+(13)    
+ Create a table showing the mean values of the variables 'unemployment', 
+ and 'gdp_pc' over time separately by income group (see variable 'income').
+ Use the pipe operator. (Tip: See below for how your result should look like.)
+ 
+```{r echo=FALSE}
+df  %>%
+  group_by(income) %>%
+  summarise(m_gdp_pc = mean(gdp_pc, na.rm = TRUE), 
+            m_unemployment = mean(unemployment, na.rm = TRUE)
+  )
+```
+
+(14)    
+ Make the same table again but now consider only observations from the year 
+ 2020 and include additionally the variables 'unemployment_dif' and 
+ 'gdp_growth'.
+```{r include=FALSE}
+df  %>%
+  group_by(income) %>%
+  filter(year==2020) %>% 
+  summarise(mean(gdp_pc, na.rm = TRUE), 
+            mean(gdp_growth, na.rm = TRUE), 
+            mean(unemployment, na.rm = TRUE), 
+            mean(unemployment_dif, na.rm = TRUE), 
+  )
+```
+
+(15)    
+ Make a scatterplot matrix that includes the variables 'gdp', 'gdp_pc', 'gdp_growth',
+ 'unemployment', and 'unemployment_dif'. 
+ 
+```{r include=FALSE}
+df %>% 
+  select( gdp, gdp_pc, gdp_growth, unemployment, unemployment_dif) %>% 
+  plot()
+```
+
+(16)    
+ Again, make a scatterplot matrix with the same variables as above, but now
+ include only observations of the year 2015. (Tip: See below for how your result
+ should look like.)
+```{r echo=FALSE}
+df %>% 
+  filter(year == 2015) %>% 
+  select( gdp, gdp_pc, gdp_growth, unemployment, unemployment_dif) %>% 
+  plot()
+```
+
+(17)    
+ Calculate the Pearson Correlation Coefficient of the two variables 
+ 'unemployment_dif' and 'gdp_growth'.
+```{r include=FALSE}
+cor(df$unemployment_dif, df$gdp_growth, method = c("pearson"))
+```
+
+(18)    
+ Make a scatterplot with 'unemployment_dif' (that is the annual change in
+ the unemployment rate) on the y-axis and 'gdp_growth' on the x-axis. 
+ Additionally, the plot should contain a linear fit. (Tip: Below you can see how 
+ your result should look like.)
+ 
+```{r echo=FALSE}
+ggplot(df, aes(x = gdp_growth, y = unemployment_dif)) +
+  geom_point() +
+  stat_smooth(formula=y~x, method="lm", se=FALSE) 
+```
+
+(19)    
+ Create two scatterplots with unemployment in the y-axis and growth on the 
+ x-axis: One for high income countries and one for low income countries (see 
+ variable 'income'). Label the graph with 'High income' using 
+ 'ggtitle("High income")' and with 'Low income' using 'ggtitle("Low income")'. 
+ (Tip: Below you can see how your result should look like.)
+
+```{r include=FALSE}
+p1 <- df %>% 
+  filter(income == "High income") %>% 
+  ggplot(aes(x = gdp_growth, y = unemployment_dif)) +
+  geom_point() +
+  stat_smooth(formula=y~x, method="lm", se=FALSE) +
+  ggtitle("High income")
+
+p2 <- df %>% 
+  filter(income == "Low income") %>% 
+  ggplot(aes(x = gdp_growth, y = unemployment_dif)) +
+  geom_point() +
+  stat_smooth(formula=y~x, method="lm", se=FALSE) +
+  ggtitle("Low income")
+```
+
+(20)    
+ Combine the two graphs into one image using the 'ggarrange' function. (Tip: 
+ Below you can see how your result should look like.)
+ 
+```{r echo=FALSE}
+ggarrange(p1, p2, 
+          labels = c("A", "B", "C"),
+          ncol = 2, nrow = 1)
+```
+
+(21)    
+ Briefly explain and interpret the relationship between the two variables you
+ see in the graphs. Be brief. (What do you see? What does the relationship mean 
+ economically and is it intuitive? Is the correlation high?)
+
+(22)    
+Estimate the relationships shown in the 3 graphs above using the least squares
+method. That is, one regression with all observations, one with high-income 
+countries, and one with low-income countries. The explanatory variable (or 
+independent variable) is on the x-axis and the response variable (or dependent 
+variable) is on the y-axis. Here, 'unemployment_dif' is the dependent variable 
+and 'unemployment_dif' is the independent variable. Store each regression in an 
+object.
+
+```{r include=FALSE}
+m1  <-  lm(unemployment_dif ~ gdp_growth, data = df)
+
+m2  <-  df %>% 
+  filter(income == "High income") %>% 
+  lm(unemployment_dif ~ gdp_growth, data = .)
+
+m3  <-  df %>% 
+  filter(income == "Low income") %>% 
+  lm(unemployment_dif ~ gdp_growth, data = .)
+```
+
+(23)    
+ Present the estimation results in a table, indicating the significance level
+ with stars. 
+
+```{r include=FALSE}
+summary(m1)
+summary(m2)
+summary(m3)
+```
+
+```{r include=FALSE}
+tab_model(m1, m2, m3,
+          file="reg_output.html",
+          p.style = "stars",
+          p.threshold = c(0.2, 0.1, 0.05),
+          show.ci = FALSE, 
+          show.se = FALSE, 
+          show.aic = TRUE,
+          dv.labels = c("World", "High income", "Low income")) 
+```
+
+(24)    
+ Interpret the estimation results regarding their statistical significance. 
+ Below you can see how your estimation result should look like. 
+
+```{r include=FALSE}
+htmltools::includeHTML("reg_output.html")
+```
+
+```{bash, include=FALSE, engine.opts='-l'}
+wkhtmltopdf -s A6 reg_output.html reg_output.pdf
+```
+
+![](reg_output.pdf){ width=70% }
+
+```{r include=FALSE}
+# rmarkdown::render("22-07_dsda_exam.Rmd", "all")
+```
+
+```{r include=FALSE}
+# knitr::purl(input = "22-07_dsda_exam.Rmd", output = "22-07_dsda_solution.R",documentation = 0)
+```
+
