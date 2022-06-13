@@ -5,7 +5,7 @@ library("countrycode")
 # install.packages("wbstats")
 library("wbstats")
 rm(list=ls())
-setwd("/home/sthu/Dropbox/hsf/22-ss/dsda/work/")
+setwd("/home/sthu/Dropbox/hsf/github/courses/scr/")
 
 
 df_forest <- WDI(
@@ -30,9 +30,9 @@ df <- df %>% select(-country.y, -iso3c.y, -lending)
 df <- rename(df, forest=AG.LND.FRST.ZS)
 
 as_tibble(df)
-save(df, file = "forest_all.Rdata")
+save(df, file = "../dta/forest_all.Rdata")
 rm(list=ls())
-load("forest_all.Rdata")
+load("../dta/forest_all.Rdata")
 
 
 
@@ -47,7 +47,7 @@ df <- df %>%
   mutate(gdppc = gdp/pop) %>% 
   na.omit() 
   
-save(df, file = "forest.Rdata")
+save(df, file = "../dta/forest.Rdata")
 
 
 

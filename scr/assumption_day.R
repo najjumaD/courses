@@ -48,9 +48,25 @@ my_varıable
     
 library(tidyverse)
 
+ggplot(dota = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+fliter(mpg, cyl = 8)
+
+filter(diamond, carat > 3)
+
+# Solutions:
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+
 ggplot(data = mpg) + 
   geom_point() +
   aes(x = displ, y = hwy)
+
+filter(diamonds, carat > 3)
+
+filter(mpg, cyl == 8)
+
 
 # ===
 # c)
