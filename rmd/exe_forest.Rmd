@@ -157,19 +157,6 @@ df  %>%
 ```
 
 (9)    
- Create a table showing the mean values of the variables 'gdppc', 
- and 'forest' over time separately by region. Use the pipe operator. (Tip: See 
- below for how your result should look like.)
- 
-```{r echo=FALSE}
-df  %>%
-  group_by(region) %>%
-  summarise(m_gdp_pc = mean(gdppc), 
-            m_forest = mean(forest)
-  )
-```
-
-(10)    
  Investigate the relationship of economic activity measured by the GDP and the 
  GDP per capita with a country's forest area. Therefore, graphically visualize 
  the relationsship and consider things like correlation analysis and regression

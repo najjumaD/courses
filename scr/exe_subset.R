@@ -2,7 +2,7 @@
 # exe_subset.R
 # Stephan Huber; 2022-06-07
 
-setwd("/home/sthu/Dropbox/hsf/22-ss/dsb_bac/work/")
+setwd("/home/sthu/Dropbox/hsf/22-ss/dsda/work/")
 rm(list=ls())
 
 # 1
@@ -54,8 +54,7 @@ cars_mpg <- filter(cars, mpg > 20)
 dim(cars_mpg)
 
 #14
-filter(cars, mpg < 16 & hp > 100) %>% 
-  nrow()
+cars_whattever <- filter(cars, mpg < 16 & hp > 100)
 
 # 15
 carsSub <- filter(cars, cyl == 8) 
@@ -72,7 +71,7 @@ carsSub <- cars %>%
 carsSub <- arrange(carsSub, wt)
 
 # 18
-carsSub <-carsSub %>% 
+carsSub <- carsSub %>% 
   mutate(wt2 = wt^2)
 
 # Alternatively you can put everything into one pipe:

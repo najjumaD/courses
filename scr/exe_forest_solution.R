@@ -1,5 +1,3 @@
-knitr::opts_chunk$set(echo = TRUE)
-
 setwd("/home/sthu/Dropbox/hsf/github/courses/rmd/")
 
 rm(list=ls())
@@ -22,8 +20,8 @@ df <- df %>%
 
 df  %>%
   group_by(region) %>%
-  summarise(m_gdp_mio = mean(gdp_mio), 
-            m_forest = mean(forest)
+  summarise( mean(gdp_mio), 
+             mean(forest)
   )
 
 df  %>%
@@ -34,3 +32,8 @@ df  %>%
 
 # rmarkdown::render("exe_forest.Rmd", "all")
 
+df %>% 
+  select(df, gdp, dpg_growth, forest) %>% 
+  plot()
+  
+plot(df)
