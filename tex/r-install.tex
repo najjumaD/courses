@@ -1,0 +1,98 @@
+
+\chapter{Installing  \R and \Rstudio }\label{sec:gettingR}
+
+\boxx{
+	In this chapter I'll talk about how to download and install \R and \Rstudio. 
+}
+
+Okay, enough with the sales pitch. Let us set up \R on your computer. Let's start by downloading \R  here:
+\begin{quote}
+	\url{http://cran.r-project.org/}
+\end{quote}
+At the top of the webpage you'll see separate links for Windows users, Mac users, and Linux users. If you follow the relevant link, you'll see that the online instructions are pretty self-explanatory. The version of  \R\  changes frequently. Please, just go for the most recent one.
+
+\section{Installing \R\ on a Windows Computer}
+
+The CRAN homepage changes from time to time, and it's not particularly pretty. However, it's not difficult to find what you're after. In general you'll find a link at the top of the page with the text ``Download R for Windows''. If you click on that, it will take you to a page that offers you a few options. Again, at the very top of the page you'll be told to click on a link that says to click here if you're installing \R\ for the first time. That's probably what you want. This will take you to a page that has a prominent link at the top called ``Download R 4.0.4 for Windows''. That's the one you want. Click on that and your browser should start downloading a file called \filename{R-4.0.4-win.exe}, or whatever the equivalent most recent version number is by the time you read this. Once you've downloaded the file, double click to install it. As with any software you download online, Windows will ask you some questions about whether you trust the file and so on. After you click through those, it'll ask you where you want to install it, and what components you want to install. The default values should be fine for most people, so again, just click through. Once all that is done, you should have  \R\  installed on your system. You can access it from the Start menu, or from the desktop if you asked it to add a shortcut there. You can now open up \R\ in the usual way if you want to, but what I'm going to suggest is that instead of doing that you should now install \textbf{R Studio} \Rstudio.
+
+\section{Installing \R\ on a Mac}
+
+When you click on the Mac OS X link, you should find yourself on a page with the title ``R for Mac OS X''. There's a fairly prominent link on the page called ``R-4.0.4.pkg'' (maybe the version number is different), which is the one you want. Click on that link and you'll start downloading the installer file. 
+Once you've downloaded it, all you need to do is open it by double clicking on the package file. The installation should go smoothly from there: just follow all the instructions just like you usually do when you install something. Once it's finished, you'll find a file called \filename{R.app} in the Applications folder. You can now open up \R\ in the usual way
+%\FOOTNOTE{Tip for advanced Mac users. You can run  \R\  from the terminal if you want to. The command is just ``R''. It behaves like the normal desktop version, except that help documentation behaves like a ``man'' page instead of opening in a new window.} 
+if you want to, but what I'm going to suggest is that instead of doing that you should now install Rstudio. 
+
+\section{Installing \R\ on a Linux Computer}
+
+The instructions on the website are easy enough. 
+The CRAN site has precompiled binaries for Debian, Red Hat, Suse and Ubuntu and has separate instructions for each. Once you've got \R\ installed, you can run it from the command line just by typing \rtext{R}. 
+
+\section{Using \R in the cloud}
+
+If you don't want to install \R on your PC, you can run \R in the \textit{cloud}. 
+To play around with the console in your browser, see: \websmall \url{https://rdrr.io/snippets/} or \websmall \url{https://rextester.com/l/r_online_compiler}
+
+For a more advanced experience, you can check out RStudio Cloud (for free for individuals) which is a lightweight, cloud-based solution that allows anyone to do, share, teach and learn data science online, see: \websmall \url{https://rstudio.cloud/}
+
+
+
+\section{Starting up \R~\label{sec:startingR}}
+
+When you start \R, the first thing you'll see is a whole lot of text that doesn't make much sense. It should look something like this:
+
+\begin{rblock}
+	When you start \R, the first thing you'll see is a whole lot of text that doesn't make much sense. It should look something like this:
+	
+	R is free software and comes with ABSOLUTELY NO WARRANTY.
+	You are welcome to redistribute it under certain conditions.
+	Type 'license()' or 'licence()' for distribution details.
+	
+	R is a collaborative project with many contributors.
+	Type 'contributors()' for more information and
+	'citation()' on how to cite R or R packages in publications.
+	
+	Type 'demo()' for some demos, 'help()' for on-line help, or
+	'help.start()' for an HTML browser interface to help.
+	Type 'q()' to quit R.
+	
+	> 
+\end{rblock}
+Most of this text is pretty uninteresting, and when doing real data analysis you'll never really pay much attention to it. The important part of it is this...
+\begin{rblock}
+	> 
+\end{rblock}
+... which has a flashing cursor next to it. That's the \keyterm{command prompt}. When you see this, it means that \R\ is waiting for you to do something! 
+
+\section{Downloading and installing  \Rstudio}
+
+Regardless of what operating system you're using, the last thing that I told you to do is to download \Rstudio. To understand why I've suggested this,  you need to understand a little bit more about \R\ itself. The term \R\ doesn't really refer to a specific application on your computer. Rather, it refers to the underlying statistical language. You can use this language through lots of different applications. When you install \R\ initially, it comes with one application that lets you do this: it's the R.exe application on a Windows machine, and the R.app application on a Mac. But that's not the only way to do it. There are lots of different applications that you can use that will let you interact with \R. One of those is called \Rstudio, and it's the one I'm going to suggest that you use. \Rstudio provides a clean, professional interface to \R\ that is much more user-friendly. 
+In particular, \Rstudio is freely available open-source Integrated Development Environment (IDE). RStudio provides an environment with many features to make using R easier and is a great alternative to working on R in the terminal. 
+
+
+Like \R\ itself, \Rstudio is free software. Now, download \Rstudio here:
+\begin{quote}
+	\url{https://rstudio.com/products/rstudio/download/}
+\end{quote}
+On the homepage various versions are offered. You should go for the `RStudio Desktop' version with an open source license. After choosing the desktop version it will take you to a page that shows several possible downloads: there's a different one for each operating system. Click on the appropriate link, and the \Rstudio installer file will start downloading. 
+Open the installer file in the usual way to install \Rstudio. After it's finished installing, you can start \R\ by opening \Rstudio.  You don't need to open R.app or R.exe in order to access \R. \Rstudio will take care of that for you. To illustrate what \Rstudio looks like, Figure~\ref{fig:rstudio} shows a screenshot of an \R\ session in progress. \Rstudio looks almost identical no matter what operating system you have. There are a few minor differences in where things are located in the menus and in the shortcut keys, because \Rstudio is trying to ``feel'' like a proper Mac application or a proper Windows application, and this means that it has to change its behavior a little bit depending on what computer it's running on. Please notice, the look can be altered rather easily in the global options. For example, I use a dark mode which is a bit better for the eyes when watching at it for hours.
+
+
+
+\boxb{\textbf{The RStudio Interface} has four main panels:
+	\desx{\item[Console:] where you can type commands and see output. The console is all you would see if you ran R in the command line without RStudio.
+		\item[Script editor:] where you can type out commands and save to file. You can also submit the commands to run in the console.
+		\item[description/History:] environment (a.k.a. workspace) shows all active objects and history keeps track of all commands run in console
+		\item[Files/Plots/Packages/Help] 
+	}
+	For more information, see: \websmall \url{https://rstudio.com/products/rstudio/?wvideo=520zbd3tij}
+}
+
+
+\begin{figure}[!t]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{$HOME/Dropbox/hsf/pic/Rstudio/rstudio_front}
+	\end{center}
+	\caption{An R session in progress running through \Rstudio.}
+	\label{fig:rstudio}
+\end{figure}
+

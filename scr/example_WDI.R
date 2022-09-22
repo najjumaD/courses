@@ -1,5 +1,6 @@
 
 install.packages('WDI')
+install.packages("wbstats")
 ?WDI
 library(WDI)
 WDIsearch('gdp')[1:10,]

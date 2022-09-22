@@ -1,0 +1,256 @@
+\chapter{Why and how to learn \R}\label{ch:howtolearnr}
+
+\boxx{There are multiple different approaches on how to learn \R. It pretty much depends on your preferences, needs, goals, prerequisites, and constraints. I mean how many time do you want to spend on learning \R and what type of learning do you prefer. You have to find your own way.
+
+However, I offer this script. It should guide you through a lot of things that I found important to know when working in \R and it should help you to dig deeper and learn more if you like to do so. There are thousands of other ressources to learn \R: textbooks, online courses, videos, guided tutorials, and so on.
+
+In the following, I give you a list of ressources that are worth a look. Maybe you find there what you are looking for. If not, just continue to read this book. Especially those who participated in one of my courses in person, feel free to contact me whenever you think I can help.}
+
+
+
+\section{Why \R?}\label{sec:whyR}
+
+Maybe your answer is ``because that's what my stats class uses''. Let me work on that by explaining a little why your lecturer and University, respectively, has chosen to use \R\ for the class. 
+\begin{itemize}
+	\item \textbf{\R is an artist!} Check out:\desx{\item[\websmall\url{https://www.r-graph-gallery.com/}], \item[\websmall\url{http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html}], and  \item[\websmall\url{https://www.r-bloggers.com/2020/05/7-useful-interactive-charts-in-r/}]}
+	feel impressed by the beautiful graphical visualizations.
+	\item \textbf{\R is an employment insurance.} If you are good in \R programming or if you are good in writing programming code in general, you have plenty of opportunities to earn a decent salary. 
+	\item \textbf{\R uses the computer and computers are great!} Doing statistics on a computer is faster, easier and more powerful than doing it by hand. Computers excel at mindless repetitive tasks. For most people, the only reason to ever do statistical calculations with pencil and paper is for learning purposes. However, I do occasionally suggest doing some calculations by hand, but the only real value to it is pedagogical. 
+	\item \textbf{Excel is bad!} Doing statistics in a spreadsheet (e.g., Microsoft Excel) is generally a bad idea in the long run. Although many people are likely feel more familiar with them, spreadsheets are very limited in terms of what analyses they allow you to do. You can easily lose the overview and it is hard to keep track of what you have done and in comparison with command line driven programs. In particluar, the ability to make your analysis \textit{replicate-able} is limited. 
+	\item \textbf{\R is good, proprietary software is bad!} Avoiding proprietary software is a very good idea. Commercial software is expensive: usually, the company sells ``student versions'' (crippled versions of the real thing) very cheaply; they sell full powered ``educational versions'' at a price that makes me wince; and they sell commercial licenses with a staggeringly high price tag. The business model here is to suck you in during your student days, and then leave you dependent on their tools when you go out into the real world. It's hard to blame them for trying, but personally I'm not in favor of shelling out thousands of dollars if I can avoid it. And you can avoid it: if you make use of packages like \R\ that are open source and free, you never get trapped having to pay exorbitant licensing fees. 
+	\item \textbf{R is big!} Something that you might not appreciate now, but will love later on if you do anything involving data analysis, is the fact that \R\ is highly extensible. When you download and install \R, you get all the basic ``packages'', and those are very powerful on their own. However, because \R\ is so open and so widely used, it's become something of a standard tool in statistics, and so lots of people write their own packages that extend the system. And these are freely available too. One of the consequences of this, I've noticed, is that if you open up an advanced textbook (a recent one, that is) rather than introductory textbooks, is that a {\it lot} of them use \R. In other words, if you learn how to do your basic statistics in \R, then you're a lot closer to being able to use the state of the art methods than you would be if you'd started out with a ``simpler'' system: so if you want to become a genuine expert in data analysis, learning \R\ is a very good use of your time.
+	\item \textbf{R is the future!} Related to the previous point: \R\ is a real programming language. As you get better at using \R\ for data analysis, you're also learning to program. To some people this might seem like a bad thing, but in truth, \textbf{programming is a core skill} in research, economics, and business.
+	R is one of the most widely used programming languages in the world today. It is used in almost every industry such as finance, banking, medicine or manufacturing. R is used for portfolio management, risk analytics in finance and banking industries. It is used for carrying out an analysis of drug discovery and genomic analysis in bioinformatics. R is also used to implement various statistical measures to optimize industrial processes. R is the quasi-standard in data science. 
+\end{itemize}
+
+\boxb{\textcolor{red}{Warning:} \R is not without its flaws: it's not easy to learn, it has a few very annoying quirks to it that we're all pretty much stuck with, it is slower than other languages (Phyton, MATLAB), and the algorithms and sources of R are spread across many packages (as there is no big company behind that wants you to buy it). This sometimes makes it very hard for beginners to find what they are looking for. In simply words: you can get lost!}
+
+%			\begin{center}
+%	\includegraphics[width=.6\linewidth]{$HOME/Dropbox/hsf/pic/Rstudio/why-r}
+%	\end{center}
+
+\section{\R learning resources}
+
+\section{Collection of links and ressources}
+\begin{center}
+	\includegraphics[width=0.2\linewidth]{../../../pic/Rstudio/aweres}\\
+\webbig\url{https://github.com/iamericfletcher/awesome-r-learning-resources}\\
+and\\
+\webbig\url{www.bigbookofr.com} Probably the biggest collection of R books
+\end{center}
+
+
+
+\section{Textbooks}
+\desx{
+\begin{minipage}{0.7\textwidth}
+	\item[\cite{Timbers2022Data}] \textit{Data Science:	A First Introduction} --- Very good and up to date book. You can read the web version of the book on \url{https://datasciencebook.ca/}
+	The book has accompanying worksheets providing exercises. All of the worksheets are available at \url{https://github.com/UBC-DSCI/data-science-a-first-intro-worksheets}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\begin{center}
+		\includegraphics[width=.8\linewidth]{../../../pic/dsb/ds-a-first-intro-cover}
+	\end{center}
+\end{minipage}	
+	
+	
+\begin{minipage}{0.7\textwidth}
+\item[\cite{Grolemund2018R}] \textit{R for Data Science: Import, Tidy, Transform, Visualize, and Model Data} --- Maybe the most popular source to learn \R. It has a focus on introducing the tidyverse package and all its powerful functions. It is freely available online (\websmall\url{https://r4ds.had.co.nz/}). Unlike the book, the online version is updated regularly. It will teach you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualize it and model it. You will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualizing, and exploring data.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+	\includegraphics[width=.8\linewidth]{../../../pic/Rstudio/rfordatas}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.7\textwidth}
+	\item[\cite{Venables2022Introduction}] \textit{An Introduction to R
+		Notes on R: A Programming Environment for Data Analysis and Graphics} --- This is a manual from the R Core Development Team shows how to use R without having to install and load additional packages. 
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\begin{center}
+		\includegraphics[width=.8\linewidth]{../../../pic/Rstudio/AItR}
+	\end{center}
+\end{minipage}
+
+
+\begin{minipage}{0.6\textwidth}
+		\item[\cite{Irizarry2020Introduction} ] \textit{Introduction to Data Science. Data Analysis and Prediction Algorithms with R} --- \websmall\url{https://rafalab.github.io/dsbook/}
+		
+	\item[\cite{Crawley2013R} ] \textit{The R Book} --- Another big book on \R.
+	
+
+%	\item[\cite{Kabacoff2011R} ] \textit{R in Action. Data Analyis and Graphics with R} 
+%		\item[\cite{DeVries2015R} ] \textit{R for Dummies} 
+\end{minipage}
+%\begin{minipage}{0.4\textwidth}
+%	\begin{center}
+%		\includegraphics[width=.49\linewidth]{../../../pic/Rstudio/rinaction}
+%				\includegraphics[width=.49\linewidth]{../../../pic/Rstudio/rdummies}
+%	\end{center}
+%\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+	\item[\cite{Teetor2011R} ] \textit{Cookbook for R} (also see: \websmall\url{http://www.cookbook-r.com/}) and \item[\textbf{\cite{Chang2018R}}]  \textit{R Graphics Cookbook: Practical Recipes for Visualizing Data} (also see: \websmall\url{https://r-graphics.org/})
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+	\begin{center}
+		\includegraphics[width=.3\linewidth]{../../../pic/Rstudio/cookbookr}
+		\includegraphics[width=.3\linewidth]{../../../pic/Rstudio/rgraphicscookbook}
+	\end{center}
+\end{minipage}
+\item[Various free textbooks] Please find more hints where to find more free textbooks: \websmall\url{https://cmdlinetips.com/2018/01/free-online-resources-books-to-learn-r-and-data-science/}
+\item[\websmall\url{https://bookdown.org/}] A rather long list of books on \R are published here.
+}
+ 
+\section{Online tutorials}
+
+In \Rstudio you find in the left panel at the bottom a panel that is called \textit{Help}. There you find a lot of links, manuals, and referrences that offer you tons of resources to learn \R for free including:
+\websmall\url{https://education.rstudio.com/}] 
+\websmall\url{https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R}
+
+On Youtube you find dozens of good explanations to every topic that relates to \R and \Rstudio. Also, there are hundreds of online courses available. Just Google it. Personally, I like the \textit{two-minute} approach of \websmall\url{twotorials.com} or \websmall\url{https://www.datamentor.io/r-programming/}. Also worth  to mention are the following: \websmall\url{https://www.statmethods.net/} \websmall\url{https://www.r-bloggers.com/2015/12/how-to-learn-r-2/} \websmall\url{https://data-flair.training/blogs/r-tutorial/}
+Tutorial that you can simply watch and follow the instructions are usually for free. In any case, I would not recommend to spend a dime on commercial sources that want you to believe that they have found the holy grail how to learn \R quick. Open source ressources are as good as commercial offers. Better spend your money to the open source community. They actually invented, build up, and run \R. 
+
+%Also please consider 
+%\itex{\item the tutorials by William B. King:\\
+%\websmall\url{http://ww2.coastal.edu/kingw/statistics/R-tutorials/}
+%\item 
+%}
+
+
+
+\section{Other resources}
+
+\begin{itemize}
+	\item The Rseek website (\url{www.rseek.org}). One thing that I really find annoying about the \R\ help documentation is that it's hard to search properly. When coupled with the fact that the documentation is dense and highly technical, it's often a better idea to search or ask online for answers to your questions. With that in mind, the Rseek website is great: it's an \R\ specific search engine. I find it really useful, and it's almost always my first port of call when I'm looking around.
+	\item The R-help mailing list (see \url{http://www.r-project.org/mail.html} for details). This is the official \R\ help mailing list. It can be very helpful, but it's {\it very} important that you do your homework before posting a question. The list gets a lot of traffic. While the people on the list try as hard as they can to answer questions, they do so for free, and you {\it really} don't want to know how much money they could charge on an hourly rate if they wanted to apply market rates. In short, they are doing you a favour, so be polite. Don't waste their time asking questions that can be easily answered by a quick search on Rseek (it's rude), make sure your question is clear, and all of the relevant information is included. In short, read the posting guidelines carefully (\url{http://www.r-project.org/posting-guide.html}), and make use of the \rtext{help.request()} function that \R\ provides to check that you're actually doing what you're expected.
+	\item Here you find all documentations online: \websmall\url{www.rdocumentation.org}
+	\item Here is a video that discusses how you should ask for help: \websmall\url{https://youtu.be/ZFaWxxzouCY}
+%	\desx{
+%%		\item[5 Ways to get help in R] \websmall\url{https://youtu.be/pc7rig_cxpk} 
+%		\item[Getting help in R by R-Tutorials] \websmall\url{https://youtu.be/bPivdfjdIlY}
+%		\item[How to ask for help] 
+%	}
+\end{itemize}
+
+
+%
+%\section{How to read the help documentation}\label{sec:help}
+%
+%The very last topic I want to mention in this chapter is where to go to find help.  Obviously, I've tried to make this book as helpful as possible, but it's not even close to being a comprehensive guide, and there's thousands of things it doesn't cover. So where should you go for help? First and formost, I still recommend the resources that I mentioned in \autoref{ch:howtolearnr}.
+%
+%%\TODO {\bf [discuss vignette() and demo() commands?]}
+%
+%%\subsection{}
+%
+%I have somewhat mixed feelings about the help documentation in \R. On the plus side, there's a lot of it, and it's very thorough. On the minus side, there's a lot of it, and it's very thorough. There's so much help documentation that it sometimes doesn't help, and most of it is written with an advanced user in mind. Often it feels like most of the help files work on the assumption that the reader already understands everything about \R\ except for the specific topic that it's providing help for. What that means is that, once you've been using \R\ for a long time and are beginning to get a feel for how to use it, the help documentation is {\it awesome}. These days, I find myself really liking the help files (most of them anyway). But when I first started using \R\ I found it very dense.
+%
+%To some extent, there's not much I can do to help you with this. You just have to work at it yourself; once you're moving away from being a pure beginner and are becoming a skilled user, you'll start finding the help documentation more and more helpful. In the meantime, I'll help as much as I can by trying to explain to you what you're looking at when you open a help file. To that end, let's look at the help documentation for the \rtext{load()} function. To do so, I type either of the following:
+%\begin{rblock1}
+%	> @usr{?load}
+%	> @usr{help("load")}
+%\end{rblock1}
+%When I do that, \R\ goes looking for the help file for the \rtext{"load"} topic. If it finds one, Rstudio takes it and displays it in the help panel. Alternatively, you can try a fuzzy search for a help topic:  
+%\begin{rblock1}
+%	> @usr{??load}
+%	> @usr{help.search("load")}
+%\end{rblock1}
+%This will bring up a list of possible topics that you might want to follow up in. 
+%
+%Regardless, at some point you'll find yourself looking at an actual help file. And when you do, you'll see there's a quite a lot of stuff written down there, and it comes in a pretty standardized format. So let's go through it slowly, using the \rtext{"load"} topic as our example. Firstly, at the very top we see this:
+%\begin{rhelp}
+%	load (base)	                                              R Documentation
+%\end{rhelp}
+%The \texttt{R Documentation} part isn't terribly interesting, but the \texttt{ load \{ base \} } part is telling you that this is in reference to the \rtext{load()} function (obviously) and that this function is in the \rtext{base} package. Next, we get the ``title'' information, and a short ``description'' of what the function does:
+%\begin{rhelp1}
+%	
+%	@textbf{Reload Saved Datasets}
+%	
+%	@textbf{Description}
+%	
+%	Reload datasets written with the function @helpcode{save}.
+%	
+%\end{rhelp1}
+%Fairly straightforward. The next section describes how the function is used:
+%
+%\begin{rhelp1}
+%	
+%	@textbf{Usage}
+%	
+%	@helpcode{load(file, envir = parent.frame())}
+%	
+%\end{rhelp1}
+%In this instance, the usage section is actually pretty readable. It's telling you that there are two arguments to the \rtext{load()} function: the first one is called \rtext{file}, and the second one is called \rtext{envir}. It's also telling you that there is a default value for the \rtext{envir} argument; so if the user doesn't specify what the value of \rtext{envir} should be, then \R\ will assume that \rtext{envir = parent.frame()}. In contrast, the \rtext{file} argument has no default value at all, so the user {\it must} specify a value for it. So in one sense, this section is very straightforward. 
+%
+%The problem, of course, is that you don't know what the \rtext{parent.frame()} function actually does, so it's hard for you to know what the \rtext{envir = parent.frame()} bit is all about. What you {\it could} do is then go look up the help documents for the \rtext{parent.frame()} function (and sometimes that's actually a good idea), but often you'll find that the help documents for those functions are just as dense (if not more dense) than the help file that you're currently reading. As an alternative, my general approach when faced with something like this is to skim over it, see if I can make any sense of it. If so, great. If not, I find that the best thing to do is ignore it. In fact, the first time I read the help file for the \rtext{load()} function, I had no idea what any of the \rtext{envir} related stuff was about. But fortunately I didn't have to: the default setting here (i.e.,   \rtext{envir = parent.frame()}) is actually the thing you want in about 99\% of cases, so it's safe to ignore it. 
+%
+%Basically, what I'm trying to say is: don't let the scary, incomprehensible parts of the help file intimidate you. Especially because there's often some parts of the help file that will make sense. Of course, I guarantee you that sometimes this strategy will lead you to make mistakes... often embarrassing mistakes. But it's still better than getting paralysed with fear.  
+%
+%So, let's continue on. The next part of the help documentation discusses each of the arguments, and what they're supposed to do:
+%\begin{rhelp1}
+%	
+%	@textbf{Arguments}
+%	
+%	@helpcode{file}	a (readable binary-mode) connection or a character string giving the name
+%	of the file to load (when tilde expansion is done).
+%	@helpcode{envir}	the environment where the data should be loaded.
+%	
+%\end{rhelp1}
+%Okay, so what this is telling us is that the \rtext{file} argument needs to be a string (i.e., text data) which tells \R\ the name of the file to load. It also seems to be hinting that there's other possibilities too (e.g., a ``binary mode connection''), and you probably aren't quite sure what ``tilde expansion'' means. It's extremely simple. We discussed it in Section~\ref{sec:navigation}, though I didn't call it by that name. Tilde expansion is the thing where \R\ recognizes that, in the context of specifying a file location, the tilde symbol~{\tt \~{}} corresponds to the user home directory (e.g., \filename{/Users/huber/}).
+%
+%Turning to the \rtext{envir} argument, it's now a little clearer what the Usage section was babbling about. The \rtext{envir} argument specifies the name of an environment into which \R\ should place the variables when it loads the file. Almost always, this is a no-brainer: you want \R\ to load the data into the same damn environment in which you're invoking the \rtext{load()} command. That is, if you're typing \rtext{load()} at the \R\ prompt, then you want the data to be loaded into your workspace (i.e., the global environment). But if you're writing your own function that needs to load some data, you want the data to be loaded inside that function's private workspace. And in fact, that's exactly what the \rtext{parent.frame()} thing is all about. It's telling the \rtext{load()} function to send the data to the same place that the \rtext{load()} command itself was coming from. As it turns out, if we'd just ignored the \rtext{envir} bit we would have been totally safe.  Which is nice to know. 
+%
+%Moving on, next up we get a detailed description of what the function actually does: 
+%
+%\begin{rhelp1}
+%	
+%	@textbf{Details}
+%	
+%	@helpcode{load} can load R objects saved in the current or any earlier format. It can read a
+%	compressed file (see @helpcode{save}) directly from a file or from a suitable connection (including
+%	a call to @helpcode{url}).
+%	
+%	A not-open connection will be opened in mode @helpcode{"rb"} and closed after use. Any connection
+%	other than a @helpcode{gzfile} or @helpcode{gzcon} connection will be wrapped in @helpcode{gzcon} to allow compressed 
+%	saves to be handled: note that this leaves the connection in an altered state (in 
+%	particular, binary-only).
+%	
+%	Only R objects saved in the current format (used since R 1.4.0) can be read from a 
+%	connection. If no input is available on a connection a warning will be given, but any input 
+%	not in the current format will result in a error.
+%	
+%	Loading from an earlier version will give a warning about the "magic number": magic 
+%	numbers @helpcode{1971:1977} are from R @texttt{<} 0.99.0, and @helpcode{RD[ABX]1} from R 0.99.0 to R 1.3.1. These 
+%	are all obsolete, and you are strongly recommended to re-save such files in a current 
+%	format.
+%	
+%\end{rhelp1}
+%Then it tells you what the output value of the function is:
+%\begin{rhelp1}
+%	
+%	@textbf{Value}
+%	
+%	A character vector of the names of objects created, invisibly.
+%	
+%\end{rhelp1}
+%This is usually a bit more interesting, but since the \rtext{load()} function is mainly used to load variables into the workspace rather than to return a value, it's no surprise that this doesn't do much or say much. Moving on, we sometimes see a few additional sections in the help file, which can be different depending on what the function is:
+%
+%\begin{rhelp1}
+%	@textbf{Warning}
+%	
+%	Saved R objects are binary files, even those saved with @helpcode{ascii = TRUE}, so ensure that 
+%	they are transferred without conversion of end of line markers. @helpcode{load} tries to detect such 
+%	a conversion and gives an informative error message.
+%	
+%\end{rhelp1}
+%Yeah, yeah. Warning, warning, blah blah blah. Towards the bottom of the help file, we see something like this, which suggests a bunch of related topics that you might want to look at. These can be quite helpful:
+%
+%\begin{rhelp1}
+%	@textbf{See Also}
+%	
+%	@helpcode{save}, @helpcode{download.file}.
+%	
+%	For other interfaces to the underlying serialization format, see @helpcode{unserialize} and @helpcode{readRDS}.
+%\end{rhelp1}
+

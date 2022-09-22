@@ -1,0 +1,89 @@
+
+\chapter{\textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}}-it}
+
+%		\begin{center}
+%		\includegraphics[width=.4\linewidth]{../../../pic/Rstudio/swirlr}
+%	\end{center}
+\boxx{
+Required exercises:
+\itex{
+	\item Students should go through the following learning modules that are all part of my \textit{swirl-it} course:
+	\itex{
+		\item \textit{huber-intro-1}
+		\item \textit{huber-intro-2}
+		\item \textit{huber-data-1}
+		\item \textit{huber-data-2}
+		\item \textit{huber-data-3}
+	}	
+}
+}
+
+\section{What is \textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}}?}
+
+\texttt{swirl} teaches you \R programming and data science interactively, at your own pace, and right in the \R console!
+Just follow the instructions on \websmall\url{https://swirlstats.com/students.html} and you will learn \R step by step within \Rstudio itself.
+
+\section{A short introduction to \R and \Rstudio in two \textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}} modules}\label{exe:swirl}
+The \textit{swirl} \R package makes it fun and easy to learn \R programming and data science. If you are new to \R, have no fear. \textit{swirl} will walk you through each of the steps required to employ \Rstudio and \R for your purpose.
+
+Open \Rstudio  and type in the console the following:
+
+\begin{rblock1}
+	install.packages("swirl")
+	library("swirl")
+	ls()
+	rm(list=ls())
+\end{rblock1}
+
+The above lines of code do the following:
+
+\begin{itemize}
+	\item Install the \textit{swirl} package.
+	\item Load the \textit{swirl} package.
+	\item List the content of the environment.
+	\item Remove everything from the environment.
+	\item Start \textit{swirl}.
+\end{itemize}
+
+Now type in the Console the following:\footnote{If the course has failed to install, you can try to download the file \texttt{swirl-it.swc} from \url{https://github.com/hubchev/swirl-it} and install the course with \rtext{install\_course()}}
+\begin{rblock1}
+	install_course_github("hubchev", "swirl-it")
+\end{rblock1}
+With the first line, you install my \textit{swirl} course that is hosted on GitHub.
+
+To start swirl and your learning experience type
+\begin{rblock1}
+	swirl()
+\end{rblock1}
+
+With \rtext{swirl()} you start \textit{swirl}. 
+Please choose the course \textit{swirl-it} and the learning module \textit{huber-intro-1}.
+You can exit \textit{swirl} at any time by typing \rtext{bye()} or by clicking the \rtext{Esc} on your keyboard. 
+
+After you have successfully finished learning module \textit{huber-intro-1} please go ahead with the learning module \textit{huber-intro-2} that is also part of my swirl course \textit{swirl-it}.
+
+
+
+\section{\textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}} module on data analytical basics}
+
+In my swirl modules \textit{huber-data-1}, \textit{huber-data-2}, and \textit{huber-data-3} I introduce some very basic statistical principles on how to analyse data. These modules are part of my \textit{swirl-it} course that can be installed as explained in \autoref{exe:swirl}.
+
+
+\section{\textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}} module on the \textit{tidyverse} package}
+I compiled a short \textit{swirl} module to introduce the \textit{tidyverse} universe. This is a powerful collection of packages which I discuss in \autoref{ch:tidyverse}. The learning module is also part of my \textit{swirl-it} course.
+
+\section{Other \textcolor{cyan}{\{}swi\textcolor{cyan}{r}l\textcolor{cyan}{\}} courses}
+You can also install some other courses. You find a list of courses here \websmall\url{http://swirlstats.com/scn/index.html} or here \websmall\url{https://github.com/swirldev/swirl_courses}
+
+I can recommend the following:
+\begin{rblock1}
+	swirl::install_course_github("swirldev", "R_Programming_E")
+	swirl::install_course_github("matt-dray", "tidyswirl")
+%	swirl::install_course("Exploratory Data Analysis")
+	swirl::install_course("Getting and Cleaning Data")
+	swirl::install_course_github("sysilviakim", "swirl-tidy")
+	swirl::install_course("Regression Models")
+\end{rblock1}
+
+
+
