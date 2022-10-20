@@ -1,10 +1,7 @@
 ################################################################################
-# Dear students, I hope you are doing good. There is no lecture today. 
-# Nevertheless, you should use the time to prepare for the exam. In the 
-# following I will give you some tasks and hints what you should study and 
-# repeat, respectively.
-# I will review these exercises next week. However, try to work on them as good
-# as possible given the time you have.
+# Dear students, I hope you are doing good. 
+# In the following I will give you some tasks and hints what you should study 
+# and repeat, respectively.
 ################################################################################
 
 # ==============================================================================

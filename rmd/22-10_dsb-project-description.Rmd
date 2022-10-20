@@ -95,7 +95,9 @@ __Project work__
 - Nobody is perfect and the project is done under time pressure. So don't try to sell yourself too hard. If you see weaknesses in your work, this is a good place to discuss them. 
 - Describe and present your data set so that everyone has an idea of the structure and content of the data.
 - Describe your question and if possible describe your plan to address the question with the data. Rest assured that you don't have to come up with a perfect strategy. It's okay if you don't know many empirical methods. 
-- To facilitate the organization and scheduling of all presentations, please let me know the times you are available by __October 26__. Two presentations per meeting would be ideal. If you do not let me know your preferences, I will determine the time and date. 
+- To facilitate the organization and scheduling of all presentations, please let me know the times you are available by __October 26__. A maximum of 3 presentations per meeting would be ideal. If you do not let me know your preferences, I will determine the time and date. Here is the link where you can give me your preferences and your availability:
+[Doodle Poll: Data Science Presentation](https://doodle.com/meeting/participate/id/bD9mzKYd)
+- We start with the presentations on October 10.
 
 ## rmd file
 

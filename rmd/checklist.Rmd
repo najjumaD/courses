@@ -1,0 +1,57 @@
+---
+title: "Description of the project to be submitted"
+author: "Stephan.Huber@hs-fresenius.de"
+date: 'Data Science for Business: status quo'
+output:
+  html_document:
+    toc: no
+    toc_depth: 3
+    number_sections: false
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+    number_sections: yes
+  word_document:
+    toc: yes
+    toc_depth: '3'
+citation_package: natbib
+biblio-style: apalike
+header-includes: \usepackage{setspace}\doublespacing
+fontsize: 12pt
+urlcolor: blue
+linkcolor: red
+bibliography: /home/sthu/Dropbox/LIT/LIT_full.bib
+---
+  
+```{r setup, include=FALSE}
+library("knitr")
+knit_hooks$set(purl = hook_purl)
+```
+
+Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
+
+# Abstract {-}
+This document informs you about the status-quo of the learning progress in the course "Data Science for Business". 
+
+# What you should know till November
+
+Please ask yourself if the following applies to you. If not, begin studying immediately. I am here to support you. Inside and outside the classroom. Rest assured that you do not need to be able to memorize and apply all of the material without the help of the lecture notes or other resources. However, you should be able to find a solution to a problem you face when dealing with data.
+
+- I have installed R and Rstudio on my PC and it works.
+- I have read ch. 1-7 of the lecture notes and I understood everything.
+- I know how to handle R-scripts. In particular, I know
+    - ...how to send code from the script to the console, 
+    - ...how to run the entire script with the 'source' function, and
+    - ...why writing scripts is so essential when working with data.
+- I know how to install and load R-packages.
+- I know where to find help about R-functions (R documentation).
+- I know how to use the assignment operator.
+- I know how to use the pipe operator.
+I have worked through the swirl learning modules huber-intro-1 and huber-intro-2. I have understood the concepts explained in them.
+- I have worked through the swirl learning modules huber-data-1, huber-data-2 and huber-data-3. I have understood the concepts explained in them.
+- I have worked through the swirl learning modules huber-tidyverse. I have understood the concepts explained in them.
+- I read the chapters of the book "R for Data Science" that I was prompted for in the Swirl packages.
+- I have a basic understanding on how to import, load, handle, manipulate, and visualize data.
+
+
+
