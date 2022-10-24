@@ -115,9 +115,9 @@ __Project work__
   
 # Evaluation 
 
-  - *70 % -- Quality and execution of the project*
+  - *65 % -- Quality and execution of the project*
     -- After your presentation, we will discuss your work in a personal meeting. The goal of this conversation will be that we agree on certain standards by which I will grade you. By this I mean that we define certain goals that you should achieve with your data set and your question. The goal is to create a transparent set of expectations on my part. So that you have an indication of what you need to accomplish at a minimum in order to pass the course.  
-  - *30 % -- Quality and execution of the presentation*
+  - *35 % -- Quality and execution of the presentation*
 
 
 
