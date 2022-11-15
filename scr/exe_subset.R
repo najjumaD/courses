@@ -80,3 +80,4 @@ carsSub2 <- cars %>%
   select(wt, qsec, hp, car) %>% 
   arrange(carsSub, wt) %>% 
   mutate(wt2 = wt^2)
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.3)  9 MAY 2022 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.9.2)  10 NOV 2022 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,12 +185,52 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
-Package: xurl 2020/12/30 v 0.09a modify URL breaks
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count266
+\Gm@cntv=\count267
+\c@Gm@tempcnt=\count268
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count269
+\FV@InFile=\read2
+\FV@TabBox=\box49
+\c@FancyVerbLine=\count270
+\FV@StepNumber=\count271
+\FV@OutFile=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen157
+\fb@frh=\dimen158
+\FrameRule=\dimen159
+\FrameSep=\dimen160
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
@@ -214,9 +254,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen149
-\Hy@linkcounter=\count266
-\Hy@pagecounter=\count267
+\@linkdim=\dimen163
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -226,7 +266,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count268
+\Hy@SavedSpaceFactor=\count274
 Package hyperref Info: Option `unicode' set `true' on input line 4338.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
@@ -240,18 +280,22 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count269
+\c@Hy@tempcnt=\count275
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen150
+\XeTeXLinkMargin=\dimen164
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count270
-\Field@Width=\dimen151
-\Fld@charsize=\dimen152
+\Fld@menulength=\count276
+\Field@Width=\dimen165
+\Fld@charsize=\dimen166
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -266,9 +310,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count271
-\c@Item=\count272
-\c@Hfootnote=\count273
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -278,8 +322,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count274
-\c@bookmark@seq@number=\count275
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -288,55 +332,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip54
 ) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count276
-)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count277
-\Gm@cntv=\count278
-\c@Gm@tempcnt=\count279
-\Gm@bindingoffset=\dimen153
-\Gm@wd@mp=\dimen154
-\Gm@odd@mp=\dimen155
-\Gm@even@mp=\dimen156
-\Gm@layoutwidth=\dimen157
-\Gm@layoutheight=\dimen158
-\Gm@layouthoffset=\dimen159
-\Gm@layoutvoffset=\dimen160
-\Gm@dimlist=\toks24
-) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count280
-\FV@InFile=\read2
-\FV@TabBox=\box49
-\c@FancyVerbLine=\count281
-\FV@StepNumber=\count282
-\FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip54
-\fb@frw=\dimen161
-\fb@frh=\dimen162
-\FrameRule=\dimen163
-\FrameSep=\dimen164
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 105.
-)
-\Gin@req@height=\dimen165
-\Gin@req@width=\dimen166
+\BKM@id=\count282
+)) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2020/12/30 v 0.09a modify URL breaks
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
@@ -397,19 +398,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 110.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count290
-)
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -444,6 +432,19 @@ LaTeX Info: Redefining \nameref on input line 110.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package hyperref Info: Link coloring OFF on input line 110.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count290
+)
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 12.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -485,72 +486,78 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) (./regress_lecture.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 9.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 9.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `regress_lecture.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-29.
+35.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-</home/sthu/Dropbox/hsf/pic/destat/afact2.png, id=27, 702.625pt x 362.35374pt>
+</home/sthu/Dropbox/hsf/pic/destat/afact2.png, id=29, 702.625pt x 362.35374pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/afact2.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/afact2.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/afact2.png  used on 
-input line 148.
+input line 157.
 (pdftex.def)             Requested size: 469.76996pt x 242.26707pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-</home/sthu/Dropbox/hsf/pic/destat/foo-13.png, id=59, 702.625pt x 501.875pt>
+</home/sthu/Dropbox/hsf/pic/destat/foo-13.png, id=63, 702.625pt x 501.875pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/foo-13.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/foo-13.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/foo-13.png  used on 
-input line 163.
+input line 172.
 (pdftex.def)             Requested size: 469.76996pt x 335.54996pt.
 [2 </home/sthu/Dropbox/hsf/pic/destat/afact2.png>]
-</home/sthu/Dropbox/hsf/pic/destat/foo-32.png, id=66, 702.625pt x 501.875pt>
+</home/sthu/Dropbox/hsf/pic/destat/foo-32.png, id=71, 702.625pt x 501.875pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/foo-32.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/foo-32.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/foo-32.png  used on 
-input line 167.
+input line 176.
 (pdftex.def)             Requested size: 469.76996pt x 335.54996pt.
 [3 </home/sthu/Dropbox/hsf/pic/destat/foo-13.png>]
-</home/sthu/Dropbox/hsf/pic/destat/storks.png, id=72, 1313.90875pt x 953.5625pt
+</home/sthu/Dropbox/hsf/pic/destat/storks.png, id=77, 1313.90875pt x 953.5625pt
 >
 File: /home/sthu/Dropbox/hsf/pic/destat/storks.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/storks.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/storks.png  used on 
-input line 173.
+input line 182.
 (pdftex.def)             Requested size: 352.31418pt x 255.6902pt.
+</home/sthu/Dropbox/hsf/pic/destat/nejm.jpg, id=78, 803.0pt x 645.41125pt>
+File: /home/sthu/Dropbox/hsf/pic/destat/nejm.jpg Graphic file (type jpg)
+<use /home/sthu/Dropbox/hsf/pic/destat/nejm.jpg>
+Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/nejm.jpg  used on in
+put line 186.
+(pdftex.def)             Requested size: 375.8172pt x 302.06306pt.
 [4 </home/sthu/Dropbox/hsf/pic/destat/foo-32.png> </home/sthu/Dropbox/hsf/pic/d
 estat/storks.png>]
-</home/sthu/Dropbox/hsf/pic/destat/corelate_overview.png, id=80, 1927.2pt x 880
+</home/sthu/Dropbox/hsf/pic/destat/corelate_overview.png, id=87, 1927.2pt x 880
 .28876pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/corelate_overview.png Graphic file (typ
 e png)
 <use /home/sthu/Dropbox/hsf/pic/destat/corelate_overview.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/corelate_overview.pn
-g  used on input line 192.
+g  used on input line 208.
 (pdftex.def)             Requested size: 305.32942pt x 139.46556pt.
-</home/sthu/Dropbox/hsf/pic/destat/regression_ols.png, id=82, 1362.08875pt x 97
+</home/sthu/Dropbox/hsf/pic/destat/regression_ols.png, id=88, 1362.08875pt x 97
 5.645pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/regression_ols.png Graphic file (type p
 ng)
 <use /home/sthu/Dropbox/hsf/pic/destat/regression_ols.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/regression_ols.png  
-used on input line 208.
+used on input line 224.
 (pdftex.def)             Requested size: 234.87743pt x 168.2394pt.
-[5 </home/sthu/Dropbox/hsf/pic/destat/corelate_overview.png> </home/sthu/Dropbo
-x/hsf/pic/destat/regression_ols.png>]
+[5 </home/sthu/Dropbox/hsf/pic/destat/nejm.jpg> </home/sthu/Dropbox/hsf/pic/des
+tat/corelate_overview.png>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-261.
+277.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -558,179 +565,190 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-</home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png, id=96, 584.1825pt x 808.018
-75pt>
+</home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png, id=100, 584.1825pt x 808.01
+875pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png Graphic file (type png)
 
 <use /home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png  use
-d on input line 262.
+d on input line 278.
 (pdftex.def)             Requested size: 93.94354pt x 129.93909pt.
-</home/sthu/Dropbox/hsf/pic/destat/intuitive_2.png, id=97, 449.68pt x 449.68pt>
-
+</home/sthu/Dropbox/hsf/pic/destat/intuitive_2.png, id=101, 449.68pt x 449.68pt
+>
 File: /home/sthu/Dropbox/hsf/pic/destat/intuitive_2.png Graphic file (type png)
 
 <use /home/sthu/Dropbox/hsf/pic/destat/intuitive_2.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/intuitive_2.png  use
-d on input line 263.
+d on input line 279.
 (pdftex.def)             Requested size: 140.92947pt x 140.92947pt.
-</home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png, id=100, 860.21375pt x 450.6
+[6 </home/sthu/Dropbox/hsf/pic/destat/regression_ols.png>]
+</home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png, id=117, 860.21375pt x 450.6
 8375pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png Graphic file (type png)
 
 <use /home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png  use
-d on input line 278.
+d on input line 295.
 (pdftex.def)             Requested size: 399.29959pt x 209.2013pt.
-[6 </home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png> </home/sthu/Dropbox/hsf/
-pic/destat/intuitive_2.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-87.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+04.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7 </home/sthu/Dropbox/hsf/pic/destat/reg-outlier.png>]
-</home/sthu/Dropbox/hsf/pic/destat/olsscheme.png, id=121, 1048.91875pt x 1150.2
+) [7 </home/sthu/Dropbox/hsf/pic/destat/intuitive_1.png> </home/sthu/Dropbox/hs
+f/pic/destat/intuitive_2.png> </home/sthu/Dropbox/hsf/pic/destat/reg-outlier.pn
+g>]
+</home/sthu/Dropbox/hsf/pic/destat/olsscheme.png, id=130, 1048.91875pt x 1150.2
 975pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/olsscheme.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/olsscheme.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/olsscheme.png  used 
-on input line 359.
+on input line 376.
 (pdftex.def)             Requested size: 328.82663pt x 360.60797pt.
-<regress_lecture_files/figure-latex/pressure-1.pdf, id=122, 459.7175pt x 315.17
+[8]
+<regress_lecture_files/figure-latex/pressure-1.pdf, id=144, 459.7175pt x 315.17
 75pt>
 File: regress_lecture_files/figure-latex/pressure-1.pdf Graphic file (type pdf)
 
 <use regress_lecture_files/figure-latex/pressure-1.pdf>
 Package pdftex.def Info: regress_lecture_files/figure-latex/pressure-1.pdf  use
-d on input line 371.
+d on input line 388.
 (pdftex.def)             Requested size: 459.74442pt x 315.19595pt.
-[8 </home/sthu/Dropbox/hsf/pic/destat/olsscheme.png>]
-<regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf, id=136, 459.7175pt x
+[9 </home/sthu/Dropbox/hsf/pic/destat/olsscheme.png>]
+<regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf, id=151, 459.7175pt x
  315.1775pt>
 File: regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (ty
 pe pdf)
 <use regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-3-1.p
-df  used on input line 385.
+df  used on input line 402.
 (pdftex.def)             Requested size: 459.74442pt x 315.19595pt.
-[9 <./regress_lecture_files/figure-latex/pressure-1.pdf>]
+[10 <./regress_lecture_files/figure-latex/pressure-1.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 393.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 410.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 393.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 410.
 
-<regress_lecture_files/figure-latex/unnamed-chunk-5-1.pdf, id=148, 453.695pt x 
-315.1775pt>
-File: regress_lecture_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (ty
-pe pdf)
-<use regress_lecture_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-5-1.p
-df  used on input line 429.
-(pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
-[10 <./regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf, id=161, 453.695pt x 
+[11 <./regress_lecture_files/figure-latex/unnamed-chunk-3-1.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+462.
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf, id=176, 453.695pt x 
 315.1775pt>
 File: regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (ty
 pe pdf)
 <use regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-6-1.p
-df  used on input line 445.
+df  used on input line 476.
 (pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
-[11 <./regress_lecture_files/figure-latex/unnamed-chunk-5-1.pdf>]
-<regress_lecture_files/figure-latex/unnamed-chunk-7-1.pdf, id=174, 453.695pt x 
+[12 <./regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf>]
+<regress_lecture_files/figure-latex/unnamed-chunk-7-1.pdf, id=189, 453.695pt x 
 315.1775pt>
 File: regress_lecture_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (ty
 pe pdf)
 <use regress_lecture_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-7-1.p
-df  used on input line 458.
+df  used on input line 492.
 (pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
-[12 <./regress_lecture_files/figure-latex/unnamed-chunk-6-1.pdf>]
-<regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf, id=186, 453.695pt x 
+<regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf, id=190, 453.695pt x 
 315.1775pt>
 File: regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (ty
 pe pdf)
 <use regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf>
 Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-8-1.p
-df  used on input line 462.
+df  used on input line 505.
 (pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
 [13 <./regress_lecture_files/figure-latex/unnamed-chunk-7-1.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-484.
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [14 <./regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf>] [15] [16]
-<regress_lecture_files/figure-latex/unnamed-chunk-12-1.pdf, id=222, 436.63126pt
+<regress_lecture_files/figure-latex/unnamed-chunk-9-1.pdf, id=203, 453.695pt x 
+315.1775pt>
+File: regress_lecture_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (ty
+pe pdf)
+<use regress_lecture_files/figure-latex/unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-9-1.p
+df  used on input line 524.
+(pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
+[14 <./regress_lecture_files/figure-latex/unnamed-chunk-8-1.pdf>] [15 <./regres
+s_lecture_files/figure-latex/unnamed-chunk-9-1.pdf>] [16] [17]
+<regress_lecture_files/figure-latex/unnamed-chunk-13-1.pdf, id=240, 436.63126pt
  x 250.9375pt>
-File: regress_lecture_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (t
+File: regress_lecture_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (t
 ype pdf)
-<use regress_lecture_files/figure-latex/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-12-1.
-pdf  used on input line 694.
+<use regress_lecture_files/figure-latex/unnamed-chunk-13-1.pdf>
+Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-13-1.
+pdf  used on input line 741.
 (pdftex.def)             Requested size: 436.63019pt x 250.93687pt.
-<regress_lecture_files/figure-latex/unnamed-chunk-12-2.pdf, id=223, 437.635pt x
+<regress_lecture_files/figure-latex/unnamed-chunk-13-2.pdf, id=241, 437.635pt x
  250.9375pt>
-File: regress_lecture_files/figure-latex/unnamed-chunk-12-2.pdf Graphic file (t
+File: regress_lecture_files/figure-latex/unnamed-chunk-13-2.pdf Graphic file (t
 ype pdf)
-<use regress_lecture_files/figure-latex/unnamed-chunk-12-2.pdf>
-Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-12-2.
-pdf  used on input line 702.
+<use regress_lecture_files/figure-latex/unnamed-chunk-13-2.pdf>
+Package pdftex.def Info: regress_lecture_files/figure-latex/unnamed-chunk-13-2.
+pdf  used on input line 749.
 (pdftex.def)             Requested size: 437.6406pt x 250.94069pt.
-[17 <./regress_lecture_files/figure-latex/unnamed-chunk-12-1.pdf>]
-</home/sthu/Dropbox/hsf/pic/destat/howbad.png, id=235, 1221.56375pt x 658.46pt>
+</home/sthu/Dropbox/hsf/pic/destat/howbad.png, id=242, 1221.56375pt x 658.46pt>
 
 File: /home/sthu/Dropbox/hsf/pic/destat/howbad.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/howbad.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/howbad.png  used on 
-input line 708.
+input line 757.
 (pdftex.def)             Requested size: 375.81036pt x 202.57321pt.
-[18 <./regress_lecture_files/figure-latex/unnamed-chunk-12-2.pdf> </home/sthu/D
-ropbox/hsf/pic/destat/howbad.png>]
-</home/sthu/Dropbox/hsf/pic/destat/fitR.png, id=248, 1927.2pt x 963.6pt>
+[18 <./regress_lecture_files/figure-latex/unnamed-chunk-13-1.pdf> <./regress_le
+cture_files/figure-latex/unnamed-chunk-13-2.pdf>]
+</home/sthu/Dropbox/hsf/pic/destat/fitR.png, id=262, 1927.2pt x 963.6pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/fitR.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/fitR.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/fitR.png  used on in
-put line 727.
+put line 776.
 (pdftex.def)             Requested size: 258.36697pt x 129.18349pt.
+[19 </home/sthu/Dropbox/hsf/pic/destat/howbad.png> </home/sthu/Dropbox/hsf/pic/
+destat/fitR.png>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 745.
+(amsmath)                 on input line 794.
 
-</home/sthu/Dropbox/hsf/pic/destat/storks3.png, id=249, 938.50626pt x 636.3775p
+</home/sthu/Dropbox/hsf/pic/destat/storks3.png, id=271, 938.50626pt x 636.3775p
 t>
 File: /home/sthu/Dropbox/hsf/pic/destat/storks3.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/storks3.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/storks3.png  used on
- input line 760.
+ input line 809.
 (pdftex.def)             Requested size: 117.42755pt x 79.62466pt.
-[19 </home/sthu/Dropbox/hsf/pic/destat/fitR.png> </home/sthu/Dropbox/hsf/pic/de
-stat/storks3.png>]
-</home/sthu/Dropbox/hsf/pic/destat/storks2.png, id=261, 1307.88625pt x 863.225p
+</home/sthu/Dropbox/hsf/pic/destat/storks2.png, id=274, 1307.88625pt x 863.225p
 t>
 File: /home/sthu/Dropbox/hsf/pic/destat/storks2.png Graphic file (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/storks2.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/storks2.png  used on
- input line 785.
+ input line 834.
 (pdftex.def)             Requested size: 375.80482pt x 248.03696pt.
-</home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png, id=262, 414.64912
-pt x 167.12437pt>
+[20 </home/sthu/Dropbox/hsf/pic/destat/storks3.png>]
+</home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png, id=282, 460.72125
+pt x 185.69376pt>
 File: /home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png Graphic file 
 (type png)
 <use /home/sthu/Dropbox/hsf/pic/destat/correlation_causation.png>
 Package pdftex.def Info: /home/sthu/Dropbox/hsf/pic/destat/correlation_causatio
-n.png  used on input line 800.
-(pdftex.def)             Requested size: 375.82545pt x 151.47647pt.
-[20 </home/sthu/Dropbox/hsf/pic/destat/storks2.png> </home/sthu/Dropbox/hsf/pic
+n.png  used on input line 849.
+(pdftex.def)             Requested size: 375.80437pt x 151.46799pt.
+
+Overfull \hbox (1036.9906pt too wide) in paragraph at lines 867--867
+[]\T1/lmtt/m/n/10 ## [>                                                        
+   ] 0%[======>                                                     ] 10%[=====
+=================================================>     ] 90%[==================
+==========================================] 100%Printing pages (2/2)[] 
+ []
+
+[21 </home/sthu/Dropbox/hsf/pic/destat/storks2.png> </home/sthu/Dropbox/hsf/pic
 /destat/correlation_causation.png>] (./regress_lecture.aux) ) 
 Here is how much of TeX's memory you used:
- 13840 strings out of 481158
- 207973 string characters out of 5912464
- 535141 words of memory out of 5000000
- 30362 multiletter control sequences out of 15000+600000
- 482661 words of font info for 137 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 13859 strings out of 481085
+ 208436 string characters out of 5910883
+ 536447 words of memory out of 5000000
+ 30377 multiletter control sequences out of 15000+600000
+ 482874 words of font info for 139 fonts, out of 8000000 for 9000
+ 81 hyphenation exceptions out of 8191
  85i,8n,88p,742b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/
 fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/
@@ -747,10 +765,10 @@ public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share
 /lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtko1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on regress_lecture.pdf (20 pages, 1594477 bytes).
+Output written on regress_lecture.pdf (21 pages, 1057736 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 47356 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 47377 words of extra memory for PDF output out of 51595 (max. 10000000)
 
