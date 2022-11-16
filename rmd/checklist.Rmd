@@ -1,5 +1,5 @@
 ---
-title: "Description of the project to be submitted"
+title: "Checklist: What you should know till November"
 author: "Stephan.Huber@hs-fresenius.de"
 date: 'Data Science for Business: status quo'
 output:
@@ -8,12 +8,8 @@ output:
     toc_depth: 3
     number_sections: false
   pdf_document:
-    toc: yes
-    toc_depth: '3'
-    number_sections: yes
-  word_document:
-    toc: yes
-    toc_depth: '3'
+    toc: no
+    number_sections: no
 citation_package: natbib
 biblio-style: apalike
 header-includes: \usepackage{setspace}\doublespacing
@@ -23,10 +19,6 @@ linkcolor: red
 bibliography: /home/sthu/Dropbox/LIT/LIT_full.bib
 ---
   
-```{r setup, include=FALSE}
-library("knitr")
-knit_hooks$set(purl = hook_purl)
-```
 
 Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
 
