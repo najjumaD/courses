@@ -8,6 +8,7 @@ rm(list=ls())
 library("tidyverse")
 library("ggpubr")
 library("sjPlot")
+library("GGally")
 
 load(url("https://github.com/hubchev/courses/raw/main/dta/forest.Rdata"))
 
@@ -32,8 +33,16 @@ df  %>%
 
 # rmarkdown::render("exe_forest.Rmd", "all")
 
-df %>% 
-  select(df, gdp, dpg_growth, forest) %>% 
-  plot()
+cc <- 
   
-plot(df)
+  df %>% 
+  select(country, gdp, gdp_growth, forest) %>%
+  plot()
+
+
+cc <-   df %>% 
+  select(gdp, gdp_growth, forest)
+
+ggpairs(cc)
+  
+plot(cc)

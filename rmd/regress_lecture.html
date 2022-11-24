@@ -1498,7 +1498,7 @@ font-size: 0.95em;
 
 
 <hr />
-<p>Compiled at 10 November, 2022</p>
+<p>Compiled at 17 November, 2022</p>
 <p>Word count: 1614</p>
 <hr />
 <div id="literature" class="section level1" number="1">
@@ -1641,20 +1641,20 @@ head(classdata)</code></pre>
 ## 6  6   w     48    161        0   g</code></pre>
 <hr />
 <pre class="r"><code>summary(classdata)</code></pre>
-<pre><code>##        id           sex                weight          height         siblings    
-##  Min.   : 1.0   Length:23          Min.   :48.00   Min.   :156.0   Min.   :0.000  
-##  1st Qu.: 6.5   Class :character   1st Qu.:64.50   1st Qu.:168.0   1st Qu.:1.000  
-##  Median :12.0   Mode  :character   Median :70.00   Median :175.0   Median :1.000  
-##  Mean   :12.0                      Mean   :70.61   Mean   :173.7   Mean   :1.391  
-##  3rd Qu.:17.5                      3rd Qu.:81.00   3rd Qu.:180.0   3rd Qu.:2.000  
-##  Max.   :23.0                      Max.   :90.00   Max.   :194.0   Max.   :4.000  
-##      row           
-##  Length:23         
-##  Class :character  
-##  Mode  :character  
-##                    
-##                    
-## </code></pre>
+<pre><code>##        id           sex                weight          height     
+##  Min.   : 1.0   Length:23          Min.   :48.00   Min.   :156.0  
+##  1st Qu.: 6.5   Class :character   1st Qu.:64.50   1st Qu.:168.0  
+##  Median :12.0   Mode  :character   Median :70.00   Median :175.0  
+##  Mean   :12.0                      Mean   :70.61   Mean   :173.7  
+##  3rd Qu.:17.5                      3rd Qu.:81.00   3rd Qu.:180.0  
+##  Max.   :23.0                      Max.   :90.00   Max.   :194.0  
+##     siblings         row           
+##  Min.   :0.000   Length:23         
+##  1st Qu.:1.000   Class :character  
+##  Median :1.000   Mode  :character  
+##  Mean   :1.391                     
+##  3rd Qu.:2.000                     
+##  Max.   :4.000</code></pre>
 <div id="how-to-execute-a-regression-analysis" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> How to execute a
 regression analysis</h2>
@@ -1761,9 +1761,8 @@ m3 &lt;- lm(weight ~ height + sex + height * sex , data = classdata )
 m4 &lt;- lm(weight ~ height + sex + height * sex + siblings , data = classdata )
 m5 &lt;- lm(weight ~ height + sex + height * sex , data = subset(classdata, siblings &lt; 4 ))
 
-library(sjPlot)</code></pre>
-<pre><code>## #refugeeswelcome</code></pre>
-<pre class="r"><code>tab_model(m1, m2, m3, m4, m5,
+library(sjPlot)
+tab_model(m1, m2, m3, m4, m5,
           p.style = &quot;stars&quot;,
           p.threshold = c(0.2, 0.1, 0.05),
           show.ci = FALSE, 
