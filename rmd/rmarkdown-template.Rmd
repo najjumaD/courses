@@ -36,7 +36,7 @@ Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", kni
 
 
 # Abstract {-}
-Bli bla blub
+Bli bla blub @Kirchkamp2018Using
 
 
 # h1 Heading 8-)

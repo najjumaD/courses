@@ -2,6 +2,7 @@
 setwd("/home/sthu/Dropbox/hsf/22-ss/dsb_bac/work/")
 rm(list=ls())
 library(tidyverse)
+library("GGally")
   read_csv("https://raw.githubusercontent.com/hubchev/courses/main/dta/classdata.csv") %>%
   select(sex,weight,height,siblings) %>% 
   ggpairs(.,

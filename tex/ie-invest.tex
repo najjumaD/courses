@@ -1,0 +1,363 @@
+
+\pbn
+\section{International investments}\label{sec:International investments}
+\subsection{Three components of the rate of return}
+An investment is usually rated by the rate of return and individual preferences\footnote{A note concerning preferences: 	Each investment has different characteristics such as the default risk, opportunities, and liquidity. These characteristics are important to decide which investment is superior. However, we mostly refrain from discussing sophisticated features of investments here.}.
+In particular, three components are important to calculate the rate of return:
+\enux{
+	\item \textbf{Interest rate}: An interest rate is the proportion of a loan that is charged to the borrower per period: \[\underbrace{I_t}_{\textnormal{investment in t}} \cdot\quad \underbrace{(1+i)}_{1+\textnormal{interest rate}} = \underbrace{I_{t+1}}_{\textnormal{payout amount in t+1}} \] 
+	\item \textbf{Exchang rate}: An exchange rate is the rate at which one currency can be exchanged to another currency:
+	\[
+	\underbrace{A}_{\textnormal{value of currency A}}=\underbrace{B}_{\textnormal{value of currency B}} \Leftrightarrow E^{\frac{A}{B}}=\frac{A}{B}
+	\]
+	\pbn
+	\item \textbf{Inflation}: Inflation is a quantitative measure of the rate at which the (average) prices (of a basket of representative goods and services) in an economy increase over a period of time. A negative inflation is usually called a deflation.
+	\[
+	\underbrace{\pi}_{\textnormal{Inflation}}=\frac{\overbrace{P_t}^{\textnormal{Price in t}}-\overbrace{P_{t-1}}^{\textnormal{Price in t-1}}}{P_{t-1}}=\frac{P_t}{P_{t-1}}-1
+	\]
+}
+
+
+\heux{Currencies as a store of value}{
+	If currencies can appreciate/depreciate over time and/or if inflation is existing, the decision in which currency you store your value and purchasing power, respectively, is important. Thus, whenever you hold a currency you speculate.
+}
+
+\pbn
+\subsection{Rate of return}
+The rate of return, $r$, is calculated as follows:
+\begin{align*}
+	r=& \frac{I^{\euro}_t-I_{t-1}^{\euro}}{I_{t-1}^{\euro}}=\frac{I^{\euro}_t}{I^{\euro}_{t-1}}-1  ,
+\end{align*}
+where $I$ denotes the value of an asset measured in \euro\ in the respective time period. Three things can change the value of an asset from $t-1$ to $t$:
+\enux{\item The interest rate, $i$: \[I_{t-1} \cdot (1+i) = I_{t} \] 
+	\item Storing the value in another currency temporarily, i.e., between $t-1$ and $t$:
+	\[ I^{\euro}_{t-1}\cdot E_{t-1}^{\frac{\lira}{\euro}} \cdot E_{t}^{\frac{\euro}{\lira}}= I_{t}^{\euro}  \]
+	\item The inflation rate, $\pi$: \[I_{t-1} \cdot (1+\pi) = I_{t} \] 
+}
+Let us now combine the three components to see how the value of an investment changes over time when it is invested in an asset (inflation matters), abroad (exchange rate matters), and in productive capital (interest rate matters):
+\begin{equation}\label{equ:Invest_t}
+	I_{t-1}^{\euro} \cdot (1+i) \cdot E_{t-1}^{\frac{\lira}{\euro}} \cdot E_{t}^{\frac{\euro}{\lira}} \cdot  (1+\pi)  = I_{t}^{\euro}. 
+\end{equation}
+By assuming no inflation ($\pi=0$), we can re-write the equation as 
+\begin{align}
+	I_{t} =&	I_{t-1} \cdot (1+i) \cdot E_{t-1}^{\frac{\lira}{\euro}} \cdot E_{t}^{\frac{\euro}{\lira}} \\
+	\Leftrightarrow \frac{I_{t} }{I_{t-1}}=&  (1+i) \cdot E_{t-1}^{\frac{\lira}{\euro}} \cdot E_{t}^{\frac{\euro}{\lira}}\label{equ:rear1} \\
+	\Leftrightarrow \frac{I_{t} }{I_{t-1}}=&  (1+i) \cdot \underbrace{\frac{E_{t}^{\frac{\euro}{\lira}}}{E_{t-1}^{\frac{\euro}{\lira}}}}_{\textnormal{denote this relation } \alpha} \\
+	\Leftrightarrow \underbrace{\frac{I_{t} }{I_{t-1}}-1}_{\textnormal{rate of return}\equiv r}=&  (1+i) \cdot \alpha-1\\
+	r=&(1+i)\cdot \alpha -1 \\
+	r=&\alpha+ i\alpha - 1\\
+	r=& \underbrace{\alpha-1}_{\textnormal{rate of depreciation}=w} + i\alpha\\
+	r=& w + i+ i\alpha-i\\
+	r=& w + i+ i\underbrace{(\alpha-1)}_{=w}\\
+	r=& w + i+ iw\label{equ:rear2}.
+\end{align}
+\heux{Simple rule for $r$}{Assuming that the product $iw$ is very small, we can say that the rate of return equals approximately the interest rate plus the rate of depreciation: $r=w+i$.}
+
+%\pbn
+\subsection{The interest parity condition}
+Assume that the rate of return is smaller at home than for an investment abroad. Denoting the foreign country with an asterisk ($*$), we can write this situation, where it is more profitable to invest money abroad than at home, as follows:
+\begin{align*}
+	r&<r_{*}\\
+	i&< w+i_{*}+i_{*} w.
+\end{align*}
+
+What would happen if actors in the financial market would find that out?
+\itex{
+	\item The actors would try to convert their home currency to the foreign currency.
+	\item This, in turn, would increase the demand for the foreign currency.
+	\item The foreign currency is now under appreciation pressure and becomes relatively more expensive  till it is not more profitable anymore to invest abroad.
+	\item In other words, \red{$w$ is negative so that $r=r_*$} is reached.
+}
+\pbn
+\heux{Interest parity condition}{The FOREX is in equilibrium when deposits of all currencies offer the same expected rate of return. Thus, in equilibrium the exchange rate, $w$, assures that the rate of return from the home country, $r$, is equal to the rate of return in any foreign country, denoted with an asterisk ($*$):
+	\begin{align}
+		r&=r_{*}\nonumber\\
+		i&= w + i_{*}+ i_{*}w\nonumber\\
+		\Leftrightarrow i&= i_*+w(i_*+1)\nonumber\\
+		\Leftrightarrow w&= \frac{i-i_{*}}{1+i_{*}}\label{equ:ipa}
+	\end{align}
+}
+
+%This intuitive story can be depicted in a figure with the difference of two alternative rate of returns (here it is Turkey and Germany) on the y-axis and the rate of depreciation on the y-axis:
+%
+%\begin{minipage}{0.45\linewidth}	
+%\begin{center}
+%	\begin{tikzpicture}[domain=1:2,xscale=1,yscale=1]
+%	\draw[black,domain=-.8:.8] plot (\x, {-2*\x}) node[right] at (.1,1.7) {};
+%	\draw[<->] (0,2) node[left]{$\triangle r= r_{TUR}-r_{GER}$}-- (0,0) -- (2,0) node[below] {$\triangle w$};
+%	\draw[-] (0,-1.8) -- (0,0) -- (-1.8,0) ;
+%	\draw [dashed] (0,1) node [right] {$\triangle r_1$} -- (-.5,1) -- (-.5,0) node [below] {$\triangle  w_1$};
+%%	\draw [->] (1,-.2) node[left]{$\triangle w_*$} (1,0) -- (.9,-.1);
+%%		\draw [] (0,0) node[left]{0} (1,0);
+%%		\draw[blue,domain=0.15:0.415] plot (\x, {2.9+-7*\x}) node[right] {$B$};
+%%	\draw[green] plot (\x, {0.025+\x+\x*\x}) node[right] {$v_2(x)$};
+%%	\draw[thin, dashed] plot (\x, {0.275+1.5*\x+1.5*\x*\x}) ;
+%%	\draw[thick,domain=0:0.33666] plot (\x, {0.05+2*\x+2*\x*\x}) ;
+%%	\draw[thick,domain=0.33666:0.5]
+%%	plot (\x, {0.5+\x+\x*\x}) node[right] {$2\min[v_1,v_2]$};
+%	\end{tikzpicture}
+%\end{center}
+%\end{minipage}	
+%\begin{minipage}{0.55\linewidth}	
+%In $\triangle r_1$ the rate of return is larger in Turkey as compared to Germany. In turn, the demand for \lira\ exceeds its supply and the Turkish lira must appreciate relative to the \euro\ ($w$ must be negative) till the FOREX is in equilibrium with an exchange rate at which the rate of return for an asset in Germany is equal to the rate of return for an asset in Turkey and both $\triangle w=0$ and $\triangle r=0$.
+%\end{minipage}	
+
+The interest parity condition allows us, to analyze how changes in interest rates and expected exchange rates transmit into changes of exchange rates today by doing comparative static analysis with equation (\ref{equ:ipa}):
+\begin{align*}
+	\frac{\partial w}{\partial i}>0; \qquad	\frac{\partial w}{\partial i_*}<0.
+\end{align*}
+That means, 
+\itex{
+	\item if the interest rate of the home country increases, the change in the depreciation rate is positive ($\rightarrow$ the home currency \red{de}preciates)
+	\item if the  interest rate of the foreign country increases, the change in the depreciation rate is negative ($\rightarrow$ home currency \red{ap}preciates)
+}
+
+
+\pbn
+\boxb{\textbf{Unpegging the Swiss Franc}
+	Until early 2015 the Swiss central bank (SNB) officially aimed to keep the franc over the cap of 1.20 Franc per Euro to protect exporters and ward off deflationary pressure. Unexpectedly, the SNB unpegged the Franc in 2015 which was under appreciation pressure because many investors wanted to store their assets in the Swiss Franc. With the SNB announcement, the exchange rate felt from 1.20 to 1.00 Franc per Euro ($E^{\frac{F}{\euro}}$), see \autoref{fig:franc_euro}. Almost simultaneously the interest rate also dropped as is shown in \autoref{fig:swiss_i}. This is exactly what the interest parity condition predicts.
+	
+	
+	\begin{minipage}{0.5\linewidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\linewidth]{$HOME/Dropbox/hsf/pic/ie/franc_euro_pdf}
+			
+			\caption{The Swiss central bank unpegged the Franc from the Euro}
+			%	\note{}
+			\label{fig:franc_euro}
+		\end{figure}
+	\end{minipage}	
+	\begin{minipage}{0.5\linewidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\linewidth]{$HOME/Dropbox/hsf/pic/ie/swiss_i_pdf}
+			
+			\caption{The Swiss interest rate}
+			%	\note{}
+			\label{fig:swiss_i}
+		\end{figure}
+	\end{minipage}	
+}
+
+\pbn
+\subsection{The Fisher effect}
+Let us recall equation (\ref{equ:Invest_t}): 
+\begin{align*}
+	I_{t-1}^{\euro} \cdot (1+i) \cdot E_{t-1}^{\frac{\lira}{\euro}} \cdot E_{t}^{\frac{\euro}{\lira}} \cdot  (1+\pi)  = I_{t}^{\euro}
+\end{align*}\texttt{}
+Now, assume that the exchange rate is stable over time ($E_{t-1}^{\frac{\euro}{\lira}} =E_{t}^{\frac{\euro}{\lira}}$) and that the interest rate is zero ($i=0$). Then, we can write 
+\begin{align}
+	I_{t} =&	I_{t-1} \cdot  (1+\pi) \\
+	\Leftrightarrow \frac{I_{t} }{I_{t-1}}-1=&  (1+\pi)-1  \\
+	r=&  \pi
+\end{align}
+\heux{Fisher effect}{Abstracting from exchange rate movements and interest rate differences, the rate of return is solely determined by the inflation rate and cross-country differences in their rate of return can be described by differences in inflation rates:
+	\[r_{GER}-r_{TUR}= \pi_{GER}-\pi_{TUR}.\]
+	This equation is often called the Fisher Effect.}
+
+
+
+\exextoc{Exchange rates and where to invest}{
+	
+	Suppose you want to buy a new car in Germany in one year, i.e, t=2023. Today, i.e., t=2022, you have \euro10,000 to invest for one year. 
+	
+	Given the following conditions:
+	\itex{\item The annual interest rate in Europe is 1\%.
+		\item The annual interest rate in the U.S.A. is 2\%.
+		\item One US-Dollar can be converted to \euro 0.93 this year.
+		\item You expect that \euro 1  can be converted to \textdollar1.09 next year.
+		\item Moreover, you expect no inflation in Germany and the U.S.
+		\item No banking fees or alike.	
+	}
+	\abcx{
+		\item Calculate the return on an investment in the U.S. and Germany, respectively.
+		\item Do you expect the euro to appreciate or depreciate from 2022 to 2023?
+	}
+	%	\item Calculate the exchange rate in period t that makes investing in Germany and Turkey equal profitable.
+	%	\item Explain why the Turkish Lira is under appreciation pressure in t-1. 
+}
+
+\pbn
+\solx{Exchange rates and where to invest}{
+	\abcx{
+		\item Rate of return in the EU is 1 percent and hence you will have \euro 10,100 in 2023.\\
+		Rate of return in the US is about 0.62 percent:
+		\[
+		10000\euro \cdot \frac{1 \textdollar}{0.93 \euro}\cdot 1.02 \cdot \frac{1 \euro}{1.09 \textdollar}= 10062.1485 \euro
+		\]
+		Thus, it is better to invest in Europe.
+		\item In 2022 you have to pay 93 Cent for a dollar and in 2023 you expect to pay about 91 Cent for a dollar. Thus, you expect the Euro to appreciate.
+	}
+}
+
+%
+%\boxb{\textbf{A remark theory vs. reality}
+%	Social and economic reality is more complex than we can imagine or than any theory can capture. However, theory can help us identify, describe, and understand important underlying relationships in the real world. In theory, we can abstract from some (more unimportant) parts of the story to see and understand other (more important) parts of the story. For example, in this section we abstract from many relationships and circumstances that may be important, such as all the interactions of our variables, the effects of politics, nature, or the dynamic processes behind economic behavior.  
+%}
+%
+%\paragraph{Investments Under Uncertainty}{
+%So far, we have considered both inflation and the interest rate as two variables that are certain, that is, they do not vary differently across countries. However, in the real world these assumptions are nonsense because both rates do not only have different average values across countries and both rates vary across countries differently. Additionally, they are far from being perfectly predictable. That means, investors can make wrong decisions if one of the two rates do not fit their expectations. If that is the case, the investors change their decision accordingly with implications for the exchange rate. However, these implications can be analyzed straightforward with the equations for the rate of return. 
+%}
+
+
+%\newpage
+%\subsection{Tutorial}
+\pbn
+\exextoc{Turkey vs. Germany}{
+	
+	You have 100\euro\ this year, $t-1$, which you like to invest till next year, $t$.  
+	\abcx{\item Where should you invest, given the following informations:
+		\itex{\item The interest rate in Germany is 1\%.
+			\item The interest rate in Turkey is 10\%.
+			\item 1\euro\ can be converted to 7 \lira\ this year in the FOREX
+			\item You expect that 1 \euro\ can be converted to 7.1 \lira\ next year in the FOREX.
+			\item You expect no inflation in Germany and Turkey.
+		}
+		\item Calculate the exchange rate in period t that makes investing in Germany and Turkey equal profitable.
+		\item Explain why the Turkish Lira is under appreciation pressure in t-1. 
+	}
+}
+
+\pbn
+\solx{Turkey vs. Germany}{
+	\abcx{\item 
+		Intuition: Looking only on the interest rate, it would be superior to invest in Turkey. Looking only on the development of the exchange rate, however, it would be superior to invest in Germany because the Euro appreciates relative to the Lira from period t-1 to t. Thus, we need to calculate the return on investment in order to see which of the two effects dominates.
+		
+		%
+		\ubex{$\Rightarrow$ (Exact) Calculation Method in 4 Steps:}
+		\begin{enumerate}
+			\item exchange \euro\ to \lira\ in t-1:\\ $100\euro\cdot E^{\lira/\euro}_{t-1}= 100\euro \cdot 7\frac{\lira}{\euro}=700\lira$ 
+			\item invest in either Germany or Turkey: \\$GER \rightarrow 100\euro\cdot (1+0.01)=101\euro$\\
+			$TUR\rightarrow 700\lira\cdot(1+0.1)=770\lira$
+			\item re-exchange \lira\ to \euro:\\
+			$770\lira\cdot E^{\euro/\lira}_{t}= 770\lira\cdot\frac{1 \euro}{7\frac{1}{10}\lira}=\frac{7700}{71}\approx 108.4507$
+			\item calculate the return on investment, $r$: 
+			\begin{align*}
+				r_{GER}=&0.01\\
+				r_{TUR}=&\frac{108.4507-100}{100}=0.084507
+			\end{align*}
+		\end{enumerate}
+		
+		Answer: The return on investment is lower in Germany. Thus, it is superior to invest the 100\euro\ in Turkey.
+		
+		
+		\ubex{$\Rightarrow$ (Exact) Calculation Method Alternative:}
+		\begin{align*}
+			\overbrace{r}^{\textnormal{rate of return}}=& \frac{I^{\euro}_t-I_{t-1}^{\euro}}{I_{t-1}^{\euro}} 
+		\end{align*}
+		with $I^{\euro}_{t}=\overbrace{I^{\euro}_{t-1}}^{\textnormal{investment in t-1}}\cdot \overbrace{E^{\lira/\euro}_{t-1}}^{\textnormal{exchange rate in t-1}}\cdot \overbrace{(1+i)}^{1+ \textnormal{interest rate}}\cdot \overbrace{E^{\euro/\lira}_{t}}^{\textnormal{exchange rate in t}}$
+		\begin{align*}
+			TUR\rightarrow I_{t}^{\euro}=&100\euro\cdot 7\frac{\lira}{\euro}\cdot (1+0.1)\cdot\frac{1\euro}{7.1\lira}=108.4507 \rightarrow r_{TUR}=0.084507\\
+			GER\rightarrow I_{t}^{\euro}=& 100\euro \cdot 1 \cdot (1+0.01)\cdot 1 = 101\euro\rightarrow r_{GER}=0.01
+		\end{align*}
+		
+		\ubex{$\Rightarrow$ (Approximative) Calculation Method:}\\
+		Steps a) to c) can be summarized as two rates of changes:
+		\begin{align*}
+			\underbrace{r'}_{\textnormal{approximative rate of return}}=&\underbrace{i}_{\textnormal{interest rate}}+\underbrace{w}_{\textnormal{rate of depreciation}}\\
+			\textnormal{with}\quad	w=&\frac{E^{\euro/\lira}_{t}}{E^{\euro/\lira}_{t-1}}-1
+		\end{align*}
+		\begin{align*}
+			r'_{GER}=&0.01\\
+			r'_{TUR}=&0.1+\frac{\frac{10}{71}}{\frac{10}{70}}-1=0.1+\frac{700}{710}-1=0.1-\frac{10}{710}=\frac{61}{710}\approx 0.08591
+		\end{align*}
+		
+		\item Both investments are equal profitable if $r_{GER}=r_{TUR}$. Given all informations in period $t-1$, the exact exchange rate in period $t$ that makes investments are equal profitable, $E^{\euro/\lira*}_{t}$, is calculated as follows:
+		\begin{align*} 
+			I^{\euro}_{t}&=I^{\euro}_{t-1} E^{\lira/\euro}_{t-1} (1+i) E^{\euro/\lira *}_{t}\\
+			\Leftrightarrow E^{\euro/\lira*}_{t}&= \frac{I^{\euro}_{t}}{(I^{\euro}_{t-1} E^{\lira/\euro}_{t-1} (1+i))}=\frac{101}{(100\cdot 7 \cdot 1.1)}=\frac{101}{770}\approx 0.1311
+		\end{align*}
+		
+		The approximate exchange rate in period $t$ that makes investments are equal profitable, $E^{\euro/\lira*'}_{t}$, is calculated as follows:
+		\begin{align*}
+			r_{GER}=&i_{TUR}+\frac{E^{\euro/\lira*'}_{t}}{E^{\euro/\lira}_{t-1}}-1\\
+			\Leftrightarrow r_{GER}-i_{TUR}+1=&\frac{E^{\euro/\lira*'}_{t}}{E^{\euro/\lira}_{t-1}}\\
+			\Leftrightarrow E^{\euro/\lira*'}_{t}=& (r_{GER}-i_{TUR}+1)\cdot E^{\euro/\lira}_{t-1}\\
+			\Leftrightarrow E^{\euro/\lira*'}_{t}=& (0.01-0.1+1)\cdot \frac{1}{7}=\frac{91}{100}\cdot \frac{1}{7}=\frac{91}{700}=0.13
+			%	\Leftrightarrow E^{\euro/\lira*}_{t-1}=& \frac{E^{\euro/\lira}_{t}}{(r_{GER}-i_{TUR}+1)}\\
+			%	\Leftrightarrow E^{\euro/\lira*}_{t-1}=& \frac{\frac{1}{7}}{(0.01-0.01+1)}= \frac{\frac{1}{7}}{(0.91)}=\frac{100}{637}\approx 0.1569
+		\end{align*}
+		Let us proof our results by re-calculating the rate of return for an investment in Turkey with  $E^{\euro/\lira*}_{t}$ and $E^{\euro/\lira*'}_{t}$:
+		\begin{align*}
+			r'_{TUR}=&0.1+\frac{\frac{91}{700}}{\frac{1}{7}}-1=\frac{637}{700}-0.9=0.01\\
+			I_{t}^{\euro*}=&100\euro\cdot 7\frac{\lira}{\euro}\cdot (1+0.1)\cdot \frac{91}{700}\frac{\euro}{\lira}= \frac{70070}{700}=100.1\\
+			\rightarrow r_{TUR}^*=&0.01
+		\end{align*} 
+		
+		\item The \lira\ must appreciate in t-1 since it is more profitable to exchange \euro\ to store the asset value in Turkey. That means the demand curve in the FOREX shifts upwards (see figure of Box \ref{sec:FOREX}) till the exchange rate equals the exchange rate that makes both investments equal profitable and hence nobody has an incentive to demand more \lira\ for the given exchange rate $E^{\euro/\lira*}_{t}$ as calculated above.
+	}
+}
+
+%\solx{Interest Parity Condition MC}{a) and b) are correct statements.}
+
+
+
+
+%\exex{Graphical Interpretation of the Interest Parity Condition}{
+%	Show how the comparative static analysis of Box \ref{FOREX: Interest Rates and Exchange Rate Expectations} can be presented graphically. Use therefore the figure of Box \ref{The Interest Parity Condition}.
+%}
+%
+%
+%\solx{Graphical Interpretation of the Interest Parity Condition}{
+%	Let us call Germany the home country and Turkey the foreign country. The comparative static analysis is made with $w$, the figures below, however, have the exchange rate in direct quotation on the x-axis. Thus we should clarify that an expected appreciation (depreciation) of the \euro\ equates a negative (positive) $w$.
+%\desx{
+%	\item[$\frac{\partial w}{\partial i}>0 \Rightarrow$]  An increase of Germany's interest rate makes Germany more attractive to foreign investors because Germany's rate of return, $r_{GER}$, increases. Consequently in the figure, the $\triangle r$ decreases for all exchange rates.
+%	The positive change of Germany's interest rate, hence, would shift the function $\triangle r(E^{\euro/\lira})$ downwards and a the new equilibrium exchange rate would be $E_1$, i.e., $E^{\euro/\lira}$ decreases and  $w$ increases.
+%	\begin{center}
+%		\begin{tikzpicture}[domain=1:2,xscale=2,yscale=2]
+%		\draw[<->] (0,2) node[left]{$\triangle r= r_{TUR}-r_{GER}$}-- (0,0) -- (2,0) node[below] {$E^{\euro/\lira}$};
+%				\draw[black,domain=0.2:1] plot (\x, {2+-2*\x}) node[above right] at (.1,1.7) {$\triangle r(E^{\euro/\lira})$};
+%						\draw[black,domain=0.2:.75] plot (\x, {1.5+-2*\x}) node[above right] at (.1,1.7) {};
+%%		\draw [dashed] (0,1) node [left] {$\triangle r_1$} -- (.5,1) -- (.5,0) node [below] {$E_1$};
+%		\draw [] (1,-.05) node[below]{$E_0$} (1,0);
+%				\draw [] (.75,-.05) node[below]{$E_1$} (1,0);
+%		\end{tikzpicture}
+%	\end{center}
+%
+%	\item[$\frac{\partial w}{\partial i_*}<0 \Rightarrow$] An increase of Turkey's interest rate makes Turkey more attractive to German investors because Turkey's rate of return, $r_{TUR}$, increases. Consequently in the figure, the $\triangle r$ increases for all exchange rates.
+%	The positive change of Turkey's interest rate, hence, would shift the function $\triangle r(E^{\euro/\lira})$ upwards and a the new equilibrium exchange rate would be $E_2$, i.e., $E^{\euro/\lira}$ increases and  $w$ decreases.
+%		\begin{center}
+%		\begin{tikzpicture}[domain=1:2,xscale=2,yscale=2]
+%		\draw[<->] (0,2) node[left]{$\triangle r= r_{TUR}-r_{GER}$}-- (0,0) -- (2,0) node[below] {$E^{\euro/\lira}$};
+%		\draw[black,domain=0.2:1] plot (\x, {2+-2*\x}) node[above right] at (.1,1.7) {$\triangle r(E^{\euro/\lira})$};
+%		\draw[black,domain=0.2:.75] plot (\x, {1.5+-2*\x}) node[above right] at (.1,1.7) {};
+%			\draw[black,domain=0.5:1.25] plot (\x, {2.5+-2*\x}) node[above right] at (.1,1.7) {};
+%		%		\draw [dashed] (0,1) node [left] {$\triangle r_1$} -- (.5,1) -- (.5,0) node [below] {$E_1$};
+%		\draw [] (1,-.05) node[below]{$E_0$} (1,0);
+%		\draw [] (.75,-.05) node[below]{$E_1$} (1,0);
+%			\draw [] (1.3,-.05) node[below]{$E_2$} (1,0);
+%		\end{tikzpicture}
+%	\end{center}
+%
+%	\item[$\frac{\partial w}{\partial E^{\frac{\euro}{\lira}}_{t-1}}<0 \Rightarrow$] 
+%	An increase of the expected exchange rate in direct quotation, $E^{\frac{\euro}{\lira}}_{t-1}$ Turkey more attractive to German investors because investors expect the \lira\ to appreciate relative to the \euro\ and hence, Turkey's rate of return, $r_{TUR}$ increases.  Consequently in the figure, the $\triangle r$ increases for all exchange rates.
+%	The positive change of the expected exchange rate, hence, would shift the function $\triangle r(E^{\euro/\lira})$ upwards and a the new equilibrium exchange rate would be $E_2$, i.e., $E^{\euro/\lira}$ increases and  $w$ decreases. This scenario is shown in the figure above.
+%}}
+
+%\exex{Combining the FOREX and the Interest Parity Condition}{
+%	Combine the figure of Box \ref{The Foreign Exchange Market (FOREX)} which represents the FOREX  and the figure of Box \ref{The Interest Parity Condition} which represents the interest parity condition.
+%s
+%}
+
+%However, Trump's increased tariffs do not only make Turkish products more expensive, but lowers the demand for Liras on the exchange markets which can contradict his goal to influence relative prices. We will come back to this later on in more detail.
+%
+%
+%\tcblistof[\subsection*]{heurekalist}{List of Heurekas%
+%	\label{listofexercises}}
+
+%\titx{Key Take Aways}{
+%\itex{
+%	\item A currency stores value and holding a currency can be seen as a financial speculation.
+%	\item The exchange rate determines the relative costs of trading commodities (buying/selling) across countries.
+%	\item An appreciation of a currency is neither good nor bad, but makes exports costly and imports cheap.
+%}}
+
+%\titx{Some Key Terms}{
+%\desx{
+%	\item[Exchange rate] is the price of one currency in terms of another currency
+%	\item[Appreciation (Depreciation)] describes the case when the value of a currency increases (decreses) relative to another currency 
+%	\item[Relative price] is the price of a commodity (goods or services) in terms of another
+%	\item[Inflation (Deflation)] is a quantitative measure ot the rate at which the (average) price (of a basket of representativ goods and services) in an economy increase (decrease) over a period of time.
+%}}
+%

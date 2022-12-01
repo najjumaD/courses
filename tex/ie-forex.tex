@@ -1,0 +1,463 @@
+	
+
+
+\pbn
+\section{The foreign exchange market}\label{sec:The foreign exchange market}
+
+\boxx{\subsubsection*{Learning goals}
+	%	After this part of the lecture, you will be able to:
+	\itex{
+		\item Interpret exchange rates and relate their changes with relative prices of countries goods.
+		%\item Calculate with foreign exchange market work?
+		\item Predict the impact of exchange rate changes on national economies.
+		\item Understand the linkage of interest rates and inflation in open economies.
+		%\item What is the role of expectations concerning interest rates, inflation, and exchange rates?
+		\item Explain the interest rate parity condition and the purchasing power parity assumption.
+}}
+
+\pbn
+\subsection{Motivation}
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{$HOME/Dropbox/hsf/pic/ie/trump_lira2_pdf}
+	\captionof{figure}{Trump doubles metal tariffs on Turkey by 20\%}
+	\note{Source: Twitter}
+	\label{fig:trump_lira}
+\end{center} 
+
+Do you understand the logic behind Mr. Trumps order to double metal tariffs due to a fall of the Turkish Lira?
+%	\item Answer the PINGO\footnote{See \url{http://pingo.upb.de/}} question in class: Why is a strong dollar something that makes Trump increase tariffs?
+
+\pbn
+\subsection{Exchange rates}\label{sec:Exchange rates}
+The price of one currency in terms of another is called an exchange rate. Exchange rates allows to compare prices of goods and services across countries. Exchange rates determine a country's relative prices of exports and imports.
+
+Lets name $\euro$ the home currency and $\lira$ the  foreign currency, then \[E^{\frac{\euro}{\lira}}=\frac{X \euro}{Y \lira}\] is the exchange rate in direct quotation (Preisnotierung) and \[E^{\frac{\lira}{\euro}}=\frac{Y \lira}{X \euro}\] is the exchange rate in indirect quotation (Mengennotierung). 
+
+\boxb{
+	\paragraph{Conventions to talk about exchange rates:}
+	\itex{
+		\item \textit{``Euro to Dollar''} means \euro/\textdollar\ (This is especially confusing and it can also be understood the other way round but the first currency mentioned is \textit{usually} interpreted as the numerator)
+		\item \textit{``Euro per Dollar''} means \euro/\textdollar
+		\item \textit{``Euro in Dollar''} means \textdollar/\euro
+		\item \textit{``1 Euro costs X Dollars''} means X (\textdollar/\euro)
+	}
+}
+\pbn
+
+Both rates contain the same information, but have different interpretations: \itex{\item $E^{\frac{\euro}{\lira}}$ tells that we have to give X \euro\ to receive Y \lira, whereas \item $E^{\frac{\lira}{\euro}}$ tells that we have to give Y \lira\ to receive X \euro. }
+
+Alternative interpretations: \itex{
+	\item $E^{\frac{\euro}{\lira}}$ tells that we have to give $\frac{X}{Y} \euro$ to receive 1 \lira, whereas 
+	\item $E^{\frac{\lira}{\euro}}$ tells that we have to give $\frac{Y}{X} \lira$ to receive 1 \euro.} 
+
+\heux{Appreciation / Depreciation}{
+	A currency can appreciate or depreciate relative to other currencies.
+	\itex{\item If the \euro\ appreciates, $E^{\frac{\euro}{\lira}}$ decreases and $E^{\frac{\lira}{\euro}}$ increases.
+		\item If the \euro\ depreciates, $E^{\frac{\euro}{\lira}}$ increases and $E^{\frac{\lira}{\euro}}$ decreases.
+	}
+}
+
+\pbn
+\subsection{Relative prices}
+\itex{
+	\item How much `value' do I have to give to receive a `value' from abroad?
+	\item Assume the home country produces beer and the foreign country produces wine. Further assume you want to exchange a beer for wine, then the relative price gives the amount of beer you have to give to receive a unit of wine (in the direct quotation), or the amount of wine you receive for a unit of beer (indirect quotation).
+	\item A relative price of 1 can mean, for example, that you can exchange 1 litre of beer with 1 litre of wine. However, we could also assume that beer is measured in cans of 500ml each and wine in 1 litre bottles. Then, the relative price would be \[P^{\frac{beer}{wine}}= \frac{2 \textnormal{ beer}}{1 \textnormal{ wine}}.\]
+	That means, you can convert 2 cans of beer for one bottle of wine.
+	\item If the relative prices increase, I must give more beer to receive a wine.
+	\item If the relative prices decrease, I must give less beer to receive a wine.
+}
+
+
+\subsection{Exchange rates and relative prices}
+\itex{
+	\item Relative prices are (directly) determined by exchange rates.
+	\item To proof this statement, assume an exchange rate of 1, $E^{\frac{\lira}{\euro}}=E^{\frac{\euro}{\lira}}=1$ and that
+	a litre of beer costs 1 \euro\ at home and a wine costs 1 \lira\ abroad.
+	\item Thus, I can buy both a wine or a beer for 1 \euro. Due to the fact that I must pay the wine producer with \lira, I must exchange the \euro\ beforehand. The process goes like this:\\
+	
+	\begin{tikzpicture}
+		[
+		% Einstellungen
+		node distance=0.75cm and 1cm,
+		rounded corners,
+		font=\small,
+		>=stealth'
+		]
+		% Knoten
+		\node[draw, rectangle, align=center] (top) { exchange 1 \euro\  };
+		\node[draw, rectangle, right =of top] (yes) { $1\euro \cdot 1 \frac{\lira}{\euro} = 1 \lira$ };
+		%\node[draw, rectangle, below right=of top] (no) { No };
+		\node[draw, rectangle, right =of yes] (doit) { buy  wine };
+		\node[draw, rectangle, right =of doit] (wine) {$1\lira \cdot 1 \frac{\textnormal{wine}}{\lira}=1 \textnormal{ wine }$ };
+		\draw[->] (top)-- (yes) ;
+		\draw[->] (doit) -- (wine);
+		\draw[->] (yes) -- (doit);
+	\end{tikzpicture}\\
+	
+	
+	
+	\item Now, assume that the \euro\ appreciates and the exchange rate becomes $E^{\frac{\euro}{\lira}}=0.5$ and $E^{\frac{\lira}{\euro}}=2$, respectively. \\
+	
+	\begin{tikzpicture}
+		[
+		% Einstellungen
+		node distance=0.75cm and 1cm,
+		rounded corners,
+		font=\small,
+		>=stealth'
+		]
+		
+		% Knoten
+		\node[draw, rectangle, align=center] (top) { exchange 1 \euro\  };
+		\node[draw, rectangle, right =of top] (yes) { $1\euro \cdot 2 \frac{\lira}{\euro} = 2 \lira$ };
+		%\node[draw, rectangle, below right=of top] (no) { No };
+		\node[draw, rectangle, right =of yes] (doit) { buy  wine };
+		\node[draw, rectangle, right =of doit] (wine) {$2\lira \cdot 1 \frac{\textnormal{wine}}{\lira}=2 \textnormal{ wine }$ };
+		\draw[->] (top)-- (yes) ;
+		\draw[->] (doit) -- (wine);
+		\draw[->] (yes) -- (doit);
+	\end{tikzpicture}\\
+	
+	
+	\item Indeed, exchange rates determine the relative prices. If the home currency appreciates (depreciates), buying goods and services abroad becomes relative cheaper (more expensive).
+	
+	\item Of course, if many people now buy wine and aim to convert \euro\ to \lira, this may impact the exchange rate and the price of wine. We come back to that later.
+}
+
+\heux{Exchange rates and international trade}{The exchange rate determines the relative price of commodities across countries. For example, an appreciation of a currency makes commodities more expensive for foreign buyers and in turn makes foreign commodities cheaper for buyers at home.}
+
+
+
+
+\subsection{Trump and relative prices}
+Let's return to Trump's Twitter message. Steel producers in the US (and with them Donald Trump) are not happy about a strong dollar (and a weak lira), because it makes their products relatively expensive for Turkish buyers and Turkish steel relatively cheap for US consumers. 
+Trump would have two options to change this situation: He could change the exchange rates or the relative prices of goods in different countries. Since it is difficult for him to influence the exchange rate (the central bank is independent), he decided to increase tariffs and thus the price of foreign steel in the United States. However, this has the disadvantage of making U.S. consumers pay more for these goods (and for goods made from and with steel and aluminum), as David Boaz, executive vice president of the Cato Institute, an American libertarian think tank, notes in his response on Twitter, see \autoref{fig:trump_reply}. 
+
+In addition, it can be argued that the increased tariffs will make the dollar even stronger because buyers who no longer purchase steel in Turkey due to the increased tariffs will no longer seek to exchange U.S. dollars for Turkish lira. 
+
+Overall, it can be doubted that raising tariffs is a successful strategy.
+
+%\heux{Relative Prices and International Trade}{Relative prices determine the relative price of commodities across countries. For example, an increase in the price of foreign commodities makes imported commodities relatively more expensive and home commodities relatively cheaper for buyers at home.}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{$HOME/Dropbox/hsf/pic/ie/trump_reply_pdf}
+	\caption{Who wins in the end?}	\note{Source: Twitter}
+	\label{fig:trump_reply}
+\end{figure}
+
+
+\subsection{The foreign exchange market (FOREX)}\label{sec:FOREX}
+
+At a market, people come together to exchange something. In short, everyone offers something to receive something in return. On the FOREX, the players exchange currencies. As in any market, the price is determined by supply and demand (of currencies):
+
+\begin{center}
+	\begin{tikzpicture}[
+		scale=1.5,
+		IS/.style={blue, thick},
+		LM/.style={red, thick},
+		axis/.style={very thick, ->, >=stealth', line join=miter},
+		important line/.style={thick}, dashed line/.style={dashed, thin},
+		every node/.style={color=black},
+		dot/.style={circle,fill=black,minimum size=4pt,inner sep=0pt,
+			outer sep=-1pt},
+		]
+		% axis
+		\draw[axis,<->] (2.5,0) node(xline)[right] {Amount of \lira\ converted} -|
+		(0,2.5) node(yline)[left] {$E^{\frac{\euro}{\lira}}$};
+		% IS-LM diagram
+		\draw[LM] (0.2,0.3) coordinate (LM_1) parabola (1.8,1.8)
+		coordinate (LM_2) node[right] {S (have \lira\ want \euro)};
+		%\draw[IS] (0.2,1.8) coordinate (IS_1) parabola[bend at end]
+		%(1.8,.3) coordinate (IS_2) node[right] {\IS};
+		%Intersection is calculated "manually" since Tikz does not offer
+		%intersection calculation for parabolas
+		%\node[dot,label=above:$A$] at (1,.68) (int1) {};
+		%shifted IS-LM diagram
+		%\draw[xshift=.7cm, LM, red!52] (0.2,0.2) parabola (1.8,1.7)
+		%node[above] {\LM'};
+		\draw[xshift=.4cm, yshift=.3cm, IS, blue!60] (0.2,1.8)
+		parabola[bend at end] (1.8,.3)
+		node[right] {D (have \euro\ want \lira)};
+		%Intersection of shifted IS-LM
+		\path[yshift=.760cm] (.98,.7) node[dot,label=above:{$A$}] (int2) {};
+		\path[xshift=.36cm, yshift=.35cm] (.98,.7) node[dot,label=above:{$B$}] (int2) {};
+		\path[xshift=.8cm] (1,.68)               node[dot,label=above:$C$] (int3) {};
+		\path[xshift=-.0cm] (1,.68)                node[dot,label=above:$E$] (int3) {};
+		\path[xshift=.63cm , yshift=.8cm] (1,.68)                node[dot,label=below:$F$] (int3) {};
+	\end{tikzpicture}
+\end{center}
+
+\pbn
+\itex{
+	\item Assume \euro\ is strong, the $E^{\frac{\euro}{\lira}}$ is low:
+	\itex{\item Given this low exchange rate, the demand for \lira\ is high (point C), but the \lira\ supply is low (point E). 
+		\item Thus, the \euro\ is under depreciation pressure $\rightarrow$ $E^{\frac{\euro}{\lira}} \uparrow$ }
+	\item Assume \euro\ is weak, the $E^{\frac{\euro}{\lira}}$ is high:
+	\itex{\item Given this high exchange rate, the demand for \lira\ is low (point A), but the \lira\ supply is high (point F). 
+		\item Thus, the \euro\ is under appreciation pressure $\rightarrow$ $E^{\frac{\euro}{\lira}} \downarrow$ }
+	\item B denotes the point where demand and supply meets, that is, the equilibrium exchange rate. In this point, none of those who have \lira\ want to give more and none of those who have \euro\ want to exchange more.
+}
+
+
+\pbn
+\subsubsection{The actors on the FOREX}{
+	%\begin{figure}[h]
+	
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{$HOME/Dropbox/hsf/pic/ie/player_over}
+		
+		%	\caption{The groups of players}
+		\label{fig:player_over}
+	\end{minipage}
+	%
+	\begin{minipage}{0.69\linewidth}
+		\centering
+		\includegraphics[width=.6\linewidth]{$HOME/Dropbox/hsf/pic/ie/player_open}
+		
+		\label{fig:player_open}
+	\end{minipage}
+	\itex{
+		\item  Commercial banks: Banks serve as intermediary for their clients (mostly firms) by demanding or supplying foreign exchange. 
+		\item Corporations: International exchange of goods and services involves exchange trading to pay for these activities.
+		\item Nonbank financial institutions: Financial institutions such as pension funds are directly trading on the foreign exchange market.
+		\item Central Banks: Depending on the monetary policy, also central banks may intervene on the foreign exchange market.
+	}
+}
+
+
+
+\pbn
+\subsubsection{The vehicle currency}
+\itex{
+	\item The average value of traded currencies are about \textdollar 5.1 trillion per day (April 2016).\footnote{See: \url{www.bis.org/publ/rpfx16.htm}}
+	\item As \autoref{fig:most_cur} shows, about 30-25\% of all currency transactions involve the \euro\ and almost 90\% of all currency transactions involve the \textdollar.
+	%	\item That means, the world economy is dominated by the US-\textdollar\ being accepted in the
+	%	exchange of goods and assets among countries. Thus, the dollar acts as a `vehicle currency' in the sense that most exchange activities indirectly involve the US-\textdollar\ rather than directly exchange two other currencies. A vehicle currency is desirable when there are high
+	%	transactions costs of exchange.
+	\item For example, assume you want to exchange currency A to B. Now, imagine you can either exchange currency A directly to B, or indirectly by convering currency A to the US-\textdollar\ and US-\textdollar\ to currency B. Then, going the indirect way using the US-\textdollar\ as a vehicle can be cheaper, when the direct transaction is more expensive than the two indirect transactions.
+}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{$HOME/Dropbox/hsf/pic/ie/most_cur_pdf}
+	\caption{Most used currencies}
+	\note{Taken from \citet[p. 455]{Marrewijk2012International}}
+	\label{fig:most_cur}
+\end{figure}
+
+\pbn
+\section{Purchasing power parity assumption}\label{sec:Purchasing power parity assumption}
+The Purchasing Power Parity (PPP) Assumption is also know as the `law of one price'. It says that in competitive markets with zero transportation costs  and no trade barriers, identical goods, $i$, have the same price, $P^i_{c}$, all over the world when expressed in terms of the same currency, $c$.
+
+The idea behind this is that if prices differences would exist, profits could be made through arbitrage, that is, the process of buying a good cheap in country A the selling the good with a profit in country B. This process can quickly equalize real price differences across countries.
+
+However, in the real world, prices differ substantially across countries (see Big Mac Index below) for several reasons. In particular, the strong assumptions of the PPP do not hold, some goods and services are not trade-able and firms might have different degrees of market power across countries.
+
+
+\pbn
+\boxb{\textbf{Big Mac Index}
+	The differences of prices across countries can be illustrated with the Economist's `Big Mac Index'. This index measures the price of an Big Mac in different countries expressed in terms of the US-Dollar.\bigskip
+	
+	\begin{minipage}{0.50\linewidth}
+		An Big Mac is relatively expensive here:\\
+		\begin{tabular}{lll}
+			\toprule
+			Switzerland & 	\textdollar6.57 & (6.50 CHF)\\
+			Sweden & \textdollar5.83 &(51.00 SEK)\\
+			United States & 	\textdollar5.51 &(5.51 USD)\\
+			Norway & 	\textdollar5.22 &(42 NOK)\\
+			Canada &	\textdollar5.08 &(6.65 CAD)\\
+			Euro area & 	\textdollar4.75 &(4.56 EUR)\\\bottomrule
+		\end{tabular}\\
+	\end{minipage}	
+	\begin{minipage}{0.50\linewidth}
+		An Big Mac is relatively cheap here:\\
+		\begin{tabular}{lll}
+			\toprule
+			Egypt & 	\textdollar1.75 &(31.37 EGP)\\
+			Ukraine & 	\textdollar1.91 &(50 UAH)\\
+			Russia & 	\textdollar2.09 &(130 RUB)\\
+			Malaysia & 	\textdollar2.10 &(8.45 MYR)\\
+			Indonesia & 	\textdollar2.19 &(31,500 IDR)\\
+			Taiwan & 	\textdollar2.27 &(69 TWD)\\	\bottomrule
+		\end{tabular}
+	\end{minipage}	
+	Source: \websmall \url{https://github.com/TheEconomist/big-mac-data}, (July 18, 2018)
+}
+
+
+
+\pbn
+\exextoc{Arbitrage}{
+	\abcx{
+		\item Suppose the good \textit{"08/15"} is tradable across countries at no cost (like software). Suppose further you have \textdollar100 and you see that the prices of the good  \textit{"08/15"} in the three countries differ as follows: 
+		\begin{center}
+			\begin{tabular}{lc}\toprule
+				Country & Price of good \textit{"08/15"}   \\\midrule
+				Germany & \$ 2  \\ 
+				Swizerland & \$ 6  \\ 
+				United States of  America & \$ 6 \\\bottomrule
+			\end{tabular} 
+		\end{center}\medskip
+		
+		Explain how you can make money with \textit{international arbitrage}, that is, the practice of taking advantage of price differences of a good across countries. What will happen to the prices once you start making money?
+		
+		\item Suppose the good \textit{"08/15"} is tradable across countries at no cost (like software). Further suppose that your international arbitrage has equalized prices for that good worldwide: 
+		\begin{center}
+			\begin{tabular}{lcc}\toprule
+				Country & Price of good \textit{"08/15"}  & Price of good \textit{"08/15"} \\\midrule
+				Germany & \$ 4 & EUR 2 \\ 
+				Swizerland & \$ 4 & CHF 6 \\ 
+				United States of  America & \$ 4&  \\\bottomrule
+			\end{tabular} 
+		\end{center}\medskip
+		Now, calculate and interpret the exchange rates denoted in 
+		$\frac{\textdollar}{\euro}$, 
+		$\frac{\euro}{\textdollar}$, 
+		$\frac{\textdollar}{CHF}$, 
+		$\frac{CHF}{\textdollar}$, 
+		$\frac{CHF}{\euro}$, and
+		$\frac{\euro}{CHF}$.
+}}
+
+\pbn
+\exextoc{Big-Mac-Index vs. Mac-Index}{
+	\itex{
+		\item Read \websmall \url{https://en.wikipedia.org/wiki/Big_Mac_Index} and discuss the \textit{Big-Mac-Index} critically. Is it really reasonable real-world measurement of purchasing power parity? 
+		\item Compare the \textit{Big-Mac-Index} to the \textit{Mac-Index} (see: \websmall \url{https://themacindex.com/}) looking for price differences of the \textit{Mac mini M1 256GB}. Why are the price differences for Apple products so much smaller as compared to McDonald's \textit{Big Mac}?
+}}
+
+
+%\pbn
+\exextoc{Big Mac economics}{
+	Price differences across countries can be illustrated with the \textit{Big Mac Index}. It measures the price of a Big Mac in different countries expressed in terms of the US-Dollar. 
+	Here is an excerpt of the index:
+	\begin{center}
+		\begin{tabular}{lcc}\toprule
+			Country & Price of 1 Big Mac (in \textdollar) & Price of 1 Big Mac \\\midrule
+			Germany & \$ 4.70 & EUR 3.88 \\ 
+			Swizerland & \$ 6.90& CHF 6.16 \\ 
+			United States of  America & \$ 5.70&  \\\bottomrule
+		\end{tabular} 
+	\end{center}\medskip
+	
+	\abcx{
+		\item With the information given in the table, calculate the exchange rate of Euros (EUR) to Swiz Franc (CHF). Interpret your result.
+		\item Calculate how many Dollars you can buy with 100\euro. Then, use that dollars to buy Swiss Franc. How many Swiss Franc do you get?
+	} 
+}
+
+%\pbn
+\exextoc{Brexit and the exchange rate}{
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{$HOME/Dropbox/hsf/pic/ie/sinkflug_pdf}
+		\caption{The Price of the British Pound $(E^{\frac{\euro}{\pounds}})$}
+		\note{Source: Süddeutsche Zeitung am Wochenende, 17./18. November 2018, year 74, week 46, No. 265, p. 1 (front page).}
+		\label{fig:sinkflug}
+	\end{figure}
+	Discuss Figure \ref{fig:sinkflug}. Explain how and why the British pound has depreciated since June 2016.
+}
+
+\pbn
+\exextoc{FOREX MC}{\textbf{\underline{Multiple Choice!}} Price differences across countries can be illustrated with the Economist's `Big Mac Index'. This index measures the price of an Big Mac in different countries expressed in terms of the US-Dollar.	Here is an excerpt of the index:
+	\begin{center}
+		\begin{tabular}{lll}\toprule
+			Switzerland & 	\textdollar6.57 & (6.50 CHF)\\
+			United States & 	\textdollar5.51 &(5.51 USD)\\
+			Canada &	\textdollar5.08 &(6.65 CAD)\\
+			Euro area & 	\textdollar4.75 &(4.56 EUR)\\
+			Russia & 	\textdollar2.09 &(130 RUB)\\\bottomrule
+		\end{tabular}\\
+	\end{center}
+	Which of the following statements is true?
+	\begin{enumerate}[a)]
+		\item  The table indicates that the \textit{Purchasing Power Parity Assumption} is fulfilled.
+		\item  The exchange rate of US-Dollar to Swiss Franc (CHF) is close to one.
+		\item  The exchange rate of US-Dollar to the Russian Ruble (RUB)  is about $62.2 \frac{\$}{RUB}$.
+		\item  The exchange rate of Canadian Dollar (CAD) to the Euro (EUR) is about $0.73$.
+		\item With one Canadian Dollar (CAD) you can buy $0.73\$$.
+	\end{enumerate}
+}
+
+
+%
+%\exex{Interest Parity Condition MC}{Suppose a world with two countries, the Home country A and the foreign country B. Both countries have zero inflation. Which of the following statements is true? \\
+%The \textit{Interest Parity Condition} implies/states that\dots
+%\begin{enumerate}[a)]
+%	\item \dots the foreign exchange market is in equilibrium when deposits of all currencies offer the same expected rate of return.
+%	%		\choice \dots  the foreign exchange market is in equilibrium when deposits of all currencies offer different interest rates.
+%	\item \dots if the interest rate in country A is larger than in country B, the currency of country A will depreciate against the currency of country B so that the rate of return is not higher in country A than in country B.
+%	\item \dots if the interest rate in country B is larger than in country A, the currency of country A will depreciate against the currency of country B so that the rate of return is not higher in country A than in country B.
+%\end{enumerate}
+%}
+
+
+%\solx{Brexit and the Exchange Rate}{Join the in-class discussion.}
+
+
+\pbn
+\solx{Big Mac economics}{
+	\abcx{
+		\item	$$\frac{3.88 \euro}{4.70 \textdollar}\cdot \frac{6.90 \textdollar}{6.16 \CHF}=\frac{6693 \euro}{7238 CHF}\approx 0.9247 \frac{\euro}{\CHF}$$
+		Thus, the exchange rate of Euros to Swiss Franc is $E^{\frac{\euro}{\CHF}}=0.9247 \frac{\euro}{\CHF}.$
+		That means, we have to pay about 92 Cent for one Swiss Franc.
+		
+		\textit{[The exchange rate of CHF to EUR would be:
+			$E^{\frac{\CHF}{\euro}}=1.08142835798596.
+			$ That means, you have to give about 1.08 CHF to receive 1 Euro]}
+		
+		\item Let us assume we have 100 Euro and we want to have Swiss Franc. The exchange rate above would give us 
+		$$\frac{100\euro}{0.9247 \frac{\euro}{\CHF}}=100\euro\cdot \frac{1 \CHF}{0.9247 \euro} 
+		\approx  108.142835798596 \CHF$$ 
+		
+		Let's proof if that exchange rate is correct:
+		First, let us do the exchange from the Euro to the vehicle currency, i.e., the Dollar, using the fact that 3.88 Euro are equal to \textdollar 4.70:
+		$$
+		100\euro \cdot \frac{4.70 \textdollar}{3.88 \euro}\approx 121.134020618557 \textdollar
+		$$
+		Second, let us do the exchange from Dollar to Swiss Franc using the fact that \textdollar 6.90 are equal to 6.16 CHF:
+		$$
+		121.134020618557 \textdollar \cdot \frac{6.16 \CHF}{6.90 \textdollar}=108.142835798596 \CHF
+		$$
+		Thus, the calculated exchange rate of $E^{\frac{\euro}{\CHF}}=0.9247 \frac{\euro}{CHF}$ is correct.
+}}
+
+
+%\pbn
+\solx{FOREX MC}{
+	\abcx{
+		\item is not correct as the price of a Big Mac in \textdollar\ is different across countries.
+		\item is correct.	 
+		\item is incorrect: To check whether the statement is correct you need to calculate the following: 2.09\textdollar/130RUB=0.016(\textdollar/RUB). Thus, the statement is false. The interpretation of 0.016(\textdollar/RUB) is ``1 Ruble costs 0.0160 Dollar''.
+		\item is incorrect: 
+		$$
+		\underbrace{\frac{6.65 \text{CAD}}{5.08 \$}}_{\approx1.309}\cdot \underbrace{\frac{4.75 \$}{4.56 \euro}}_{\approx1.0416}\approx1.36\frac{\text{CAD}}{\euro}
+		$$
+		\item is incorrect:
+		$$
+		\frac{6.05 \text{CAD}}{5.08\textdollar}  \approx 0.76 \frac{\text{CAD}}{\textdollar}
+		$$
+		Thus, with one CAD you can buy 0.76\textdollar.
+		%		
+		%		for 1 Canadian-\textdollar\ we receive 0.7639 US- \textdollar\ and since one US-\textdollar\ is worth \euro 0.96 (4.56/4.75), 1 Canadian-\textdollar\ can be transfered to  \euro0.73 $(0.7639\cdot0.96)$.
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

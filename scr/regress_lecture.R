@@ -67,7 +67,6 @@ ggplot(classdata, aes(x=height, y=weight, shape = sex)) +
               colour = "red", 
               linetype = 1)
 
-
 ## ---- echo=TRUE, results='hide'------------------------------------
 
 m1 <- lm(weight ~ height , data = classdata )
