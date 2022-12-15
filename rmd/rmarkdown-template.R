@@ -2,7 +2,7 @@
 library("knitr")
 knit_hooks$set(purl = hook_purl)
 
-## ----echo=FALSE---------------------------------------------------------------
+## ----echo=TRUE----------------------------------------------------------------
 setwd("/home/sthu/Dropbox/hsf/github/courses/rmd/")
 
 ## -----------------------------------------------------------------------------
@@ -23,4 +23,11 @@ B <- c(5, 10, 15, 20)
 dataframe <- data.frame(A, B)
 print(dataframe)
 boxplot(B~A,data=dataframe)
+
+## -----------------------------------------------------------------------------
+library("tidyverse")
+
+## ----include=TRUE-------------------------------------------------------------
+library("rmarkdown")
+paged_table(mtcars)
 

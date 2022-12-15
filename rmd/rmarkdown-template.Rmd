@@ -5,7 +5,7 @@ date: 'HS-Fresenius: Data Science for Business'
 output:
   html_document:
     toc: yes
-    toc_depth: 2
+    toc_depth: 3
     number_sections: yes
     toc_float:
       collapsed: no
@@ -39,19 +39,22 @@ Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", kni
 Bli bla blub @Kirchkamp2018Using
 
 
-# h1 Heading 8-)
+# h1 Heading 
 ## h2 Heading
 ### h3 Heading
+### h31 Heading
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
 
 
-## Set your working directory. 
+# Always set your working directory. 
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 setwd("/home/sthu/Dropbox/hsf/github/courses/rmd/")
 ```
+
+# Stuff
 
 ## Horizontal Rules
 
@@ -132,6 +135,8 @@ console.log(foo(5));
 
 ## R Code Chunks
 
+Please consider the introduction [here](https://bookdown.org/yihui/rmarkdown/r-code.html).
+
 ```{r}
 norm <- rnorm(100, mean = 0, sd = 1)
 ```
@@ -156,7 +161,16 @@ print(dataframe)
 boxplot(B~A,data=dataframe)
 ```
 
+```{r}
+library("tidyverse")
+```
 
+To show the data in an interactive environment you can use the following code:
+
+```{r include=TRUE}
+library("rmarkdown")
+paged_table(mtcars)
+```
 
 ## Tables
 
@@ -202,11 +216,6 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
 $$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$
-Alternatively, you can use a math code block syntax to display a math expression as a block. With this syntax, you don't need to use the dollar delimiters.
-
-```math
-\sqrt{3}
-```
 
 ## [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
@@ -230,9 +239,7 @@ Duplicated footnote reference[^second].
 
 You can cite papers like that: The book [_R for Data Science_](https://r4ds.had.co.nz/) by @Wickham2018R is a good one. I am the author of @Huber2016Calculate.
 
-In order to be able to do that you need to save the references in the reference.bib
-file that I mentioned in the header. I highly recommend using a bibliography manager
-such as [www.jabref.org](www.jabref.org) that allows to save and manage all  bibliography entries. 
+In order to be able to do that you need to save the references in the reference.bib file that I mentioned in the header. I highly recommend using a bibliography manager such as [www.jabref.org](www.jabref.org) that allows to save and manage allbibliography entries. 
 
 
 ## Render everything
