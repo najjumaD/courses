@@ -2,7 +2,7 @@
 title: "Title"
 author: "Stephan.Huber@hs-fresenius.de"
 date: 'HS-Fresenius: Data Science for Business'
-output:
+  output:
   html_document:
     toc: yes
     toc_depth: 3
