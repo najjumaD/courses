@@ -1,0 +1,611 @@
+---
+title: '**Hate crimes in USA between 1991 and 2020**'
+subtitle: 
+author: 
+- "Email: najjuma.diana@stud.hs-fresenius.de"
+- "Name: Diana Najjuma"
+- "ID: 400324587"
+date: "HS-Fresenius: **Data Science for Business**"
+output:
+  pdf_document:
+    toc: True
+    toc_depth: 2
+    number_sections: yes
+  html_document:
+    toc: yes
+    toc_depth: '2'
+    df_print: paged
+citation_package: natbib
+biblio-style: apalike
+fontsize: 12pt
+urlcolor: blue
+linkcolor: red
+bibliography: article_cupcake.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Rendered at `r format(Sys.time(), '%d %B, %Y')`
+
+Word count: `r as.integer(sub("(\\d+).+$", "\\1", system(sprintf("wc -w %s", knitr::current_input()), intern = TRUE))) - 20`
+
+
+\newpage
+
+# Abstract
+
+Incidents of hate crimes have been on the rise in the United States which include vandalism, intimidation, assault and murder. Federal officials have recorded the highest number of hate-motivated crimes in recent years. Those who commit such heinous crimes have different motivations; sometimes they are motivated by religious discrimination, sometimes racial discrimination and sometimes from their hatred against people of different sexual orientations. 
+
+Hate crime is the most severe expression of discrimination and it is a persistent issue in the United States. Since 2010, law enforcement agencies have reported an average of about 6,000 hate crime incidents per year to the FBI. But government studies show that the real number is far higher — an estimated 260,000 per year. Many hate crimes never get reported, in large part because the victims are reluctant to go to the police. @SPLC2017
+
+This report therefore paints a stark picture of the increasing number of hate crimes in the united states of America more especially towards African Americans, the black community and also how the Covid-19 pandemic has driven racism and violence against Asian Americans.
+
+The report further shines a light on hate crime impact on mental health and underlines the severe emotional and psychological impacts of hate crimes on the victims,  victims families and societies at large.
+
+This report is aimed at those working on the ground with hate crime victims, such as police officers and prosecutors, as well as to help governments and policymakers responsible for the development and design of hate crime and victim support policies, and the civil society that often implements these.
+
+I also hope it raises public awareness with the information findings on hate crime because I believe that addressing the issue is very important for individuals as well as the society.
+
+
+
+\newpage
+
+
+
+# Definition of a Hate Crime
+
+The term hate crime was first introduced in the 1980s and refers to a criminal offence motivated by bias, prejudice, stereotypes, or hate. A hate crime is any criminal act or attempted criminal act directed against a person or persons based on the victim’s actual or perceived race, nationality, religion, sexual orientation, disability or gender.
+
+![What is a hate crime?!](C:/Users/Nico/Desktop/data science folder/images/ha.png)
+
+
+The "crime" in hate crime is often a violent crime, such as assault, murder, arson, vandalism, or threats to commit such crimes. It may also cover conspiring or asking another person to commit such crimes, even if the crime was never carried out. @DOJ2022
+
+
+A young white man opens fire and kills nine African Americans who welcomed him into Bible study at a church in Charleston, South Carolina, telling his victims, “I have to do it.” A Muslim woman is seated on a bench in front of a coffee shop in Washington, D.C., when a woman begins screaming anti-Muslim epithets. A swastika and other anti-Semitic graffiti appear at an elementary school in Stapleton, Colorado. A lone gunman carrying an assault rifle and a handgun storms a well-known gay club in Orlando, Florida, killing 49 people and wounding 53 others. @SPLC2017
+
+ 
+ The law recognizes five types of hate crime on the basis of:
+ 
+ 
+  + Race
+  
+  * Religion
+  
+  * Disability
+  
+  * Sexual orientation
+  
+  * Transgender identity
+  
+  
+Any crime can be prosecuted as a hate crime if the offender has either: 
+
++ demonstrated hostility based on race, religion, disability, sexual orientation or transgender identity 
+
+**Or** 
+
++ has been motivated by hostility based on race, religion, disability, sexual orientation or transgender identity.  @CPS2022
+
+Under New York State’s Hate Crime Law (Penal Law Article 485), a person commits a hate crime when one of a specified set of offenses is committed targeting a victim because of a perception or belief about their race, color, national origin, ancestry, gender, religion, religious practice, age, disability, or sexual orientation, or when such an act is committed as a result of that type of perception or belief. These types of crimes can target an individual, a group of individuals, or public or private property.
+
+For a crime to be classified as a hate crime, the victim must report at least one of three types of evidence that the act was motivated by hate:
+
+ + the offender used hate language
+ + the offender left behind hate symbols
+ + police investigators confirmed that the incident was hate crime. @BJS2022
+ 
+
+ 
+ ![Classifying hate crimes in National Crime Victimization Survey (NCVS)!](C:/Users/Nico/Desktop/data science folder/images/classifying-hate-crimes-figure.png)
+
+
+
+\newpage
+
+
+Hate crimes may have consequences far beyond the criminal act itself. Becoming the victim of a crime is traumatic, but if the act was committed because of who you are or what you believe, the violation is even more hurtful and may cause deep emotional impacts. Crimes motivated by hate are not just attacks on individual innocent people – they are attacks on our communities and the entire State. @NVS2017
+
+Hate crimes pose a threat to the security of individuals, and, if not addressed, can give rise to wider scale conflict and violence. 
+
+
+Examples of hate crimes include when:
+
+  * Someone destroys property with things that insult the victim. For example, someone vandalizes a gay couple’s property by spray painting homophobic slurs across their garage door.
+  
+  * Someone hurts a victim while using insults about the victim. For example, a black man was attacked and beaten up by a group of white teenagers yelling racial slurs.  
+  
+  * Someone forces a person to take off clothes that are part of their faith. For example, someone physically forced or threatened to beat up/rape/shoot a victim if they didn’t take off a head covering that is part of their faith.          
+
+
+\newpage
+
+# About Dataset
+
+After searching through a variety of data sets available on the internet, I decided to use FBI Hate Crime Statistics. The data was taken from Crime Data Explorer, which belongs to the Federal Bureau of Investigation (FBI). Their missions is to help expand knowledge and awareness of the crime statistics and improve accountability for law enforcement. They also show that victims are not alone and encourage lawmakers to address the issues for their communities. 
+@FBI2020
+
+This data set used in this report provides information about differing hate crime incidents from 1991 to 2020 and also provides annual statistics on the number of incidents, offenses, victims, and offenders in reported crimes that are motivated in whole, or in part, by an offender’s bias against the victim’s perceived race, gender, gender identity, religion, disability, sexual orientation, or ethnicity.  This data set includes the date, state, offender race, victim count, type of offense, etc. 
+
+I chose this Data set particularly because I am interested in crime incidents in the us over time. 
+
+This Data set contains 219,577 observations and 28 variables: Among the variables include, the date of the crime, what kind of crime it was, the offenders race, the victim's race, victim counts (if the victim was a minor or adult), what state and city the crime occurred in, and so on. 
+
+Hate Crime data are captured by indicating the element of bias present in offenses already being reported to the UCR Program. All law enforcement agencies, whether they submit Summary Reporting System (SRS) or National Incident-Based Reporting System (NIBRS) reports, can contribute Hate Crime Data to the UCR Program using forms specified to collect such information.
+
+
+I am also interested in finding out what happens to hate crimes against the Asian people in the united states across through lock down and beyond.One of my main goals is to see if there was an increase or decrease in hate crimes within the past three years ( For example against Asians and African Americans).
+
+\newpage
+
+
+## Data Collection
+
+It has been a crime in the United States Since 1968 to threaten any person because of color, race, religion or national origin, but how those crimes are investigated and categorized varies by state. Many states do not have local hate crime laws. Others are not required to report them to a centralized federal database. The FBI collects voluntarily information from states that report these crimes or are required to report their data by state law. @Frazee2019
+
+The map below shows which states have/do not have hate crime laws and states which do not require/ require data collection on hate crimes.
+
+
+![Hate crime laws and data collection!](C:/Users/Nico/Desktop/data science folder/images/US--Map.png) 
+
+
+The Hate Crime Statistics Program collects data about both single-bias and multiple-bias hate crimes. A single-bias incident is defined as an incident in which one or more offense types are motivated by the same bias. Beginning in 2013, law enforcement agencies could report up to five bias motivations per offense type. Therefore, the definition of a multiple-bias incident has been revised to “an incident in which one or more offense types are motivated
+by two or more biases. @FBI2019
+ 
+Law enforcement agencies across USA voluntarily submit crime data to the Uniform Crime Reporting (UCR) Program. Currently, as many as 18,000 agencies submit data. 
+
+The types of hate crimes reported to the FBI are then broken down by specific categories. The aggregate hate crime data collected
+for each incident includes the following:
+
+
+**Bias Motivation**: Incidents may include one or more offense types. Up to five bias motivation types can be reported per offense. The FBI collects information about single-bias incidents (crimes motivated by one type of bias) and multiple-bias incidents (offenses motivated by two or more biases.)
+
+**Victims**: The types of victims collected for hate crime incidents include individuals (adults and juveniles), businesses, institutions, and society. Law enforcement can also indicate the number of individual victims, as well as the number of adult victims, and the number of victims under the age of 18.
+
+**Offenders**: The collection includes the number of offenders (adults and juveniles), and when possible, the race and ethnicity of the offender or offenders. In the data collection, the term “known offender” does not imply the suspect’s identity is known, but rather some aspect of the offender is known, such as the offender’s age or gender.
+
+**Location Type**: One of 46 location types can be designated as the location, such as house of worship, sidewalk, home, school, or unknown. @FBI2019
+
+
+## Reading and cleaning of the data set
+
+Since I worked with a very big data set, I had to remove some variables which did not really have any use in my investigations. Some variables had to be given new names. For example, some variable names from the original data set did not adhere to my preferred naming conventions, and thus i had to rename specific variables using the rename function from the dplyr package. 
+
+
+# Questions to be investigated
+
+
+For this project, I came up with the following questions that can be used to study the
+growing number of hate crimes in recent years:
+
+  1. What are the most frequently committed hate crimes in USA and which general locations are most commonly associated with these hate crimes between 1991 and 2020?
+  
+  2. What is the largest bias incident victim category in the U.S.?
+  
+  3. Did Covid-19 lead to an increase in hate Crimes towards the Asian community in the USA?
+  
+
+  
+
+
+
+```{r, include=FALSE}
+
+setwd("D:/Documents/data_science_folder")
+
+getwd()
+library("tidyverse")
+library("dplyr")
+library("scales")
+library("ggplot2")
+library("readxl")
+library("ggpubr")
+library("sjPlot")
+
+```
+
+
+
+\newpage
+
+
+# Frequency of crime
+
+ **1. What are the most frequently committed hate crimes in USA and which general locations are most commonly associated these hate crimes between 1991 and 2020?**
+ 
+
+
+```{r}
+
+# Reading in the data set
+
+hate_crime <-  read.csv('/hate_crime.csv')
+
+# Removing of unwanted variables
+  
+    hatecrime <- subset(hate_crime, select = - c(PUB_AGENCY_UNIT, POPULATION_GROUP_CODE, JUVENILE_OFFENDER_COUNT,ADULT_VICTIM_COUNT,MULTIPLE_OFFENSE,MULTIPLE_BIAS,STATE_ABBR,AGENCY_TYPE_NAME,POPULATION_GROUP_DESC,OFFENDER_ETHNICITY,REGION_NAME,DIVISION_NAME,PUB_AGENCY_UNIT,JUVENILE_VICTIM_COUNT,ADULT_OFFENDER_COUNT))
+
+# Renaming of variables
+    
+hatecrime<- rename(hatecrime ,"YEAR"= DATA_YEAR)
+hatecrime<- rename(hatecrime, "LOCATION" = LOCATION_NAME)
+hatecrime<- rename(hatecrime, "STATE" =STATE_NAME)
+hatecrime<- rename(hatecrime, "crime" =OFFENSE_NAME)
+hatecrime<- rename(hatecrime, "Bias_Description" =BIAS_DESC)
+
+# Most frequently committed hate crimes in USA
+
+mostcommitedhatecrime <- hatecrime %>% select(crime) %>%
+ group_by(crime) %>%
+ summarize(count = sum(n()))%>%
+ arrange(desc(count))%>%
+ head(6)
+
+
+ggplot(data = mostcommitedhatecrime) +
+geom_bar(mapping = aes(crime, count, color = crime, fill = crime),
+               stat = "identity")+
+ labs(title = "Most commited crimes in USA 1991-2020")+
+ theme(axis.text.x = element_blank(), axis.ticks = element_blank())+
+ theme(legend.key.size = unit(0.5,'cm'),
+       legend.text = element_text(size = 10),
+       legend.title = element_text(size = 12))
+
+```
+
+
+The most frequent occurrence of hate crimes is against property is destruction, damage, or vandalism with over 65,000 cases.
+
+```{r}
+
+# General locations are most commonly associated these hate crimes
+
+locationshatecrime <- hatecrime %>% select(LOCATION) %>%
+ group_by(LOCATION) %>%
+ summarize(count = sum(n()))%>%
+ arrange(desc(count))%>%
+ head(6)
+
+
+ggplot(data = locationshatecrime) +
+geom_bar(mapping = aes(LOCATION, count, color = LOCATION, fill = LOCATION),
+               stat = "identity")+
+ labs(title = "Locations most commonly associated with hate crimes")+
+ theme(axis.text.x = element_blank(), axis.ticks = element_blank())+
+ theme(legend.key.size = unit(0.5,'cm'),
+       legend.text = element_text(size = 10),
+       legend.title = element_text(size = 12))
+```
+
+
+The graph above shows the locations most commonly associated with hate crimes and we can see that the general locations that are most commonly associated with hate crimes against individuals. we can see that the highest frequency of attacks happen in peoples residences with over 65,000 cases, followed by hate crimes committed on Highways/Road with over 40,000 cases. If we compare these high frequency occurrences against the others in the graph and we can see that people who are at home are more at risk for being the target of a hate crime as compared to other locations.
+
+
+
+\newpage
+
+# Largest Bias Incident
+
+**2.  What is the largest bias incident victim category in the U.S.?**
+
+ Incidents that are investigated and are confirmed to have a bias motivation are categorized with the appropriate bias category. Incidents can have more than one bias motivation.
+
+  * Gender Identity: Anti-Gender Non-Conforming or Anti-Transgender
+  
+  * Race/Ethnicity:  Anti-Arab; Anti-Asian; Anti-Black or African American; Anti-Hispanic or Latino; Anti-Asian 
+  
+  * Religion: Anti-Atheism; Anti-Buddhist; Anti-Catholic; Anti-Hindu; Anti-Islam (Muslim); Anti-Jehovah's Witness
+  
+  * Sexual Orientation: Anti-Bisexual; Anti-Gay (Male);  Anti-Lesbian (Female); or Anti-Lesbian Gay, Bisexual, or Transgender
+
+
+"Bias motivation" is the most important variable in this data set and it therefore the FBI's term for the cause of the hate. For example a hate crime targeted against Asian people would be an "anti-Asian" bias motivation. For the police to classify an incident as a hate crime, and to assign a particular bias motivation, the police must have *some* evidence that the crime was motivated by hate. The victim saying that the crime is a hate crime alone is usually not enough evidence. 
+
+Many  hate crimes may not be recorded as hate crimes since there is no enough evidence that the crime was wholly motivated by hate. For example, if a white man commits a crime against Black people, that would in reality be a hate crime. However, if the offender does not say anything anti-black to the victim, which is the mostly likely thing to indicate that this is a hate crime, the crime would not likely be recorded as a hate crime. 
+
+
+```{r}
+
+# Largest bias incident victim category using a line graph
+
+biasmotivation1 <- hatecrime %>% filter(YEAR %in% c(2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,2019,2020))
+
+
+biasmotivation2 <- biasmotivation1 %>% select(YEAR, Bias_Description) %>%    # top hate crimes all time
+ filter(Bias_Description %in% c('Anti-Black or African American', 'Anti-Jewish', 'Anti-White', 'Anti-Gay (Male)', 'Anti-Lesbian, Gay, Bisexual, or Transgender (Mixed Group)', 'Anti-Asian'))
+ggplot(biasmotivation2, aes(YEAR, color = Bias_Description))+
+ geom_line(stat = 'count', lwd = 1)+ labs(title = "Largest bias incident victim category in USA 2010-2020")+
+ scale_x_continuous(breaks = c(2010, 2012, 2014, 2016, 2018,2020))+
+ theme(legend.key.size = unit(x = 0.7, units = 'line'),
+       legend.text = element_text(size = 5),
+       legend.title = element_text(size = 14))
+
+
+```
+
+
+```{r}
+
+# Largest bias incident victim category using bar graph
+
+biasmotivation3 <- hatecrime %>% select(Bias_Description) %>%
+ group_by(Bias_Description) %>%
+ summarize(count = sum(n()))%>%
+ arrange(desc(count))%>%
+ head(6)
+
+
+ggplot(data = biasmotivation3) +
+geom_bar(mapping = aes(Bias_Description, count, color = Bias_Description, fill = Bias_Description),
+               stat = "identity")+
+ labs(title = "Largest bias incident victim category in USA 1991-2020")+
+ theme(axis.text.x = element_blank(), axis.ticks = element_blank())+
+ theme(legend.key.size = unit(0.5,'cm'),
+       legend.text = element_text(size = 10),
+       legend.title = element_text(size = 12))
+
+```
+From the above graphs, anti-Black bias is the most common race-based motivations for reported bias incidents from 1991 to 2020, which basically means that Anti-Black bias is cited as a motivation for over 75,000 reported bias incidents followed by Anti-Jewish at 28,000 cases.
+
+Since FBI began tracking and reporting hate crime in 1991, Black Americans have been its most frequent victims and the above graph confirms that. 
+
+Hate crimes reported to the FBI grew overall in seven of the last 10 years. During that time, hate crimes perpetrated against Black victims have made up the largest portion of this activity. And since 2018, white supremacists have killed more people in the United States than any other group of extremists. @Time2022
+
+.
+
+```{r}
+
+HATECRIME <- hatecrime %>% filter(YEAR %in% c(2016, 2017, 2018,2019,2020))
+
+
+Black2020 <- HATECRIME %>% select(YEAR, Bias_Description) %>%    
+ filter(Bias_Description %in% c('Anti-Black or African American'))
+ggplot(Black2020, aes(YEAR, color = Bias_Description))+
+ geom_line(stat = 'count', lwd = 1)+
+ scale_x_continuous(breaks = c(2016, 2017, 2018, 2019, 2020))+ labs(title = "Largest bias incident victim category in USA 1991-2020")+
+ theme(legend.key.size = unit(x = 0.5, units = 'line'),
+       legend.text = element_text(size = 7),
+       legend.title = element_text(size = 10))
+
+```
+In 2020, there were more anti-Black hate crimes in the U.S. in any year since 2016. The line graph above proves the findings.
+
+We can see that Anti-Black or African American hate crimes continue to be the largest bias incident victim category.
+
+```{r}
+
+offender <- hatecrime %>% select(OFFENDER_RACE) %>%
+ group_by(OFFENDER_RACE) %>%
+ summarize(count = sum(n()))%>%
+ arrange(desc(count))%>%
+ head(6)
+
+ggplot(offender, aes(reorder(OFFENDER_RACE, (count)), count, fill = OFFENDER_RACE))+
+ geom_bar(stat = 'identity')+
+ labs(title = "Largest offender Race category in USA 1991-2020")+
+   xlab(label = 'OFFENDER_RACE')+
+ theme(axis.text.x = element_blank(), axis.ticks = element_blank())+
+ theme(legend.key.size = unit(0.7,'cm'),
+       legend.text = element_text(size = 10),
+       legend.title = element_text(size = 12))
+
+
+```
+From the above graph, we can see that the largest offender race is unknown with almost 100,000 cases. Of the known ethnicity of offenders, we can see that the white race has the most offenders with over almost 80,000 cases.
+
+Payton Gendron, a 19-year-old White man, who killed 10 people and wounded three in May in a racist attack at a grocery store in a predominantly Black neighborhood of Buffalo, New York is an example of a race motivated crime.
+
+![Payton Gendron, seen here on May 19 in court, pleaded guilty on November 28 to charges of terrorism as a hate crime and murder](C:/Users/Nico/Desktop/data science folder/images/Payton Gendron.jpg)
+
+In another incident, a 22 year old man suffered multiple facial fractures, a broken wrist and other injuries that required 10 stitches during what he, his family and the NAACP of Des Moines say was a racially motivated attack.
+
+Jones, who is black, told the Register he was on his way to his girlfriend's house around 3:25 a.m. Saturday when three white men attacked him, thinking he was trying to break into a nearby home. He said the suspects, whom he didn't know, yelled racial slurs throughout the assault. @Sahouri2020
+
+White people fear losing status and access to public resources or jobs, as has long been posited in sociology and psychology literature thus when the minority group becomes larger, the majority group feels more threatened @Havard2022
+
+
+![DarQuan Jones (right) was brutally beaten by white men in May 2020 in a racially motivated attack in Des Moines, Iowa.](C:/Users/Nico/Desktop/data science folder/images/black.png)
+
+
+```{r}
+
+
+HATECRIME <- hatecrime %>% filter(YEAR %in% c(2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,2019,2020))
+
+
+alltimeyears <- HATECRIME %>% select(YEAR, Bias_Description) %>%    
+ filter(Bias_Description %in% c('Anti-Black or African American', 'Anti-Jewish', 'Anti-White', 'Anti-Gay (Male)', 'Anti-Lesbian, Gay, Bisexual, or Transgender (Mixed Group)', 'Anti-Asian'))
+ggplot(alltimeyears, aes(YEAR, color = Bias_Description))+
+ geom_line(stat = 'count', lwd = 1)+ labs(title = "Largest bias incident victim category in USA 1991-2020")+
+ scale_x_continuous(breaks = c(2010, 2012, 2014, 2016, 2018,2020))+
+ theme(legend.key.size = unit(x = 0.7, units = 'line'),
+       legend.text = element_text(size = 5),
+       legend.title = element_text(size = 10))
+
+
+```
+
+
+
+\newpage
+
+
+# Anti-Asian Hate Crime During the COVID-19 Pandemic
+ 
+Since the outbreak of the pandemic in the United States, anti-Asian hate has been on the rise. The FBI documented a 77 percent increase in hate crimes from 2019 to 2020 against Asian people living in the US. Asians people have been targets of not only physical attacks but also verbal abuse and derogatory language in media reports and statements by different government officials as well. 
+
+Many people in the US have blamed the COVID-19 pandemic on Asian people. “Go back to China,”  “You brought the virus to the United States", are statements which Asian people have had to hear since the outbreak of covid-19. 
+
+COVID-19 first emerged in Wuhan China, in December 2019. The pandemic has spread not only disease across the globe but has also fueled prejudice and bias against the Asian communities not only in US but also in other parts of the world.
+
+The COVID-19 pandemic is not the first time a public health crisis has resulted in the disparate treatment of Asian Americans. When the bubonic plague began in San Francisco, CA in 1900, public health officials implemented a race-based response by quarantining Chinese residents in Chinatown, the epicenter of the outbreak, while allowing white merchants to leave @Barde2004
+
+These are just a few examples of hate crimes against Asian Americans since the start of the pandemic reported in the media or by the victims themselves.
+
+![A woman holds up a sign during a Stop Asian Hate rally at Discovery Green in downtown Houston earlier this year.](C:/Users/Nico/Desktop/data science folder/images/Asian.jpg)
+
+
+
++ **Personal experiences of hate Crime during the COVID-19 pandemic**
+
+**February 22** - San Francisco, CA: An elderly Asian man was physically assaulted while collecting recyclables near a housing project. The incident was filmed and shared widely on social media. In the video, one person can be heard saying, "I hate Asians." Dwayne Grayson was arrested on suspicion of robbery, elder abuse and committing a hate crime, as well as a probation violation for an earlier robbery. @Moore2020
+
+
+**March 10** –  A Korean American woman in midtown Manhattan was grabbed by the hair, shoved, and punched in the face by an assailant The perpetrator yelled at the victim, “You’ve got corona virus, you Asian (expletive)” and “Where’s your (expletive) mask?”. The victim suffered a dislocated jaw @Miles2020
+
+
+**March 14** - a Texas man attacked an Asian family in 2020 stabbing three victims including a 2-year-old girl and a 6-year-old boy because he thought they were Chinese and therefore responsible for the spread of COVID-19 @Aziz2020
+
+**March 20** - a 26-year-old Asian American man was spat on in his face in a Brooklyn subway and when he asked the man why he did that, he just yelled at him, “You Chinese spreading the corona virus!” @Moore2020
+
+
+**May 5** – St. Louis, MO: A restaurant displayed a pinata in the shape of the corona virus with a racist depiction of an Asian face on it. @Aziz2020
+
+
+\newpage
+
+
+![on Feb. 3 Noel Quintana, 61, in the picture above was was slashed across the face from cheek to cheek on his way to work](C:/Users/Nico/Desktop/data science folder/images/noel-quintana.png)
+
+There is therefore no doubt that COVID-19 has driven racism And violence against Asian Americans but what reasons do the Asian Americans believe to be the cause of the discrimination. When asked to give major reasons for the hate crime against the Asians, 64 percent of Asian Americans cite COVID-19 cases first being reported in China, followed by 57 percent citing Donald Trump as shown in the table below.@Findling2022
+
+
+![Asian Americans’ beliefs about reasons for discrimination against the Asian American and Pacific Islander community](C:/Users/Nico/Desktop/data science folder/images/covid.png)
+As we can see from the table above Government and senior officials have also in some way either directly or indirectly encouraged hate crimes, racism, or xenophobia by using of different terms. The former US President Donald Trump’s use of the term “**Chinese virus**” and the former Secretary of State Mike Pompeo’s use of “**Wuhan virus**” have no doubt encouraged the use of hate speech in the US towards the Asian Community. Although by late March president Trump stopped using the term and issued a tweet in support of the Asian community, the damage had already been done.
+
+![Trump´s tweet calling on people to “protect our Asian American community” in the US](C:/Users/Nico/Desktop/data science folder/images/trump.png)
+ 
+\newpage
+
+# Covid-19 Impact on Hate Crimes
+ 
+ **3. Did Covid-19 Lead to an Increase in Hate Crimes Towards the Asian community in the USA?**
+ 
+ So to answer this question, since I am working with a very big data set, I will filter years from 2016 to 2020 to avoid congesting the graph but my main focus will be years 2019 and 2020
+ 
+
+```{r}
+
+# Impact of the pandemic on different races
+
+HATECRIME <- hatecrime %>% filter(YEAR %in% c(2016, 2017, 2018,2019,2020))
+
+
+Asianhate <- HATECRIME %>% select(YEAR, Bias_Description) %>%    
+ filter(Bias_Description %in% c('Anti-Asian'))
+ggplot(Asianhate , aes(YEAR, color = Bias_Description))+
+ geom_line(stat = 'count', lwd = 1)+labs(title = "Covid-19 impact on hate crimes against the Asians")+
+ scale_x_continuous(breaks = c(2016, 2017, 2018, 2019, 2020))+
+ theme(legend.key.size = unit(x = 0.5, units = 'line'),
+       legend.text = element_text(size = 7),
+       legend.title = element_text(size = 10))
+
+```
+
+The graph above confirms the results that suggest that Covid-19 has indeed led to an increase in hate crimes against Asian people however, there has also been a rise in the black people
+
+
+
+```{r}
+
+hate <- HATECRIME %>% select(YEAR, Bias_Description) %>%
+ filter(Bias_Description%in% c('Anti-Asian', 'Anti-Black or African American', 'Anti-Jewish'))
+
+ggplot(hate , aes(YEAR, color = Bias_Description))+
+ geom_line(stat = 'count', lwd = 1)+
+ scale_x_continuous(breaks = c(2016, 2017, 2018, 2019, 2020))+labs(title = "Covid-19 impact on hate crimes against the different races")+
+ theme(legend.key.size = unit(x = 0.5, units = 'line'),
+       legend.text = element_text(size = 7),
+       legend.title = element_text(size = 10))
+
+```
+
+According to the above graph, we can also see that the pandemic didn't only lead to an Anti- Asian hate crimes but it also shows that they was a surge in  or African American hate crimes. With Anti-Black being the largest bias incident victim category. Additionally, we can rather see that the Anti- Jewish hate crimes dropped in 2020.
+
+
+\newpage
+
+# Hate crime impact on mental health
+
+Hate crimes has a great impact on the mental health of the victims and witnessing and hearing about hate crimes is enough to affect societies and communities. Research shows that the psychological distress experienced by victims of hate crime is higher than victims of hate crimes not motivated by prejudice. Specifically, victims of crimes that are bias-motivated are more likely to experience post-traumatic stress, safety concerns, depression, anxiety and anger than victims of crimes that are not motivated by bias @APS2017
+
+Hate crimes send messages to members of the victim’s group that they are unwelcome and unsafe in the community, victimizing the entire group and decreasing feelings of safety and security.vi,vii Furthermore, witnessing discrimination against one’s own group can lead to psychological distress and lower self-esteem. @APS2017
+
+
+![Impact of Hate crime on at-risk individuals and communities.](C:/Users/Nico/Desktop/data science folder/images/mental.png)
+
+
+# Challenges encountered working with R Markdown
+
++ **Using the plus sign to add layers**
+
+In ggplot2, you need to add a plus sign (“+”) to your code when you add a new layer to your
+plot. This really took a long time for me to figure out. I kept on Putting the plus sign in the wrong place. 
+
++ **Case sensitivity**
+
+R code is case sensitive. If you accidentally capitalize the first letter in a certain function, it
+might affect your code.
+
++ **Plotting of graphs**
+
+in my project I had to rely on only two types of graphs, i.e line graphs and bar plot graphs. the rest of the graphs proved very difficult for me to come up with.
+
+
+
+\newpage
+
+
+# Conclusion
+
+COVID-19 has impacted people’s lives around the world in multiple ways. In this report, I have examined whether the outbreak of the virus triggered an increase in hate crimes and harassment towards the Asian Americans and indeed the findings confirmed the proposed trigger effect of the pandemic.
+
+The findings have also further confirmed the FBI report findings that the bias against African Americans overwhelmingly continues to be the largest category of reported hate crime offenses pertaining to race, with over 75,000 cases.
+
+Considering that both hate crimes especially towards the black people are strongly increasing, it is another reminder that government of United states of America and different non-government organisations are not doing enough  work to address hate in America. It is not only essential to prevent such crimes from happening, but it is also equally important to ensure that victims of such crimes have access to justice. This means enabling them to report their experiences to competent institutions, and then providing them with the support they need. At the same time, hate crime must be promptly and effectively investigated, and the perpetrators punished @FRA2017
+
+The police in united states and judiciary need to take hate crime more seriously. Efforts to counter hate crime can only be successful if police and judiciary system all do their part to ensure that offenders are brought to justice. 
+
+
+Hate crimes destroys lives, damage mental health of the victims and can undermine the security of societies. The government of united states must therefore raise more awareness on  hate crimes by increasing the capacities of criminal justice officials to recognize, 
+investigate, record and prosecute hate crimes effectively. 
+
+Everyone has a role to play more especially Civil societies and community organizations, as they are often the ones on hand to get victims back on their feet. But it is governments who are primarily responsible for ensuring that victims of hate crimes are protected, enjoy full access to justice and can receive the support they need. 
+
+
+\newpage
+
+
+# Affidavit
+
+I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited  with regard to their origin and authorship.
+
+This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.
+
+
+
+
+**Location**, **Date**
+
+
+Cologne, 13th. February 2023
+
+
+
+
+
+**Signature** 
+
+
+
+\newpage
+
+
+# Literature
+
+
+
+
+
